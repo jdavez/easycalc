@@ -1,0 +1,426 @@
+/* $Id: cs.rcp,v 1.31 2007/07/28 02:52:13 tvoverbe Exp $ */
+
+TRANSLATION "cs"
+BEGIN
+
+"$$OK"          =   "OK"
+"$$CANCEL"      =   "Storno"
+
+/**************************************************
+ *           PREFERENCES (19)                     *
+ **************************************************/
+"$$PREFERENCES TITLE"   =   "Nastavení"
+
+"$$RADIAN"      =   "Radiány"
+"$$DEGREE"      =   "Stupnì"
+"$$GRAD"        =   "Grady"
+
+"$$DECIMAL"     =   "10ková"
+"$$BINARY"      =   "2ková"
+"$$OCTAL"       =   "8ková"
+"$$HEXADEC"     =   "16ková"
+
+"$$NORMAL"      =   "Normální"
+"$$SCIENTIFIC"      =   "Vìdec"
+"$$MNSCIENTIFIC"    =   "Vìdecký"
+"$$ENGINEER"        =   "In¾enýrský"
+
+"$$PRECISION"       =   "Pøesnost"
+"$$FORCE INTEGER"   =   "Vynutit celá èísla"
+"$$REDUCE PRECISION"    =   "Omezení pøesnosti"
+"$$STRIP ZEROS"     =   "Odøezávat 0"
+"$$MATCH BRACKETS"  =   "Uzavírat ()"
+"$$SHOW UNITS"      =   "Zobrazovat jednotky"
+"$$INSERT HELP"     =   "Vkládat náp."
+"$$OS NUM PREFS"   =   "Èís nastavení PDA"
+"$$DISP SCIEN"      =   "Norm=>Videc"
+
+/**************************************************
+ *         MAIN FORMS (10)                         *
+ **************************************************/
+"$$TRIGONOMETRICS"      =       "Trigonometrie"
+"$$EXPONENTIAL"     =   "Exponencielní"
+"$$COMBINATORICS"   =   "Kombinatorika"
+"$$COMPLEX"     =   "Komplexní fce"
+"$$SPECIAL FUNCTIONS"   =   "Speciální fce"
+"$$SPECIAL FUNCTIONS2"  =   "Speciální fce 2"
+"$$FUNCTION SOLVING"    =   "Øe¹ení funkcí"
+"$$LIST FUNCTIONS"  =   "Funkce seznamù"
+"$$MATRIX FUNCTIONS"    =   "Funkce matic"
+"$$UPPER TAIL PROBAB"   =   "Upper Tail Probab."
+"$$SIGNAL PROCESSING"   =   "Signal Processing"
+"$$DISCRETE MATH"   =   "Discrete Math"
+
+/**************************************************
+ *            MISC FORMS (18)                     *
+ **************************************************/
+
+"$$SAVE AS TITLE"   =   "Ulo¾it promìnnou jako"
+"$$NAME:"       =   "Jméno:"
+"$$PARAM:"      =   "Prm:"
+"$$DONE"        =   "Hotovo"
+
+"$$FINANCIAL TITLE" =   "Finanèní kalkulaèka"
+"$$BEGIN"       =   "Zaèátek"
+"$$END"         =   "Konec"
+
+"$$DEFINITION TITLE"    =   "Správce definic"
+"$$NEW"         =   "Nová"
+"$$MODIFY"      =   "Zmìnit"
+"$$DELETE"      =   "Smazat"
+"$$FUNCTION"        =   "funkce"
+"$$VARIABLE"        =   "promìnná"
+"$$INSERT"      =   "Vlo¾it"
+
+"$$LIST EDITOR"     =   "Editor seznamù"
+"$$VALUE:"      =   "Hodnota:"
+"$$REFERENCE1"      =   "Reference 1"
+
+"$$MATRIX EDITOR"   =   "Editor matic"
+
+/**************************************************
+ *         Solver                                 *
+ **************************************************/
+"$$SOLVER"      =   "Øe¹itel"
+"$$UPDATE"      =   "Obnovit"
+"$$OPTIONS"     =   "Volby"
+"$$NOTE"        =   "Poznámka"
+"$$NEW WORKSHEET"   =   "Nový list"
+"$$MINIMUM:"        =   "Minimum:"
+"$$MAXIMUM:"        =   "Maximum:"
+"$$PRECISION:"      =   "Chyba:"
+"$$SOLVE"       =   "Øe¹it"
+"$$CALCULATE"       =   "Spoèítat"
+"$$WORKSHEET"       =   "list"
+"$$NEW WORKSHEET"   =   "Nový list"
+"$$SOLVER OPTIONS"  =   "Volby øeèitele"
+"$$VARIABLE DESCR"  =   "Popis promìnných:\n"
+"$$UNDEFINED"       =   "Nedefinováno"
+
+/**************************************************
+ *         MENU (17)                              *
+ **************************************************/
+
+"$$LAYOUT"      =   "Rozl."
+"$$BASIC"       =   "Zákla"
+"$$SCIENTIFIC"      =   "Vìdecké"
+"$$INTEGER"     =   "Celá èísla"
+"$$GRAPH"       =   "Grafy"
+"$$PREFERENCES..."  =   "Nastavení..."
+"$$DEFINITION..."   =   "Správce definic..."
+"$$FINANCIAL..."    =   "Finanèní kalkulaèka..."
+"$$SOLVER..."           =       "Øe¹itel..."
+
+"$$SPECIAL"     =   "Speciální"
+"$$CLEAR HISTORY"   =   "Smazat historii"
+"$$EXPORT TO MEMOPAD"   =   "Export do memopadu"
+"$$IMPORT FROM MEMOPAD" =   "Import z memopadu"
+
+"$$INFO"        =   "Info"
+"$$ABOUT..."        =   "O programu..."
+"$$HELP"        =   "Nápovìda"
+
+"$$MATRIX EDITOR..."    =   "Editor matic..."
+"$$LIST EDITOR..."  =   "Editor seznamù..."
+
+/**************************************************
+ *         ALERTS (20)                            *
+ **************************************************/
+"$$OVERWRITE TITLE" =   "Potvrdit pøepsání"
+"$$OVERWRITE MSG"   =   "Objekt '^1' ji¾ existuje, pøepsat?"
+"$$OVERWRITE"       =   "Pøepsat"
+
+"$$DELETE TITLE"    =   "Potvrdit smazání"
+"$$DELETE MSG"      =   "Nav¾dy smazat  ^1 '^2'?"
+"$$DELETE"      =   "Smazat"
+
+"$$ERROR"       =   "Chyba"
+"$$BADNAME MSG"     =   "Chybné jméno promìnné."
+"$$BADPARAM MSG"    =   "Chybné jméno parametru."
+"$$COMPUTE MSG"     =   "Chyba pøi výpoètu."
+"$$ANS PROBLEM"     =   "Nelze získat hodnotu promìnné ANS."
+"$$BAD VALUES"      =   "©patné hodnoty."
+
+"$$NUMBER GUESSER"  =   "Hádaè èísel"
+"$$NUMBER NOT RECOG"    =   "Èíslo nerozpoznáno."
+"$$OCTAL MODE SELECTED" =       "Vybrán nevhodný mód"
+"$$OCTAL MODE ERROR"    =       "Tato klávesa je nepou¾itelná v módu ^1."
+
+"$$ERROR DURING IMPORT" = "Do¹lo k chybì pøi importu."
+"$$EXPORT TITLE" = "Export databáze"
+"$$EXPORT MSG" = "Co si pøejete exportovat?"
+"$$ALL" = "V¹e"
+"$$FUNCTIONS ONLY" = "Funkce"
+"$$VARIABLES ONLY" = "Promìnné"
+
+/**************************************************
+ *         MISC STRINGS (17)                      *
+ **************************************************/
+"$$FUNCTION MODIFICATION" =     "Zmìna funkce"
+"$$VARIABLE MODIFICATION" =     "Zmìna promìnné"
+"$$NEW FUNCTION"    =   "Nová funkce"
+"$$NEW VARIABLE"    =   "Nová promìnná"
+"$$STRVARIABLE"     =   "promìnnou"
+"$$STRFUNCTION"     =   "funkci"
+"$$GRAPH FUNCTION"  =   "Funkce grafu"
+"$$NONE"        =   "®ádná"
+"$$USER"        =   "Vlastní"
+
+"$$MNCOPY"      =   "Kopírovat"
+"$$MNSAVE AS"       =   "Ulo¾it jako"
+"$$MNDATAMGR"       =   "DataMgr"
+"$$MNGUESSIT"       =   "Hádej"
+"$$ENGDISPL"        =   "->EngDisplay"
+"$$MNDEGREE"        =   "->Stupnì"
+"$$MNDEGREE2"       =   "->Stupnì2"
+"$$MNRADIAN"        =   "->Radiány"
+"$$MNGON"       =   "->e^(ix)"
+"$$MNCIS"       =   "->cos()+isin()"
+
+/**************************************************
+ *         Graph strings (15)                     *
+ **************************************************/
+"$$SELECT A FUNCTION"   =   "Výbìr funkce"
+"$$GRAPH COMPUTING" =   "Výpoèty nad grafy"
+"$$GRAPH COMPUTING RESULT" =    "Výsledek výpoètu nad grafy"
+"$$COMPUTING"       =   "Výpoèet"
+"$$COMPCONFIRM"     =   "Výpoèet mù¾e chvíli trvat. Po stisknutí tlaèítka OK zaène výpoèet."
+"$$COMPRESULT"      =   "^1 funkce je: graphres = ^2"
+"$$LEFTBOUND"       =   "Vyberte levou èást intervalu a stisknìte tlaèítko 'C'."
+"$$RIGHTBOUND"      =   "Vyberte pravout èást intervalu a stisknìte tlaèítko 'C'."
+"$$POINTONGRAPH"    =   "Vyberte místo na grafu a stisknìte tlaèítko 'C'."
+"$$GRZERO"      =   "nula"
+"$$GRVALUE"     =   "f = hodnota"
+"$$GRMIN"       =   "minimum"
+"$$GRMAX"       =   "maximum"
+"$$GRDDX"       =   "d/dx"
+"$$GRINTEG"     =   "integrál"
+"$$GRCBOUNDERR"     =   "Levá èást intervalu musí být men¹í ne¾ pravá."
+"$$GRINTERSECT"     =   "prùseèík"
+"$$GRCFUNCERR"      =   "Je tøeba zvolit 2 odli¹né funkce."
+
+/**************************************************
+ *         ERROR MESSAGES (15)                    *
+ **************************************************/
+"$$ERRNO ERROR"     =   "®ádná chyba"
+"$$ERRSYNTAX ERROR" =   "Chyba syntaxe"
+"$$ERRBAD FUNCTION" =   "Chybná funkce"
+"$$ERRMISSING ARGUMENT" =   "Chybìjící parametr"
+"$$ERRBAD ARGUMENT TYPE" =  "Chybný typ parametru"
+"$$ERRINTERNAL ERROR"   =   "Interní chyba"
+"$$ERRBAD MODE SELECTED"=   "Vybrán chybný mód"
+"$$ERRNO RESULT"    =   "®ádný výsledek"
+"$$ERRDIVISION BY 0"    =   "Dìlení nulou"
+"$$ERRNO SUCH VARIABLE" =   "Neexistující promìnná"
+"$$ERRBAD RESULT"   =   "Chybný výsledek"
+"$$ERRTOO DEEP RECURSION"=  "Pøíli¹ hluboké vnoøení"
+"$$ERRIMPOSSIBLE CALCULATION" = "Nemo¾ný výpoèet"
+"$$ERROUT OF RANGE"     =    "Èíslo mimo rozsah"
+"$$ERRBAD ARG COUNT"    =   "Chybný poèet parametrù"
+"$$ERRBAD DIMENSION"    =   "Chybný rozmìr matice"
+"$$ERRSINGULAR"     =   "Singulárí matice"
+"$$ERRINTERRUPTED"  =   "Výpoèet pøeru¹en"
+
+
+/**************************************************
+ *         GRAPH SCREENS (13)                     *
+ **************************************************/
+"$$TABLE MODE..."   =   "Mód tabulka..."
+"$$TABLE MODE"      =   "Mód tabulka"
+"$$GOTO"        =   "Jdi Na"
+"$$STEP"        =   "Step"
+"$$GO"          =   "Jdi"
+"$$SETUP GRAPHS..." =   "Výbìr grafù..."
+"$$SETUP GRAPHS"    =   "Výbìr grafù"
+"$$GRAPH PREFERENCES..."    =   "Nastavení grafù..."
+"$$GRAPH PREFERENCES"   =   "Nastavení grafù"
+"$$DEFAULT"     =   "Základní"
+"$$TRIGONO"     =   "Trigono"
+
+"$$FUNCMODE"        =   "Funkce"
+"$$POLARMODE"       =   "Polární"
+"$$PARAMMODE"       =   "Parametrický"
+
+"$$GRAPH COLORS"    =   "Graph Color Setup"
+"$$BACKGRND"    =   "backg"
+"$$AXIS"    =   "axis"
+"$$GRID"    =   "grid"
+
+/**************************************************
+ *         MENU EDIT (8)                          *
+ **************************************************/
+"$$EDIT"        =   "Úpravy"
+"$$UNDO"        =   "Zpìt"
+"$$CUT"         =   "Vyjmout"
+"$$COPY"        =   "Kopírovat"
+"$$PASTE"       =   "Vlo¾it"
+"$$SELECT ALL"      =   "Vybrat v¹e"
+"$$KEYBOARD"        =   "Klávesnice"
+"$$GRAFFITI HELP"   =   "Graffiti Nápovìda"
+
+/**************************************************
+ *         HELP STRINGS (7)                       *
+ **************************************************/
+"$$PREFHELP" = "Nastavení EasyCalcu\n\n"\
+    "Omezení pøesnosti - jestli¾e je povoleno, EasyCalc zaokrouhluje "\
+    "po ka¾dé operaci výsledky, abz omezil efekt pohiblivé øádové èárky. "\
+    "Trochu to zpomalí ve¹keré operace, tak¾e doporuèuji vypnout, pokud "\
+    "pracujete s maticemi, seznamy nebo øe¹ením funkcí."\
+    "\n\n"\
+    "Uzavírat závorky - pøi za¹krtnutí automaticky pøidává znak ')' za "\
+    "funkci a kurzor je pøesunut mezi závorky."\
+    "\n\n"\
+    "Vynutit celá èísla - vynutit vstupní konverzi èísel do celých èísel. "\
+    "Tento mód je lep¹í pro práci s konverzemi mezi soustavami a celými "\
+    "èísly, proto¾e pracuje s 32bitovým celým èíslem bez znaménka, zatímco "\
+    "základní nastavení pracuje s èísly s pohyblivou øádouvou èárkou. "\
+    "\n\n"\
+    "Zobrazení jednotek - po pøepnutí do in¾enýrského módu zobrazuje napø. "\
+    "10E3 jako 10K atd. Samozøejmì se dá tento zpùsob zápisu pou¾ít pøi "\
+    "vstupu výrazu."\
+    "\n\n"\
+    "Vkládat nápovìdu - vlo¾í popis parametrù nìkterých víceparametkých "\
+    "funkcí pøímo do vstupního øádku."\
+    "\n\n"\
+    "Èíselné nastavení PDA - pokud je nastaveno, EasyCalc pøesnì dodr¾uje "\
+    "nastavení èísel v PalmOS nastavení. Standardnì jsou èárka a teèka "\
+    "obojí pova¾ovány za desetinou èárku, ale pokud zvolíte toto nastavní, "\
+    "pouze znak nastavený v PalmOS nastavení bude pøijmut. Tato volba "\
+    "mù¾e být u¾iteèná, pokud kopírujete data z jiných aplikací."
+
+"$$BASIC HELP" = "Nejnovìj¹í informace jsou k dispozici na "\
+    "http://easycalc.sourceforge.net ."\
+    "\n\n"\
+    "EasyCalc nyní pou¾ívá odli¹ný zpùsob omezování pøesnosti, který "\
+    "by mìl ve vìt¹inì situací fungovat lépe. Jedinou výjimkou je "\
+    "práce s reálnými èísly, jako napø. pi, kdy omezení pøesnosti "\
+    "zpùsobí ménì pøesné výsledky (speciálnì ve spojení s goniometrickými "\
+    "funkcemi). Je doporuèeno mít toto nastavení zapnuté, pokud nepracujete "\
+    "s goniometrickými funkcemi v módu radián."\
+    "\n\n"\
+    "Pro u¾ivatele Visor Platinum: tato zaøízení ji¾ mají knihovnu MathLib "\
+    "vypálenou do ROM, a proto ji nemusíte instalovat. Jestli¾e jste to ji¾ "\
+    "udìlali, mù¾ete ji smazat pomocí Applications->Menu->Delete."\
+    "\n\n"\
+    "Prosím, pøeètìte si soubor INSTALL, pokud máte pocit, ¾e nemù¾ete najít "\
+    "vlastnosti (napøíklad grafy), které jste oèekávali. EasyCalc je nyní "\
+    "distribuován v nìkolika rùzných konfiguracích, z nich¾ ka¾dá má "\
+    "jinou sadu vlastností."\
+    "\n\n"\
+    "Informace o novì speciálních funkcích je v souboru specfuncs.pdf."\
+    "\n\n"\
+    "Víceparametrické funkce mají parametry oddìleny pomocí znaku ':', "\
+    "napø. ncr(6:3)"\
+    "\n\n"\
+    "Nápovìda pro kalkulátor\n"\
+    "Vìci, které mohou být u¾iteèné:\n"\
+    "Pokud napí¹ete graffiti 'nový øádek', dosáhnete stejného efektu, "\
+    "jako kdybyste stiskli tlaèítko EXE\n\n"\
+    "Napsání operátoru pomocí graffiti nepøidá 'ans' na zaèátek øadku "\
+    "(pou¾itelné asi jen pro '-3+4').\n\n"\
+    "Mo¾ná budete chtít povolit automatické uzavírání závorek v Nastavení\n"\
+    "Není tøeba uzavírat závorky na konci øádku, "\
+    "napø. 'sin(3.5'.\n\n"\
+    "Definice nové funkce: f()=\"x^2\"\nx je parametr\n\n"\
+    "Stupnì mù¾ete zadávat následujícím zpùsobem: 90°30'\n"\
+    "Je mo¾né pou¾ívat zkrácený zápis, napø. 3pi+4e "\
+    "nebo 3sin(x)\n"\
+    "Výpoèty v komplexních èíslech jsou POMALÉ. Vypnìte/zapnìte je v Nastavení."\
+    "\n\n"\
+    "Mù¾ete pou¾ívat jednotky jako M-mega, G-giga, T-terra, n-nano, f-femto atd. "\
+    "stejnì jako na papíru, napø. 10G, 1/80T"\
+    "\n\n"\
+    "Mù¾ete nadefinovat vlastní funkce s vícee parametry. Na druhý parametr "\
+    "se mù¾ete odkazovat 'x(2)', na tøetí 'x(3)' atd. (za pøedpokladu, ¾e "\
+    "'x' je jméno parametru)."
+
+"$$GNU NOTICE" =  "The Scientific Calculator for PalmOS.\n"\
+    "Copyright (C) 1999-2003, 2006, 2007 Ondrej Palkovsky.\n"\
+    "http://easycalc.sourceforge.net\n\n"\
+    "This program is free software; you can redistribute it and/or modify "\
+    "it under the terms of the GNU General Public License as published by "\
+    "the Free Software Foundation; either version 2 of the License, or "\
+    "(at your option) any later version.\n\n"\
+    "This program is distributed in the hope that it will be useful, "\
+    "but WITHOUT ANY WARRANTY; without even the implied warranty of "\
+    "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the "\
+    "GNU General Public License for more details.\n\n"\
+    "You should have received a copy of the GNU General Public License "\
+    "along with this program; if not, write to the Free Software "\
+    "Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02111-1301  USA"
+
+"$$GRPREF HELP" = "Základní nastavení grafù."\
+    "\n\n"\
+    "xmin, xmax, ymin, ymax - okraje grafu"\
+    "\n\n"\
+    "Funkèní, Polární, Parametrický - Mù¾ete si vybrat type grafu. Funkèní grafy "\
+    "jsou standardní grafy typu y=f(x), polární grafy mají jako parameter úhel "\
+    "theta a vrací polomìr, r=f(t) a Parametrické grafy umo¾ní specifikovat "\
+    "rùzné funkce pro X a Y, napø. X=t, Y=6t."
+
+"$$GRSETUP HELP" = "Výbìr grafù, které se budou kreslit."\
+    "\n\n"\
+    "Klepnutím na ID funkce (X1,Y1,r1..) mù¾ete vybrat existující funkci."\
+    "\n\n"\
+    "Klepnutím na jméno funkce ji mù¾ete upravit."
+
+"$$FINHELP" = "Popis základní finanèní kalkulaèky: "\
+    "Máte nìjaké peníze v bance (PV, souèasná hodnota). X-krát za rok (P/YR, "\
+    "platby za rok) ulo¾íte peníze do banky (PMT, platba). Banka pøidává ka¾dé "\
+    "období nìjaké peníze, procentní podíl z vý¹e va¹eho úètu. Toto procento "\
+    "se nazývá úrok (IT).\n"\
+    "Po nìkolik platbách (NP, poèet plateb) se rozhodnete vybrat peníze z banky. "\
+    "To co dostanete je budoucí hodnota (FV).\n"\
+    "Tato implementace oèekává, ¾e se poèet plateb do roka shoduje s "\
+    "poètem pøípisu úrokù."\
+    "\n\n" \
+    "!!! Tato implementace pou¾ívá 'cash flow' význam znamének. Napø. " \
+    "'+' znamená 'peníze do banky' a '-' znamená ' peníze z banky'. Mnoho " \
+    "lidí ¾ádalo zménu znamének, ale podle mého názoru je tento " \
+    "zpùsob správný a nejlépu ukazuje význam èástek."
+
+"$$MEMOHELP" = "Vyberte memo ze seznamu a stisknìte tlaèítko OK, abyste "\
+    "provedli jeho kód. "\
+    "První øádka z mema (titulek) se neprovede. Memo je provádìno, jako "\
+    "kdybyste postupnì spou¹tìli øádku po øádce v kalkulátoru.\n\n"\
+    "Jestli¾e v Memopadu existuje kategorie 'EasyCalc', zobrazí se pouze "\
+    "polo¾ky z této kategorie."
+
+"$$FUNCHELP" = "Popis funkcí\n"\
+    "Toto jsou funkce pro øe¹ení funkcí. Vlastní funkce mù¾e být "\
+    "specifikována napøíklad jako 'f()' nebo pøímo øetìzcem, napø. "\
+    "\"x+1\". "\
+    "V¹echny následující funkce pøíjímají navíc jeden VOLITELNÝ "\
+    "parametr, chybu se kterou mají poèítat. Èím men¹í je chyba, tím "\
+    "pomalej¹í je výpoèet.\n\n"\
+    "fzero(min:max:func[:chyba]) - vypoèítá koøen funkce\n\n"\
+    "fvalue(min:max:value:func[:chyba]) - vypoèítá x, kde f(x)=value\n\n"\
+    "fmin(min:max:func[:chyba]) - vypoèítá minimum fce na "\
+    "intervalu <min:max>\n\n"\
+    "fmax(min:max:func[:chyba]) - vypoèítá maximum fce na "\
+    "intervalu <min:max>\n\n"\
+    "fd_dx(point:func[:chyba]) - vypoèítá první derivaci fce\n\n"\
+    "fsimps(min:max:func[:chyba]) - vypoèítá urèitý integrál pou¾itím "\
+    "Simpsonovy numerické integrace"\
+    "\n\n" \
+    "fromberg(min:max:func[:n]) - vypoèítá urèitý integrál s pou¾itím "\
+    "rombergova algoritmu (èím vy¹¹í 'n', tím pomalej¹í).\n\n" \
+    "fintersect(min:max:f1:f2[:error]) - nalezne prùseèík funkcí "\
+    "f1 a f2."
+
+"$$SOLVERHELP" = "Øe¹itel je nástroj, který umo¾òuje ukládat rovnice "\
+        "a výrazy. "\
+    "Vytvoøte nový list vybráním polo¾ky Nový list ve vyskakovací "\
+    "nabídce. Po vybrání listu mù¾ete napsat buï výraz "\
+    "(napø. pi*r^2) nebo rovnici (e.g. x^2=x+2). Poté stisknìte tlaèítko "\
+    "'Obnovit' a seznam promìnných se aktualizuje. Pokud jste napsali výraz, "\
+    "nastavte promìnné a stisknìte tlaèítko 'Spoèítat'. Pokud jste se rozhodli pro rovnici, "\
+    "vyberte promìnnou, kterou chcete øe¹it a stisknìte tlaèítko 'Øe¹it'.\n\n"\
+    "Ke ka¾dé rovnici si mù¾ete pøipsat poznámky po stisknutí tlaèítka 'Poznámky'. "\
+    "Pokud zaènete øádku jménem promìnné a dvojteèkou "\
+    "(napø. 't: Èas'), EasyCalc pova¾uje zbytek øádku za popis "\
+    "promìnné a zobrazí vám tento popis v hlavním nabídce øe¹itele.\n\n"\
+    "Rovnice je øe¹ena pomocí funkce fzero(), její parametry mù¾ete "\
+    "zmìnit po stisknutí tlaèítka 'Volby'."
+END
+

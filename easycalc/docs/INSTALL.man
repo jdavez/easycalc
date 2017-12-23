@@ -1,0 +1,58 @@
+.Id $Id: INSTALL.man,v 1.5 2006/08/25 02:08:15 tvoverbe Exp $
+.TH INSTALL 7 "August 24, 2006" "EasyCalc" "EasyCalc Documentation"
+.SH NAME
+EasyCalc \- Scientific calculator for Palm's
+.SH REQUIREMENTS
+Palm or PalmPilot with at least PalmOS 2.0 and about 110K-264K of free memory,
+plus 50K for MathLib.
+.SH INSTALLATION
+Install MathLib.prc (if needed, see below) and one of the 'calc_*.prc' files using
+HotSync or your favorite installer program.
+These 'calc_*.prc' files are all versions of one program.
+.LP
+calc_small.prc is a minimal version (110K, English only) without graphs and special
+functions and in low resolution (160 x 160) only. This version is intended for
+the older Palm devices with limited memory.
+.LP
+The other calc_xx.prc files (264K) are various language versions of the full program
+with Sony and Palm hires support and DIA (Dynamic Input Area) support for Palm, Sony
+and Handera devices. The following language versions are available: English, German, Spanish,
+Czech (2 encodings), Portuguese, French, Italian, Russian (2 encodings) and Japanese.
+.LP
+On the Handspring Visor and the newer Palm handhelds/smart phones (T5, LifeDrive,
+TX, Treo 650, Treo 700p, ...) MathLib is already installed in the ROM. If you did
+install it into RAM on one of these devices, you can delete it and free up some
+memory. EasyCalc will warn you if it cannot find MathLib.
+.LP
+I am neither the author nor the maintainer of MathLib, so if you have questions about
+this library, look at
+.PD 0
+.LP
+http://www.radiks.net/~rhuebner/mathlib.html .
+.PD
+.SH BUGS
+Due to floating point implementation in computers you will probably
+experience some differences when adding/subtracting a small number to/from a
+large one (e.g. 1.0 - 1.0E-15). This is inherent to the use of floating point,
+you will have to get used to it..
+
+.SH AUTHOR
+Ondrej Palkovsky <ondrap@penguin.cz> with contributions from many others.
+Many thanks to all these people. See the 'Thanks to...' menu item in the program.
+.PD
+.LP
+Also thanks to all the people who sent suggestions and corrections to the tutorial.
+.SH LICENSE
+This program is free software; you can redistribute it and/or modify        
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA

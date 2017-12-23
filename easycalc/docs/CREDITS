@@ -1,0 +1,49 @@
+I send many thanks to these people for contributing to this project, many of the features that you are using wouldn't exist without their help. 
+
+Rafael R. Sevilla <dido at pacific.net.ph>
+Added many mathematical functions and improved the old code.
+
+Richard Scott <rts4377 at yahoo.com>
+Contributed the Upper Tail probabilities, romberg integration code,
+improvements of special functions
+
+Jorge Gil
+Michael Schierl
+Recent improvements of code since 1.23.
+
+John Hodapp <bigshot at email.msn.com>
+Code improvements regarding matrices, UI etc.
+
+Ton van Overbeek <ton at v-overbeek.nl>
+PalmOS5 compatibility, hires and DIA patches
+
+Edgar Piskernik <pisker at gmx.at>
+Harald Lueling <Harald_Lueling at burg-waechter.de>
+German translation
+
+Francesco <fcroci at prodigy.net.mx>
+Spanish translation
+
+Carlos Irapuan Lube de Menezes <cirapuan at hotmail.com>
+Portuguese translation
+
+Daniel Lemire, Ph.D. <lemire at ondelette.com>
+French translation
+
+Ignazio Di Napoli <neclepsio at hotmail.com>
+Michele Mazzucchi <m.mazzucchi at linuxpratico.com>
+Italian translation
+
+Yoshimov <yoshimov at pobox.com>
+Japanese translation
+
+Pavel Kharitonov <dti17 at narod.ru>
+Russian translation
+
+Olga Yiparaki <yiparaki at mindspring.com>
+Sent me utilities for matrix functions
+
+Antonio Fiol Bonnín <Antonio.FIOL at enst-bretagne.fr> 
+Added PYR support for the financial equations
+
+And many more people sending me corrections for tutorial and contibuting numerous ideas for this program.

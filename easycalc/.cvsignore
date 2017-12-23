@@ -1,0 +1,10 @@
+config.*
+Makefile
+*.o
+calc.rcp
+*.ro
+calc-sections.ld
+calc-sections.s
+calc
+*.map
+*.prc

@@ -1,0 +1,289 @@
+# EasyCalc standard skin 3 (PocketPC)
+
+# Skin rectangle coordinates x1,y1,x2,y2
+Skin: 0,0,240,268
+# Description of the display area: x1,y1 xscale yscale bg_color fg_color
+# With xscale = 0, screen width is 216 dots (only value used for now).
+# Do not touch yscale either for now.
+Display: 10,13 0 3 a3b39d 0b2327
+
+# Active elements:  num  x1,y1,l,h (on screen) x1_off,y1_off x1_on,y1_on (in the gif)
+Annunciator: 1  8,6,22,7 70,274 -1,-1          # Shift indicator (no selection)
+Annunciator: 2  34,0,16,13 20,268 20,281       # Degree indicator
+Annunciator: 3  53,0,16,13 35,268 35,281       # Radian indicator
+Annunciator: 4  72,0,21,13 50,268 50,281       # Gradian indicator
+Annunciator: 5  97,0,16,13 91,268 91,281       # Decimal indicator
+Annunciator: 6  116,0,15,13 106,268 106,281    # Octal indicator
+Annunciator: 7  134,0,13,13 120,268 120,281    # Binary indicator
+Annunciator: 8  150,0,16,13 132,268 132,281    # Hexadecimal indicator
+Annunciator: 9  0,16,10,7 178,274 178,287      # Result scroll left indicator
+Annunciator: 10 227,16,12,7 187,274 187,287    # Result scroll right indicator
+Annunciator: 11 205,0,6,13 0,268 0,281         # Skin 1 indicator
+Annunciator: 12 212,0,6,13 5,268 5,281         # Skin 2 indicator
+Annunciator: 13 219,0,6,13 10,268 10,281       # Skin 3 indicator
+Annunciator: 14 226,0,6,13 15,268 15,281       # Graph indicator
+Annunciator: 15 170,0,7,13 147,268 147,281     # Var list indicator
+Annunciator: 16 178,0,6,13 153,268 153,281     # User fct list indicator
+Annunciator: 17 185,0,6,13 158,268 158,281     # Calc fct list indicator
+Annunciator: 18 226,26,13,7 164,268 164,281    # Result Menu indicator
+Annunciator: 19 226,34,13,7 164,274 164,287    # History Menu indicator
+
+# Keys on the calculator gif:
+# num[, shifted_num] x1_sel,y1_sel,l_sel,h_sel (selection zone)  x1_off,y1_off,l,h  x1_on,y1_on
+# with num and shifted_num as follows:
+# -16 ->   shift            // Note: practice is to put -16,-16 to ensure the same shift key can toggle on/off the shift state
+# -4  ->   dot              // decimal dot
+# -3  ->   EXE              // run evaluation
+# -2  ->   bckspc           // back space. Note: if accessed through shift, will leave shift on to be able to do several in a row
+# -1  ->   clr              // clear input and result fields
+# 0   ->   0,"0"
+# 1   ->   1,"1"
+# 2   ->   2,"2"
+# 3   ->   3,"3"
+# 4   ->   4,"4"
+# 5   ->   5,"5"
+# 6   ->   6,"6"
+# 7   ->   7,"7"
+# 8   ->   8,"8"
+# 9   ->   9,"9"
+# 10  ->   A,"A"
+# 11  ->   B,"B"
+# 12  ->   C,"C"
+# 13  ->   D,"D"
+# 14  ->   E,"E"
+# 15  ->   F,"F"
+# 16  ->   And,"&"
+# 17  ->   Or,"|"
+# 18  ->   Xor,"^"
+# 19  ->   Shl,"<<"
+# 20  ->   Shr,">>"
+# 21  ->   Plus,"+"
+# 22  ->   Minus,"-"
+# 23  ->   Neg,"-"
+# 24  ->   Mult,"*"
+# 25  ->   Divide,"/"
+# 26  ->   Ans,"ans"
+# 27  ->   OpBr,"("
+# 28  ->   Pow,"^"
+# 29  ->   Log,"log"
+# 30  ->   Ln,"ln"
+# 31  ->   Inv,"^(-1)"
+# 32  ->   Sq1,"^(1/"
+# 33  ->   Sqr,"^2"
+# 34  ->   Sqrt,"sqrt"
+# 35  ->   Sin,"sin"
+# 36  ->   Cos,"cos"
+# 37  ->   Tan,"tan"
+# 38  ->   Exp,"exp"
+# 39  ->   Pi,"pi"
+# 40  ->   Degrees,"°"
+# 41  ->   Minutes,"'"
+# 42  ->   Magnitude,"abs"
+# 43  ->   Angle,"angle"
+# 44  ->   complex_i,"i"
+# 45  ->   e,"e"
+# 46  ->   Coln,":"
+# 47  ->   ClBr,")"
+# 48  ->   EE,"E"
+# 49  ->   asin
+# 50  ->   acos
+# 51  ->   atan
+# 52  ->   sinh
+# 53  ->   cosh
+# 54  ->   tanh
+# 55  ->   asinh
+# 56  ->   acosh
+# 57  ->   atanh
+# 58  ->   10^
+# 59  ->   log2
+# 60  ->   2^
+# 61  ->   fact
+# 62  ->   ncr
+# 63  ->   npr
+# 64  ->   round
+# 65  ->   trunc
+# 66  ->   ceil
+# 67  ->   floor
+# 68  ->   gamma
+# 69  ->   beta
+# 70  ->   rand
+# 71  ->   fsimps
+# 72  ->   real
+# 73  ->   imag
+# 74  ->   conj
+# 75  ->   exp(i*
+# 76  ->   fzero
+# 77  ->   fvalue
+# 78  ->   fmin
+# 79  ->   fmax
+# 80  ->   fd_dx            // d/dx
+# 81  ->   fromberg         // integ
+# 82  ->   fd2_dx           // d2/dx
+# 83  ->   ()="
+# 84  ->   "
+# 85  ->   x
+# 86  ->   list
+# 87  ->   median
+# 88  ->   mean
+# 89  ->   sum
+# 90  ->   lmin             // min
+# 91  ->   lmax             // max
+# 92  ->   prod
+# 93  ->   variance
+# 94  ->   stddev
+# 95  ->   dim
+# 96  ->   [
+# 97  ->   matrix
+# 98  ->   identity
+# 99  ->   det
+# 100 ->   qrs
+# 101 ->   rref
+# 102 ->   qrq
+# 103 ->   qrr
+# 104 ->   fintersect
+# 105 ->   ]
+# 106 ->   qBinomial
+# 107 ->   qBeta
+# 108 ->   qChiSq
+# 109 ->   qF
+# 110 ->   qPoisson
+# 111 ->   qStudentt
+# 112 ->   qWeibull
+# 113 ->   qNormal
+# 114 ->   range
+# 115 ->   rNorm
+# 116 ->   find
+# 117 ->   sample
+# 118 ->   filter
+# 119 ->   conv
+# 120 ->   fft
+# 121 ->   ifft
+# 122 ->   prevprime
+# 123 ->   isprime
+# 124 ->   nextprime
+# 125 ->   gcd
+# 126 ->   lcm
+# 127 ->   phi
+# 128 ->   gcdex
+# 129 ->   chinese
+# 130 ->   modinv
+# 131 ->   modpow
+# 132 ->   factor
+# 133 ->   besseli
+# 134 ->   besselj
+# 135 ->   besselk
+# 136 ->   bessely
+# 137 ->   ellc1
+# 138 ->   ellc2
+# 139 ->   elli1
+# 140 ->   elli2
+# 141 ->   euler
+# 142 ->   cn
+# 143 ->   dn
+# 144 ->   sn
+# 145 ->   igamma
+# 146 ->   ibeta
+# 147 ->   erf
+# 148 ->   erfc
+# 149 ->   =
+# 150 ->   Inf              // Infinity constant
+# 151 ->   %                // modulo operator
+# 152 ->   complex_j,"j"
+# 153 -> //   Speed of light in vacuum (m s-1) c=299792458
+# 154 -> //   Newtonian constant of gravitation (m3 kg-1 s-2) G=6.67428E-11
+# 155 -> //   Standard gravitational acc. (N kg-1) g=9.80665
+# 156 -> //   Electron mass (kg) me=9.10938215E-31
+# 157 -> //   Proton mass (kg) mp=1.672621637E-27
+# 158 -> //   Neutron mass (kg) mn=1.67492729E-27
+# 159 -> //   Unified Atomic mass unit (kg) u=1.660538782E-27
+# 160 -> //   Planck constant (J s) h=6.62606896-34
+# 161 -> //   Boltzmann constant (J K-1) k=1.380 6504-23
+# 162 -> //   Magnetic permeability - vacuum (magnetic constant) (H m-1) µ0=1.2566370614E-6
+# 163 -> //   Dielectric permittivity (electric constant) (F m-1) e0=8.854187817E-12
+# 164 -> //   Fine structure constant alpha=7.2973525376E-3
+# 165 -> //   Rydberg constant (m-1) Rinf=10973731.568527
+# 166 -> //   Classical electron radius (m) re=2.8179402894E-15
+# 167 -> //   Bohr radius (m) a0=5.2917720859E-11
+# 168 -> //   Fluxoid quantum (magnetic flux quantum) (W b) phi0=2.067833667E-15
+# 169 -> //   Bohr magneton (J T-1) µb=9.27400915E-24
+# 170 -> //   Electron magnetic moment (J T-1) µe=-9.28476377E-24
+# 171 -> //   Nuclear magneton (J T-1) µN=5.05078324E-27
+# 172 -> //   Proton magnetic moment (J T-1) µp=1.410606662E-26
+# 173 -> //   Neutron magnetic moment (J T-1) µn=-9.6623641E-27
+# 174 -> //   Compton wavelength (electron) (m) lc=2.4263102175E-12
+# 175 -> //   Compton wavelength (proton) (m) lcp=1.3214098446E-15
+# 176 -> //   Stefan-Boltzmann constant (W m-2 K-4) sigma=5.670400E-8
+# 177 -> //   Avogadro's constant (mol-1) Na=6.02214179E+23
+# 178 -> //   Ideal gas volume at STP (m3 mol-1) Vm=2.2413996E-2
+# 179 -> //   Universal molar gas constant (J mol-1 K-1) R=8.314472
+# 180 -> //   Electron charge (elementary charge) (C) e=1.602176487E-19
+# 181 -> //   Faraday constant (C mol-1) F=96485.3399
+# 182 -> //   Quantum Hall resistance = von Klitzing constant (Ohm) Rk=25812.807
+# 183 ->   >=
+# 184 ->   <=
+# 185 ->   ==
+# 186 ->   ;
+#
+# 1st row
+#   shift  atanh  fmin  <=  x     CLR
+#   shift  tanh   fmax  >=  ()="  bckspc
+key: -16,-16 6,70,32,22   11,75,22,12  11,74
+key: 54,57   45,70,32,22  50,75,22,12  50,74
+key: 79,78   84,70,32,22  89,75,22,12  89,74
+Key: 183,184 123,70,32,22 128,75,22,12 128,74
+Key: 83,85   162,70,32,22 167,75,22,12 167,74
+Key: -2,-1   201,70,32,22 206,75,22,12 206,74
+# 2nd row
+#  asinh  acosh  fvalue      f"(x)  Simpson
+#  sinh   cosh   fzero   ==  f'(x)  Romberg
+Key: 52,55   6,97,32,22   11,102,22,12  11,101
+Key: 53,56   45,97,32,22  50,102,22,12  50,101
+Key: 76,77   84,97,32,22  89,102,22,12  89,101
+Key: 185     123,97,32,22 128,102,22,12 128,101
+Key: 80,82   162,97,32,22 167,102,22,12 167,101
+Key: 81,71   201,97,32,22 206,102,22,12 206,101
+# 3rd row
+#  bessely  besselk  elli1  elli2      dn
+#  besselj  besseli  ellc1  ellc2  sn  cn
+Key: 134,136 6,124,40,29   11,129,30,19  11,128
+Key: 133,135 45,124,40,29  50,129,30,19  50,128
+Key: 137,139 84,124,40,29  89,129,30,19  89,128
+Key: 138,140 123,124,40,29 128,129,30,19 128,128
+Key: 144     162,124,32,22 167,129,22,12 167,128
+Key: 142,143 201,124,32,22 206,129,22,12 206,128
+# 4th row
+#  igamma  ibeta  erfc  c            G
+#  gamma   beta   erf   euler_gamma  g  "
+Key: 68,145  6,153,40,29   11,158,30,19  11,157
+Key: 69,146  45,153,40,29  50,158,30,19  50,157
+Key: 147,148 84,153,40,29  89,158,30,19  89,157
+Key: 141,153 123,153,40,29 128,158,30,19 128,157
+Key: 155,154 162,153,32,22 167,158,22,12 167,157
+Key: 84      201,149,32,22 206,154,22,12 206,153
+# 5th row
+#  me  mn  k  e0  Rinf   ;
+#  u   mp  h  µ0  alpha  :
+Key: 159,156 6,183,40,29   11,188,30,19  11,187
+Key: 157,158 45,183,40,29  50,188,30,19  50,187
+Key: 160,161 84,183,40,29  89,188,30,19  89,187
+Key: 162,163 123,183,40,29 128,188,30,19 128,187
+Key: 164,165 162,183,40,29 167,188,30,19 167,187
+Key: 46,186  201,174,40,29 206,179,30,19 206,178
+# 6th row
+#  re  µe  µn  µb    sigma
+#  a0  µN  µp  phi0  Na     Ans
+Key: 167,166 6,212,40,29   11,217,30,19  11,216
+Key: 171,170 45,212,40,29  50,217,30,19  50,216
+Key: 172,173 84,212,40,29  89,217,30,19  89,216
+Key: 168,169 123,212,40,29 128,217,30,19 128,216
+Key: 177,176 162,212,40,29 167,217,30,19 167,216
+Key: 26      196,199,40,29 201,204,30,19 201,203
+# 7th row
+#  lc                 =
+#  lcp  e  F  Rk  Vm  Exe
+Key: 175,174 6,242,40,29   11,247,30,19  11,246
+Key: 180     45,242,40,29  50,247,30,19  50,246
+Key: 181     84,242,40,29  89,247,30,19  89,246
+Key: 182     123,242,40,29 128,247,30,19 128,246
+Key: 178     162,242,40,29 167,247,30,19 167,246
+Key: -3,149  196,236,40,29 201,241,30,19 201,240

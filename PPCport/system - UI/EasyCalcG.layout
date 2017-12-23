@@ -1,0 +1,95 @@
+# EasyCalc standard graph skin (PocketPC)
+# Some annunciators used here can only exist with xxxxG skins (G for Graph).
+# Normal calc keys cannot be used in this layout, there are additional keys
+# for graph functions.
+
+# Skin rectangle coordinates x1,y1,x2,y2
+Skin: 0,0,240,268
+# Description of the graph display area: x1,y1 xscale yscale bg_color fg_color
+# With xscale = 0, screen width is 216 dots (only value used for now).
+# Do not touch yscale either for now.
+Display: 35,6 1 1 a3b39d 0b2327
+WideView: 1,212 1 1 a3b39d 0b2327
+# Description of available graph colors (background comes from Display: above
+# and Axis is initially set to foreground from Display: as well).
+Graph: 1 ff0000
+Graph: 2 00ff00
+Graph: 3 0000ff
+Graph: 4 808000
+Graph: 5 008080
+Graph: 6 800080
+Graph: 7 0b2327    # Axis
+Graph: 8 808080    # Grid
+
+# Active elements:  num  x1,y1,l,h (on screen) x1_off,y1_off x1_on,y1_on (in the gif)
+Annunciator: 2  35,0,16,13 20,268 20,281       # Degree indicator
+Annunciator: 3  54,0,16,13 35,268 35,281       # Radian indicator
+Annunciator: 4  73,0,21,13 50,268 50,281       # Gradian indicator
+Annunciator: 11 205,0,6,13 0,268 0,281         # Skin 1 indicator
+Annunciator: 12 212,0,6,13 5,268 5,281         # Skin 2 indicator
+Annunciator: 13 219,0,6,13 10,268 10,281       # Skin 3 indicator
+Annunciator: 14 226,0,6,13 15,268 15,281       # Graph indicator
+Annunciator: 20  93,211,29,19 124,268 124,287  # Select zone indicator
+Annunciator: 21 126,211,29,19 153,268 153,287  # Move graph indicator
+Annunciator: 22 159,211,29,19 211,268 211,287  # Track point indicator
+Annunciator: 23 126,232,29,19 182,268 182,287  # Center wide view indicator
+
+Annunciator: 24 1,2,30,11     2,2     -1,-1  # Zone Y max (no selection)
+Annunciator: 25 1,198,30,11   2,198   -1,-1  # Zone Y min (no selection)
+Annunciator: 26 59,211,30,11  62,212  -1,-1  # Zone X min (no selection)
+Annunciator: 27 209,211,30,11 211,212 -1,-1  # Zone X max (no selection)
+Annunciator: 28 112,255,22,11 113,255 -1,-1  # Wide view / zone ratio X (no selection)
+Annunciator: 29 138,255,22,11 139,255 -1,-1  # Wide view / zone ratio Y (no selection)
+Annunciator: 30 168,241,30,11 173,241 -1,-1  # Sel param start (no selection)
+Annunciator: 31 209,241,30,11 211,241 -1,-1  # Sel param end (no selection)
+Annunciator: 32 209,227,30,11 211,227 -1,-1  # Pointed/calculated Y (no selection)
+Annunciator: 33 209,255,30,11 211,255 -1,-1  # Pointed/calculated X (no selection)
+Annunciator: 34 168,255,30,11 173,255 -1,-1  # Pointed/calculated r (no selection)
+Annunciator: 35 192,215,11,11 192,215 -1,-1  # For curve Yn (no selection)
+
+# Keys on the calculator gif:
+# num[, shifted_num] x1_sel,y1_sel,l_sel,h_sel (selection zone)  x1_off,y1_off,l,h  x1_on,y1_on
+# with num and shifted_num as follows:
+# -5  ->   Center zone on origin, "0"
+# -6  ->   center wide view on origin, "0"
+# -7  ->   Graph preferences, "prefs"
+# -8  ->   Graph config, "conf"
+# -9  ->   Graph calculations, "calc"
+# -10 ->   Zone set X =, "-> X"
+# -11 ->   Zone zoom in, "+"
+# -12 ->   Zone zoom out, "-"
+# -13 ->   Wide view zoom in, "+"
+# -14 ->   Wide view zoom out, "-"
+# -15 ->   Normed zone coordinates (= square in wide view)
+#
+# 1st row
+#   prefs
+key: -7  0,15,31,21   5,19,22,12  5,18
+# 2nd row
+#   conf
+Key: -8  0,37,31,21   5,41,22,12  5,40
+# 3rd row
+#   calc
+Key: -9  0,59,31,21  5,63,22,12  5,62
+# 4th row
+#   + zone
+Key: -11  0,87,31,21  5,91,22,12  5,90
+# 5th row
+#   - zone
+Key: -12  0,109,31,21  5,113,22,12  5,112
+# 6th row
+#   Normed square zone
+Key: -15  0,131,31,21  5,135,22,12  5,134
+# 7th row
+#   0 zone
+Key: -5  0,153,31,21  5,157,22,12  5,156
+# 8th row
+#   -> X
+Key: -10  0,175,31,21  5,179,22,12  5,178
+# 9th row
+#   + wide view        0 wide view
+Key: -13 60,226,31,21   65,230,22,12   65,229
+Key: -6  92,231,29,19   97,235,22,12   97,234
+# 10th row
+#   - wide view
+Key: -14  60,247,31,21   65,251,22,12   65,250

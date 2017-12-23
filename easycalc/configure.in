@@ -1,0 +1,85 @@
+dnl Process this file with autoconf to produce a configure script.
+AC_INIT(EasyCalc, 1.24)
+
+LANGS="en de sp cs pt fr it ru_win ru_koi8 ja"
+AC_SUBST(LANGS)
+
+dnl Special functions enabled
+AC_MSG_CHECKING(if special functions are enabled)
+AC_ARG_ENABLE(specfun,
+AS_HELP_STRING([--enable-specfun],[include special functions (default = yes)]),
+[SPECFUN=$enable_specfun],[SPECFUN=yes;enable_specfun=yes])
+AC_MSG_RESULT($enable_specfun)
+AC_SUBST(SPECFUN)
+
+dnl Graphics form and functions enabled
+AC_MSG_CHECKING(if graphics form and functions are enabled)
+AC_ARG_ENABLE(graphfun,
+AS_HELP_STRING([--enable-graphfun],[include graphs (default = yes)]),
+[GRAPHFUN=$enable_graphfun],[GRAPHFUN=yes;enable_graphfun=yes])
+AC_MSG_RESULT($enable_graphfun)
+AC_SUBST(GRAPHFUN)
+
+dnl PalmOS5 hires support
+AC_MSG_CHECKING(if PalmOS5 hires support is enabled)
+AC_ARG_ENABLE(os5hires,
+AS_HELP_STRING([--enable-os5hires],[include PalmOS5 hires support (default = yes)]),
+[OS5HIRES=$enable_os5hires],[OS5HIRES=yes;enable_os5hires=yes])
+AC_MSG_RESULT($enable_os5hires)
+AC_SUBST(OS5HIRES)
+
+dnl Dynamic Input Area support
+AC_MSG_CHECKING(if Dynamic Input Area support is enabled)
+AC_ARG_ENABLE(diasupport,
+AS_HELP_STRING([--enable-diasupport],[include DIA support (default = yes)]),
+[DIASUPP=$enable_diasupport],[DIASUPP=yes;enable_diasupport=yes])
+AC_MSG_RESULT($enable_diasupport)
+AC_SUBST(DIASUPP)
+
+dnl Sony PalmOS4 hires support
+AC_MSG_CHECKING(if Sony SDK is used for Sony PalmOS4 hires support)
+AC_ARG_WITH(sonysdk,
+AS_HELP_STRING([--with-sonysdk],[use Sony SDK for PalmOS4 hires support (default = no)]),
+[SONYSDK=$with_sonysdk],[SONYSDK=no;with_sonysdk=no])
+AC_MSG_RESULT($with_sonysdk)
+AC_SUBST(SONYSDK)
+
+dnl Handera QVGA support
+AC_MSG_CHECKING(if Handera SDK is used for QVGA support)
+AC_ARG_WITH(handerasdk,
+AS_HELP_STRING([--with-handerasdk],[use Handera SDK for QVGA support (default = no)]),
+[HANDERASDK=$with_handerasdk],[HANDERASDK=no;with_handerasdk=no])
+AC_MSG_RESULT($with_handerasdk)
+AC_SUBST(HANDERASDK)
+
+dnl Checks for programs.
+AC_PATH_PROG(CC, m68k-palmos-gcc, no,$PATH:/usr/local/bin:\
+/usr/local/m68k-palmos/bin:/usr/local/palm/m68k-palmos/bin:/usr/bin)
+
+if test "$CC" = "no"; then
+        AC_MSG_ERROR("Unable to find m68k-palmos-gcc")
+fi
+
+AC_PATH_PROG(PILRC, pilrc, no,\
+$PATH:/usr/local/m68k-palmos/bin:/usr/local/palm/m68k-palmos/bin:/usr/bin)
+if test "$PILRC" = "no"; then
+        AC_MSG_ERROR("Unable to find pilrc")
+fi
+
+AC_PATH_PROGS(MULTIGEN, multigen m68k-palmos-multigen,  no,\
+$PATH:/usr/local/m68k-palmos/bin:/usr/local/palm/m68k-palmos/bin:/usr/bin:/usr/m68k-palmos/bin)
+if test "$MULTIGEN" = "no"; then
+        AC_MSG_ERROR("Unable to find MULTIGEN")
+fi
+
+AC_PATH_PROG(BUILDPRC, build-prc, no,\
+$PATH:/usr/local/m68k-palmos/bin:/usr/local/palm/m68k-palmos/bin:/usr/bin)
+
+if test "$BUILDPRC" = "no"; then
+        AC_MSG_ERROR("Unable to find build-prc")
+fi
+
+AC_PATH_PROGS(PILXFER, pilot-xfer pyrite-install, pilot-xfer)
+AC_PATH_PROG(CTAGS, ctags, ctags)
+
+AC_OUTPUT(Makefile)

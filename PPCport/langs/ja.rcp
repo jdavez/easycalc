@@ -1,0 +1,454 @@
+/* $Id: ja.rcp,v 1.8 2007/07/28 02:52:13 tvoverbe Exp $ */
+
+TRANSLATION "ja"
+BEGIN
+
+"$$OK"          =   "OK"
+"$$CANCEL"      =   "Cancel"
+
+/**************************************************
+ *           PREFERENCES (19)                     *
+ **************************************************/
+"$$PREFERENCES TITLE"   =   "設定"
+
+"$$RADIAN"      =   "Radian"
+"$$DEGREE"      =   "Degree"
+"$$GRAD"        =   "Grad"
+
+"$$DECIMAL"     =   "10進(D)"
+"$$BINARY"      =   "2進(B)"
+"$$OCTAL"       =   "8進(O)"
+"$$HEXADEC"     =   "16進(H)"
+
+"$$NORMAL"      =   "通常"
+"$$SCIENTIFIC"      =   "科学"
+"$$MNSCIENTIFIC"    =   "自然科学"
+"$$ENGINEER"        =   "工学"
+
+"$$PRECISION"       =   "精度"
+"$$FORCE INTEGER"   =   "整数固定"
+"$$REDUCE PRECISION"    =   "誤差修正利用"
+"$$STRIP ZEROS"     =   "ゼロを省略"
+"$$MATCH BRACKETS"  =   "()自動記述"
+"$$SHOW UNITS"      =   "単位表示"
+"$$INSERT HELP"     =   "引数を例示"
+"$$OS NUM PREFS"    =   "書式設定に従う"
+"$$DISP SCIEN"      =   "通常で関数利用"
+
+/**************************************************
+ *         MAIN FORMS (10)                         *
+ **************************************************/
+"$$TRIGONOMETRICS"      =       "三角関数"
+"$$EXPONENTIAL"     =   "指数関数"
+"$$COMBINATORICS"   =   "組み合わせ関数"
+"$$COMPLEX"     =   "複素数"
+"$$SPECIAL FUNCTIONS"   =   "特殊関数1"
+"$$SPECIAL FUNCTIONS2"  =   "特殊関数2"
+"$$FUNCTION SOLVING"    =   "関数解決"
+"$$LIST FUNCTIONS"  =   "統計関数"
+"$$MATRIX FUNCTIONS"    =   "行列関数"
+"$$UPPER TAIL PROBAB"   =   "Upper Tail Probab."
+"$$SIGNAL PROCESSING"   =   "Signal Processing"
+"$$DISCRETE MATH"   =   "Discrete Math"
+
+/**************************************************
+ *         MISC FORMS (18)                        *
+ **************************************************/
+
+"$$SAVE AS TITLE"   =   "変数を保存する"
+"$$NAME:"       =   "名前:"
+"$$PARAM:"      =   "引数:"
+"$$DONE"        =   "終了"
+
+"$$FINANCIAL TITLE" =   "金融計算"
+"$$BEGIN"       =   "はじめ"
+"$$END"         =   "おわり"
+
+"$$DEFINITION TITLE"    =   "データ管理"
+"$$NEW"         =   "新規"
+"$$MODIFY"      =   "変更"
+"$$DELETE"      =   "削除"
+"$$FUNCTION"        =   "関数"
+"$$VARIABLE"        =   "変数"
+"$$INSERT"      =   "挿入"
+
+"$$LIST EDITOR"     =   "リスト編集"
+"$$VALUE:"      =   "値:"
+"$$REFERENCE1"      =   "参考"
+
+"$$MATRIX EDITOR"   =   "行列編集"
+
+/**************************************************
+ *         Solver                                 *
+ **************************************************/
+"$$SOLVER"      =   "Solver"
+"$$UPDATE"      =   "Update"
+"$$OPTIONS"     =   "Options"
+"$$NOTE"        =   "Note"
+"$$NEW WORKSHEET"   =   "New Worksheet"
+"$$MINIMUM:"        =   "Minimum:"
+"$$MAXIMUM:"        =   "Maximum:"
+"$$PRECISION:"      =   "Precision:"
+"$$SOLVE"       =   "Solve"
+"$$CALCULATE"       =   "Calculate"
+"$$WORKSHEET"       =   "worksheet"
+"$$NEW WORKSHEET"   =   "New Worksheet"
+"$$SOLVER OPTIONS"  =   "Solver Options"
+"$$VARIABLE DESCR"  =   "Variable Description:\n"
+"$$UNDEFINED"       =   "Undefined"
+
+/**************************************************
+ *         MENU (17)                              *
+ **************************************************/
+
+"$$LAYOUT"      =   "画面"
+"$$BASIC"       =   "通常"
+"$$SCIENTIFIC"      =   "科学"
+"$$INTEGER"     =   "整数"
+"$$GRAPH"       =   "グラフ"
+"$$PREFERENCES..."  =   "設定.."
+"$$DEFINITION..."   =   "データ管理.."
+"$$FINANCIAL..."    =   "金融計算.."
+/**************************************************/
+"$$SOLVER..."           =       "Solver..."
+/**************************************************/
+
+"$$SPECIAL"     =   "特殊"
+"$$CLEAR HISTORY"   =   "履歴削除"
+"$$EXPORT TO MEMOPAD"   =   "メモ帳へ出力"
+"$$IMPORT FROM MEMOPAD" = "メモ帳から入力"
+
+"$$INFO"        =   "情報"
+"$$ABOUT..."        =   "EasyCalcについて.."
+"$$HELP"        =   "ヘルプ"
+
+"$$MATRIX EDITOR..."    =   "行列編集.."
+"$$LIST EDITOR..."  =   "リスト編集.."
+
+/**************************************************
+ *         ALERTS (20)                            *
+ **************************************************/
+"$$OVERWRITE TITLE" =   "上書き確認"
+"$$OVERWRITE MSG"   =   "'^1' は既に存在します．上書きしますか？"
+"$$OVERWRITE"       =   "上書き"
+
+"$$DELETE TITLE"    =   "削除確認"
+"$$DELETE MSG"      =   "^1 の '^2' を削除します．よろしいですか？"
+"$$DELETE"      =   "削除"
+
+"$$ERROR"       =   "エラー"
+"$$BADNAME MSG"     =   "変数名が不正です．"
+"$$BADPARAM MSG"    =   "引数名が不正です．"
+"$$COMPUTE MSG"     =   "計算エラー．"
+"$$ANS PROBLEM"     =   "ANS の値が取得できません．"
+"$$BAD VALUES"      =   "不正な値です．"
+
+"$$NUMBER GUESSER"  =   "数値推測"
+"$$NUMBER NOT RECOG"    =   "数値を認識できません．"
+/**************************************************/
+"$$OCTAL MODE SELECTED" =       "Bad Mode Selected"
+"$$OCTAL MODE ERROR"    =       "You cannot use this key in ^1 mode."
+/**************************************************/
+
+"$$ERROR DURING IMPORT" = "インポート中にエラーが発生しました．"
+"$$EXPORT TITLE" = "データベースの出力"
+"$$EXPORT MSG" = "どれを出力しますか？"
+"$$ALL" = "全て"
+"$$FUNCTIONS ONLY" = "関数のみ"
+"$$VARIABLES ONLY" = "変数のみ"
+
+/**************************************************
+ *         MISC STRINGS (17)                      *
+ **************************************************/
+"$$FUNCTION MODIFICATION" =     "関数の変更"
+"$$VARIABLE MODIFICATION" =     "変数の変更"
+"$$NEW FUNCTION"    =   "新しい関数"
+"$$NEW VARIABLE"    =   "新しい変数"
+"$$STRVARIABLE"     =   "変数"
+"$$STRFUNCTION"     =   "関数"
+"$$GRAPH FUNCTION"  =   "グラフ関数"
+"$$NONE"        =   "なし"
+"$$USER"        =   "ユーザ"
+
+"$$MNCOPY"      =   "複写"
+"$$MNSAVE AS"       =   "保存"
+"$$MNDATAMGR"       =   "データ管理"
+"$$MNGUESSIT"       =   "推測する"
+"$$ENGDISPL"        =   "->EngDisplay"
+"$$MNDEGREE"        =   "->Degree"
+"$$MNDEGREE2"       =   "->Degree2"
+"$$MNRADIAN"        =   "->Radian"
+"$$MNGON"       =   "->e^(ix)"
+"$$MNCIS"       =   "->cos()+isin()"
+
+/**************************************************
+ *         Graph strings (15)                     *
+ **************************************************/
+"$$SELECT A FUNCTION"   =   "関数の選択"
+"$$GRAPH COMPUTING" =   "グラフ計算"
+"$$GRAPH COMPUTING RESULT" =    "グラフ計算結果"
+"$$COMPUTING"       =   "計算中"
+"$$COMPCONFIRM"     =   "計算には時間がかかります．OK を押すと計算を始めます．"
+"$$COMPRESULT"      =   "^1 : graphres = ^2"
+"$$LEFTBOUND"       =   "左の端を選択して，'C' ボタンを押してください．"
+"$$RIGHTBOUND"      =   "右の端を選択して，'C' ボタンを押してください．"
+"$$POINTONGRAPH"    =   "グラフ上の点を選択して，'C' ボタンを押してください．"
+"$$GRZERO"      =   "ゼロ点"
+"$$GRVALUE"     =   "f = 値"
+"$$GRMIN"       =   "最小値"
+"$$GRMAX"       =   "最大値"
+"$$GRDDX"       =   "d/dx"
+"$$GRINTEG"     =   "積分"
+"$$GRCBOUNDERR"     =   "左の端は，右の端よりも小さい値でなければなりません．"
+"$$GRINTERSECT"     =   "交点"
+"$$GRCFUNCERR"      =   "異なる２つの関数を選択してください．"
+
+/**************************************************
+ *         ERROR MESSAGES (17)                    *
+ **************************************************/
+"$$ERRNO ERROR"     =   "エラーはありません"
+"$$ERRSYNTAX ERROR" =   "文法エラー"
+"$$ERRBAD FUNCTION" =   "不正な関数"
+"$$ERRMISSING ARGUMENT" =   "引数がありません"
+"$$ERRBAD ARGUMENT TYPE" =  "引数の型が不正です"
+"$$ERRINTERNAL ERROR"   =   "内部エラー"
+"$$ERRBAD MODE SELECTED"=   "モードが不正です"
+"$$ERRNO RESULT"    =   "結果がありません"
+"$$ERRDIVISION BY 0"    =   "0で除算しました"
+"$$ERRNO SUCH VARIABLE" =   "変数がありません"
+"$$ERRBAD RESULT"   =   "結果が不正です"
+"$$ERRTOO DEEP RECURSION"=  "再帰が深すぎます"
+"$$ERRIMPOSSIBLE CALCULATION" = "計算不能です"
+"$$ERROUT OF RANGE"     =    "値が範囲外です"
+"$$ERRBAD ARG COUNT"    =   "引数の個数が不正です"
+"$$ERRBAD DIMENSION"    =   "次元が異なります"
+"$$ERRSINGULAR"     =   "Singular matrix"
+"$$ERRINTERRUPTED"  =   "処理を中断しました"
+
+/**************************************************
+ *         GRAPH SCREENS (13)                     *
+ **************************************************/
+"$$TABLE MODE..."   =   "値一覧.."
+"$$TABLE MODE"      =   "値一覧"
+"$$GOTO"        =   "移動"
+"$$STEP"        =   "Step"
+"$$GO"          =   "移動"
+"$$SETUP GRAPHS..." =   "グラフ構成.."
+"$$SETUP GRAPHS"    =   "グラフ構成"
+"$$GRAPH PREFERENCES..."    =   "グラフ設定.."
+"$$GRAPH PREFERENCES"   =   "グラフ設定"
+"$$DEFAULT"     =   "既定"
+"$$TRIGONO"     =   "三角関数"
+
+"$$FUNCMODE"        =   "関数"
+"$$POLARMODE"       =   "極座標"
+"$$PARAMMODE"       =   "媒介変数"
+
+"$$GRAPH COLORS"    =   "Graph Color Setup"
+"$$BACKGRND"    =   "backg"
+"$$AXIS"    =   "axis"
+"$$GRID"    =   "grid"
+
+/**************************************************
+ *         MENU EDIT (8)                          *
+ **************************************************/
+"$$EDIT"        =   "編集"
+"$$UNDO"        =   "元に戻す"
+"$$CUT"         =   "切り取り"
+"$$COPY"        =   "複写"
+"$$PASTE"       =   "貼り付け"
+"$$SELECT ALL"      =   "全て選択"
+"$$KEYBOARD"        =   "キーボード"
+"$$GRAFFITI HELP"   =   "Graffiti ヘルプ"
+
+/**************************************************
+ *         HELP STRINGS (7)                       *
+ **************************************************/
+"$$PREFHELP" = "EasyCalc の設定\n\n"\
+    "■誤差修正機能 (Reduce precision) - "\
+    "チェックされていると，浮動小数点の影響を避けるため，全ての演算の後に"\
+    "誤差の修正処理を行います．"\
+    "この設定は，全ての演算の速度を低下させるため，"\
+    "行列演算，統計処理，関数解決を行う場合は，この機能をオフにすることを"\
+    "お薦めします．"\
+    "\n\n"\
+    "■ゼロを省略 - "\
+    "チェックされていると，小数点以下のゼロが続く部分を表示しません．"\
+    "チェックされていないと，精度で指定された桁数分，ゼロが表示されます．"\
+    "\n\n"\
+    "■()自動記述 - "\
+    "チェックされていると，関数などを記述した際に閉じカッコ ')' を"\
+    "自動的に付加し，カーソルを内部に移動します．"\
+    "\n\n"\
+    "■単位表示 - "\
+    "工学演算モードにした際，10E3 を 10K などと表示します．"\
+    "この形式は入力の際にも利用可能です．"\
+    "\n\n"\
+    "■引数を例示 - "\
+    "引数が複数ある一部の関数を記述する際，引数の名前を表示します．"\
+    "\n\n"\
+    "■書式設定に従う - "\
+    "Palm の環境設定内の書式設定に従って，入力された数値を解釈します．"\
+    "通常はドット '.' とカンマ ',' はどちらも小数点区切りと見なされますが"\
+    "この設定がチェックされていると，書式設定された形式のみが"\
+    "有効になります．"\
+    "この設定は，他のアプリケーションから EasyCalc に数値を貼り付ける際"\
+    "などに役に立ちます．"\
+    "\n\n"\
+    "■通常で関数利用 - "\
+    "チェックされていると，通常演算モードに，三角関数，指数関数を"\
+    "行うためのボタンを表示します．"\
+    "チェックされていないと，簡単な指数関数のみが表示されます．"
+
+"$$BASIC HELP" = "最新版の情報は次の URL から入手可能です．\n"\
+    "http://easycalc.sourceforge.net"\
+    "\n\n"\
+    "EasyCalc は，一般とは異なる演算法で誤差の修正を行っています．"\
+    "この方式は，多くの条件下でより良い演算結果となりますが，"\
+    "唯一，円周率などを用いた演算においては，精度が落ちる場合があります．"\
+    "Radian を用いた goniometric functions の場合は，誤差修正機能を"\
+    "使わないことをお薦めします．"\
+    "\n\n"\
+    "Visor Platinum をお使いの方は，MathLib をインストール必要は"\
+    "ありません．"\
+    "\n\n"\
+    "新しいバージョンでは，グラフ機能などを省略したパッケージも"\
+    "用意しています．"\
+    "詳しくは INSTALL というファイルを参照してください．"\
+    "\n\n"\
+    "新しい関数などに関する情報は，specfuncs.pdf というファイルに"\
+    "記載されています．（英語）"\
+    "\n\n"\
+    "複数の引数を取る関数の場合，引数同士は ':' で区切ってください．"\
+    "\n\n"\
+    "計算機機能の Tips\n"\
+    "○Graffiti で改行を入力すると EXE ボタンを押した時と同じように"\
+    "計算が実行されます．\n"\
+/*
+    "○Typing the operators using graffiti area doesn't add 'ans' on the "\
+    "beginning of the line (usable only for '-3+4').\n"\
+*/
+    "○設定から，自動的にカッコを閉じるように設定されるかもしれませんが，"\
+    "EasyCalc では，最後のカッコを閉じる必要はありません．"\
+    "例： sin(3.5 \n"\
+    "○関数を定義する際，x が引数となります．例：f()=\"x^2\"\n"\
+    "○Degree を利用する場合，90ｰ30' のような指定が可能です．\n"\
+    "○現在のバージョンでは，数式のように 3pi+4e や"\
+    " 3sin(x) と記述することができます．\n"\
+    "○複素数の演算は遅いです．複素数の利用は設定からオン／オフできます．"\
+    "\n"\
+    "○工学で用いる M-mega, G-giga, T-terra, n-nano, f-femto などの"\
+    "単位が利用可能です．"\
+    "通常の数式と同じように記述してください．例：10G, 1/80T"\
+    "\n"\
+    "○独自に複数の引数を持つ関数を定義することが可能です．"\
+    "その場合，第二引数は 'x(2)'，第三引数は 'x(3)' などと"\
+    "指定してください．"
+
+"$$GNU NOTICE" =  "The Scientific Calculator for PalmOS.\n"\
+    "日本語訳：Yoshimov@pobox.com\n"\
+    "Copyright (C) 1999-2003, 2006, 2007 Ondrej Palkovsky.\n"\
+    "http://easycalc.sourceforge.net\n\n"\
+    "This program is free software; you can redistribute it and/or modify "\
+    "it under the terms of the GNU General Public License as published by "\
+    "the Free Software Foundation; either version 2 of the License, or "\
+    "(at your option) any later version.\n\n"\
+    "This program is distributed in the hope that it will be useful, "\
+    "but WITHOUT ANY WARRANTY; without even the implied warranty of "\
+    "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the "\
+    "GNU General Public License for more details.\n\n"\
+    "You should have received a copy of the GNU General Public License "\
+    "along with this program; if not, write to the Free Software "\
+    "Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA"
+
+"$$GRPREF HELP" = "グラフ描画設定"\
+    "\n\n"\
+    "■xmin, xmax, ymin, ymax - グラフを描画する範囲"\
+    "\n\n"\
+    "■既定 - "\
+    "X軸とY軸の描画範囲が -7 から 7 に設定されます．"\
+    "\n\n"\
+    "■三角関数 - "\
+    "X軸とY軸の描画範囲が -2pi から 2pi に設定されます．"\
+    "\n\n"\
+    "■通常関数，極座標，媒介変数 - "\
+    "グラフの種類を選択することができます．"\
+    "通常関数では，y=f(x) の形式で表される関数を描画します．"\
+    "極座標では，r=f(t) のように，角度 t をパラメータとして，"\
+    "極座標からの距離 r を返す関数を描画します．"\
+    "媒介変数では，X=t, Y=6t のように，媒介変数 t を元に，"\
+    "X座標，Y座標を別々の関数で定義する関数を描画します．"
+
+"$$GRSETUP HELP" = "描画するグラフを構成します．"\
+    "\n\n"\
+    "関数の ID 部分 (X1,Y1,r1..) をタップすると，現在定義されている関数を選択することができます．"\
+    "\n\n"\
+    "関数部分をタップすると，関数を編集することができます．"
+
+"$$FINHELP" = "Basic financial calculation can be described this way: "\
+    "You have some money in the bank (PV, present value). X-times a year(P/YR, "\
+    "payments per year) you deposit some money (PMT, payment) into your bank "\
+    "account. Bank adds every time some amount of money, it's a percentage of "\
+    "the amount that is currently on your account, and the percentage is called "\
+    "interest (IT).\n"\
+    "After a given number of deposits (NP, Number of periods) you decide to "\
+    "withdraw "\
+    "your money from bank. What you will get from bank is a future value(FV).\n"\
+    "This implementation expects that the deposit period is equal to the "\
+    "time the bank adds interest to your account." \
+    "\n\n" \
+    "!!! This implementation uses the 'cash flow' meaning of sign. E.g. " \
+    "'+' may mean 'money to bank' and '-' means 'money from bank'. There " \
+    "are many people asking me to change the sign, but IMO this is the " \
+    "correct and least confusing way how to show the meaning."
+
+"$$MEMOHELP" = "メモを選択して OK ボタンを押すと，メモの内容が実行されます．"\
+    "メモの最初の行は，タイトルと認識され，実行されません．"\
+    "メモは，一行ずつ EasyCalc の入力部分に入力された場合と同じように実行されます．\n\n"\
+    "メモ帳に 'EasyCalc' というカテゴリがある場合，"\
+    "このカテゴリ内のメモだけが一覧に表示されます．"
+
+"$$FUNCHELP" = "関数に関して\n" \
+    "以下では関数解決を行う関数を説明します．"\
+    "関数解決を行う関数の 'func' とされている部分は，"\
+    "'f()' のように定義された関数名を記述するか，'\"x+1\"' のように"\
+    "直接関数の内容を記述することができます．\n\n"\
+/*
+    "全ての関数はオプションとしてエラーを引数に取ることができます．"\
+    "All following functions have 1 extra OPTIONAL argument defining the "\
+    "error with which they should compute. The smaller the error, the "\
+    "slower the computing.\n\n" \
+*/
+    "fzero(min:max:func[:error]) - min と max の間で f(x) がゼロになる x を計算します．\n\n"\
+    "fvalue(min:max:value:func[:error]) - min と max の間で"\
+    "f(x)=value になる x を計算します．\n\n"\
+    "fmin(min:max:func[:error]) - min と max の間で f(x) の値が"\
+    "最小となる x を計算します．\n\n"\
+    "fmax(min:max:func[:error]) - min と max の間で f(x) の値が"\
+    "最大となる x を計算します．\n\n"\
+    "fd_dx(point:func[:error]) - f(point) を微分した値を計算します．\n\n"\
+    "fsimps(min:max:func[:error]) - min と max の間で，Simpson 法を用いて"\
+    "有限積分を行います．\n\n"\
+    "fromberg(min:max:func[:n]) - min と max の間で，Romberg 法を用いて"\
+    "有限積分を行います．n が大きいと計算が遅くなります．\n\n"\
+    "fintersect(min:max:f1:f2[:error]) - min と max の間で，"\
+    "f1 と f2 の２つの関数の交点を求めます．"
+
+/**************************************************/
+"$$SOLVERHELP" = "The Solver is a tool, that helps you store equations "\
+        "and formulas and compute results in a convinient way. "\
+    "Create a new worksheet or select existing one from the drop-down "\
+    "menu. When the worksheet is selected, you can type in either formula "\
+    "(e.g. pi*r^2) or equation (e.g. x^2=x+2). Then tap the 'Update' "\
+    "button and the list of variables gets updated. If you wrote in formula, "\
+    "set up the variables and tap button 'Calculate'. If you entered equation, "\
+    "select the variable you want to solve and press button 'Solve'.\n\n"\
+    "You may annotate the function and the variables. Press the 'Note' button "\
+    "and add a note. If you start a new line with a name of variable and colon "\
+    "(e.g. 't: Time'), the rest of the line is treated as a description of the "\
+    "variable and shown to you when you select the variable in the list.\n\n"\
+    "The equation solving internally uses fzero() function, you can modify the "\
+    "parameters by tapping the 'Options' button."
+
+END
+

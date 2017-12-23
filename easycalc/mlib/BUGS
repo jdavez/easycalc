@@ -1,0 +1,5 @@
+
+The Euler gamma function code is somewhat limited in accuracy,
+especially for negative values that are close to negative integers.
+For values within +- 0.1 of a negative integer, the approximation can
+only yield 5-6 figure accuracy.  I'm working on how to fix this.

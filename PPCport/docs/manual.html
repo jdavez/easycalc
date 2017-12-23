@@ -1,0 +1,2281 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>EasyCalc Manual</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" >
+<style type="text/css">
+ body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+ }
+ tt {
+  font-size: 1.2em;
+ }
+ pre {
+  font-size: 1.2em;
+ }
+ blockquote.c4 {MARGIN-RIGHT: 0px}
+ p.c3 {text-align: left}
+ p.c2 {font-weight: bold}
+ blockquote.c1 {font-weight: bold}
+</style>
+</head>
+
+<body>
+<h1>EasyCalc Manual</h1>
+<h2>for Version 1.25g Pocket PC</h2>
+<p>
+<IMG height="294" width="242" alt="Title 1"
+ src="images/Title-1.png" border="1">
+<IMG height="293" width="242" alt="Title 2"
+ src="images/Title-2.png" border="1">
+<IMG height="294" width="243" alt="Title 3"
+ src="images/Title-3.png" border="1">
+<IMG height="292" width="240" alt="Title 4"
+ src="images/Title-4.png" border="1">
+</p>
+<br />
+<A NAME="TOC"></A>
+<h2>Table of Contents</h2>
+
+<A HREF="#SEC01">01. Introduction</A><BR />
+<A HREF="#SEC02">02. Installation</A><BR />
+<A HREF="#SEC03">03. Syntax and Interface</A><BR />
+<A HREF="#SEC04">04. EasyCalc Basics</A><BR />
+<A HREF="#SEC05">05. Preferences</A><BR />
+<A HREF="#SEC06">06. Graphing</A><BR />
+<A HREF="#SEC07">07. Trigonometry</A><BR />
+<A HREF="#SEC08">08. List and Matrix Basics</A><BR />
+<A HREF="#SEC09">09. Statistics with Lists</A><BR />
+<A HREF="#SEC10">10. Digital Signal Processing</A><BR />
+<A HREF="#SEC11">11. Linear Algebra with Matrices</A><BR />
+<A HREF="#SEC12">12. Probability</A><BR />
+<A HREF="#SEC13">13. Complex Calculations</A><BR />
+<A HREF="#SEC14">14. Integer/Base Operations</A><BR />
+<A HREF="#SEC15">15. Numerical Analysis</A><BR />
+<A HREF="#SEC16">16. Solver</A><BR />
+<A HREF="#SEC17">17. Financial Manager</A><BR />
+<A HREF="#SEC18">18. Function Reference part 1</A><BR />
+<A HREF="#SEC19">19. Function Reference part 2</A><BR />
+<A HREF="#SEC20">20. Function Reference part 3</A><BR />
+<A HREF="#SEC21">21. Some Useful Constants</A><BR />
+<A HREF="#SEC0A">A. License</A><BR />
+<A HREF="#SEC0B">B. Credits</A><BR />
+
+<A NAME="SEC01"></A>
+<h2>01. Introduction</h2>
+<p>
+EasyCalc is a scientific graphing calculator for PalmOS and Pocket PC devices.
+This manual is for the Pocket PC version.
+EasyCalc has the ease-of-use of the built-in OS Calculator, but adds
+all the features of a top-of-the-line (TI-89, HP-49) scientific graphing
+calculator except CAS (computer algebra system) and programming
+(although user defined functions are possible).
+</p>
+<p>This manual is based on the EasyCalc documentation submitted by
+&lt;halliday at users.sourceforge.net&gt; and Ondrej Palkovsky's tutorial
+from previous EasyCalc versions. It also covers the new features introduced
+in recent versions (&gt;= 1.23).
+</p>
+<p>Features and Specifications:</p>
+<ul>
+<li>Skinnable like Free42 (this part of the code was reused from it).
+<li>Dynamic language support: Czech, German, Russian, Ukrainian, English, Japanese, Portuguese, French, Italian, Spanish.
+<li>IEEE-754 double precision math routines.
+<li>Algebraic (not RPN) entry.
+<li>Range of values: +/- 1E-308 to +/-1E308 (IEEE 754 double precision);
+    up to 15-digit (user-selectable) decimal precision.
+<li>150+ built-in functions including: trigonometry, complex numbers,
+    exponential, probability, statistics, numerical analysis of functions
+    (roots, derivatives, integrals, intersection), discrete math, digital
+    signal processing, list, matrix, and special.
+<li>Unlimited user-defined variables and functions.
+<li>Multipe levels of nested parentheses limited only by available stack memory.
+<li>Multiple screens easily categorize functions.
+<li>"ANS" button (last result).
+<li>Scrolling history.
+<li>Scrolling menu access to user- and built-in functions and variables.
+<li>Angular Units: Radian, Degree and Grad.
+<li>Integer Base Operations: Decimal, Binary, Hexadecimal, and Octal.
+<li>Display Formats: Normal, Scientific and Engineering display modes.
+<li>Automatic parentheses matching.
+<li>Full OS clipboard support.
+<li>Complex number support in all functions.
+<li>Graphics (available as of 1.25g PPC):
+  <ul>
+  <li>Normal (Cartesian), polar, and parametric graphs.
+  <li>Graph up to six functions simultaneously with trace and numerical analysis.
+  <li>Graphs have user definable colors, axes, axes lables, range, grid, log and log-log.
+<!--  <li>"Table Mode" of graph function values. -->
+  <li>Zoom in/out.
+  <li>Live screen scrolling.
+  <li>Adjustable graph resolution.
+  </ul>
+</ul>
+
+And more coming in future versions...<BR />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC02"></A>
+<h2>02. Installation</h2>
+
+<h3>Requirements</h3>
+Windows mobile device with WM5, WM6 or compatible.
+About 600K of free memory.
+
+<h3>Installation</h3>
+<p>Before upgrading, export user variables and functions to unicode or MBCS text files as a precaution.
+It is also a good idea to copy the state.bin file to some place or under another name,
+like state.bin.sav, in case something goes wrong in the migration and we want to investigate it.
+</p>
+<p>Until there is a .CAB file, install program and accompanying files in the archive in the directory of your choice.
+Keep the directory structure.</p>
+<p>It is possible to not copy the docs subdirectory in order to save space,
+removing access to calculator help.
+The Help->Help sub-menu item will then start Internet Explorer on a non existing page
+and will generate an error message inside IE.
+</p>
+
+<p>After install, if needed import your user variables, functions and equations from .utxt or .txt files (.utxt is unicode).</p>
+
+<p>On first install, or after a clean install, EasyCalc issues the following message,
+which is normal:<br />
+"No or wrong version state file (normal on first run or after a clean install). Reinitializing with defaults."<br />
+Simply close the application with File->Exit, and next time it is open, no such message will appear again.
+</p>
+<p>The reason EasyCalc is delivered with no state.bin file is that this file is storing all user variables, user functions, equations and configuration.
+If a default state.bin file were supplied in the package, it would replace the existing state.bin file, and one would lose one's work / config each time one upgrades to a new release.
+</p>
+
+<h3>Uninstallation</h3>
+<p>
+Until there is a CAB file for install, simply delete the directory where EasyCalc has been stored.
+</p>
+<h3>Note</h3>
+<p>
+See also the file ReadMe.txt in the distribution which contains the most recent
+information about installing EasyCalc.
+</p>
+<BR />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC03"></A>
+<h2>03. Syntax and Interface</h2>
+
+Conventions used in this manual:
+<ol>
+<li><tt>ans></tt> will be used to indicate the results of entering the
+ previous statement into EasyCalc (what is shown on the 'Result Line')
+
+<li>'Single Quotes' are usually used only for clarification, and
+ should not be entered. 'Single quotes' should be entered when used as an
+operator in matrix transposition, DegreeMinuteSecond-style entry, and complex
+conjugates.<br />
+"Double quotes" are <strong>required</strong> around the expression
+when defining a function.
+
+<li>Curly braces {} are used to indicate optional parameters.
+
+<li>When an example expression is given, the next line(s) should be
+entered into EasyCalc exactly as shown, followed by the 'EXE' key (or
+the Palm 'Return' Graffiti stroke).
+</ol>
+
+<h3>EasyCalc Syntax</h3>
+
+<p>To enter numbers or functional expression (such as <tt>3*sin(pi/2)</tt>),
+you may use the on-screen buttons, graffiti and/or keyboard, and switch between
+them at will.</p>
+
+<p>EasyCalc supports 'implicit' multiplication (without the '*' operator):<br />
+<tt>3e+1<br />
+ans> 9.154 845 485<br />
+3E+1<br />
+ans> 30</tt><br />
+The priority of the hidden implicit multiplication operator is very
+high. When you enter <tt>3^6pi</tt>, <tt>3^(6*pi)</tt> is executed.
+The priority of an explicitly written multiplication '*' operator is as
+expected.</p>
+
+<p>EasyCalc doesn't require closing parentheses:<br />
+<tt>2sin(pi/2</tt><br />
+...is interpreted as 2*sin(pi/2)<br />
+<tt>ans>2</tt></p>
+
+<p>The 'ANS' button displays the last computed result.
+The 'ans' variable is inserted automatically when you are at the
+beginning of the line, and press some 'operation' button.<br />
+Example:<br />
+<tt>sin(pi)</tt><br />
+...now tap the 'plus' button<br />
+<tt>ans> ans+</tt><br />
+...now complete the expression with '1', and tap EXE to compute sin(pi)+1>.
+
+<p>Tip: if you select an expression (or a part of it), and then tap a
+function button, the selected text is inserted into the function and
+remains selected.<br />
+This works for parentheses, too: if you forgot to put part of an
+expression in parens, simply select it and tap the '(' button.</p>
+
+<h3>EasyCalc Interface</h3>
+
+<p>On the main EasyCalc screen:<br />
+<img width="242" height="294" alt="BasicMainScreen" src="images/BasicMainScreen.png" border="1"><br />
+First is a line of 'annunciators', showing modes and menus. Tap on them to change or trigger actions, see below for more details.<br />
+The first line below the 'annunciators' is the 'Results Line', where EasyCalc
+displays the results of computations or error messages.<br />
+If the contents of the Result Line are too long to display, tap on the arrow annunciators which appear on each side to scroll left or right.<br />
+In a later release, you will be able to drag the Result Line left and right to see the whole thing.<br />
+On the side is another set of 'annunciators' to tap.<br />
+</p>
+
+<p>The next two lines are the 'Entry Line', where user input is
+entered.</p>
+
+<p>Annunciators:</p>
+<ul>
+<li>Tap on 'Rad'/'Deg'/'Grd' to change the Angular mode (See Trig section).
+<li>Tap on 'Dec'/'Oct'/'Bin'/'Hex' - to change the numeric display/input mode.
+<li>Tap on 'V' to bring up user-defined variables:<br />
+<img width="242" height="293" alt="V-Popupmenu" src="images/VPopupMenu.png" border="1"><br/>
+<li>Tap on 'F' to bring up user-defined functions.
+<li>Tap on 'f' to bring up a list of EasyCalc built-in functions.
+<li>'1', '2', '3', 'G' - select the active skin (3 skins, and a Graph mode).
+Note: G became available as of 1.25g PPC.
+<li>'M' pops up a menu:<br />
+<img width="243" height="208" alt="M-Popupmenu" src="images/MPopupMenu.png" border="1"><br/>
+- Copy (results to OS clipboard)<br />
+- DataMgr (edit user variables and functions)<br />
+- Save as (results to a variable)<br />
+- GuessIt (simplify result - see Basics)<br />
+->xxx display (display in normal, scientific or engineering form. Ex: 1E6 -> 1M)<br />
+->Degree, ->Degree2, ->Radian, ->Grad convert to another angular metric (see Trig section).
+<li>'H' - history of user entries and results, most recent at top.
+</ul>
+<p>
+<br />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC04"></A>
+<H2>04. EasyCalc Basics</H2>
+
+<p>EasyCalc supports all common (and most uncommon) mathematical functions
+and operations found on the best scientific calculators. See the
+Function Reference sections for a complete list of all functions.</p>
+
+<H3>Variables and Functions</H3>
+
+<p>EasyCalc supports an unlimited number of variables and functions.
+Variable names cannot be: pi, e, f, i, j, k, m, n, p, u, or x (see the
+Function Reference section for details). They may consist of lower-case
+letters, numbers, and the underscore symbol '_', and can be up to 10
+characters long. If you define a variable with the same name as a
+function, the function will be overwritten (and vice versa).</p>
+
+<p>A variable is defined by entering:<br />
+<tt>name=value</tt></p>
+
+<p>Example:<br />
+<tt>a=31</tt><br />
+The value 31 is stored in variable 'a', which can be used in other
+expressions and calculations.</p>
+
+<p>If you then enter <tt>a=3*a</tt>  thevariable 'a' will contain the number
+93.</p>
+
+<p>A function is defined by entering:<br />
+<tt>name()="expression"</tt><br />
+The "expression" <strong>must</strong> be enclosed in double quotes, and the
+parentheses must be left empty).</p>
+
+<p>Example:<br />
+<IMG height="124" width="243" alt="Function f() 1"
+ src="images/Function-f-1.png" border="1">
+<IMG height="123" width="241" alt="Function f() 2"
+ src="images/Function-f-2.png" border="1"><br />
+<tt>f()="x^2"<br />
+f(3)<br />
+ans> 9</tt></p>
+
+<p>Function definitions <strong>must</strong> use 'x' as the parameter.<br />
+You can delete or edit defined functions and variables by tapping the
+'DataMgr' in the 'M'-menu (to the right of the Result Line).</p>
+
+<p>To define functions that accept more then one input variable, use 'x' or
+'x(1)' for the first parameter, 'x(2)' for the second parameter, 'x(3)'
+for the third, etc. When calling the function, separate values with a
+colon.</p>
+
+<p>Example (quadratic formula):<br />
+<tt>quadsoln1()="( -x(2) + sqrt(x(2)^2 - 4*x(1)*x(3)) ) / (2*x(1))"<br />
+quadsoln1(1:-2:-3)<br />
+ans> 3</tt></p>
+
+<p>You can separate multiple expressions or definitions on one line with a
+semicolon ';'. Only the result of the last expression is displayed.</p>
+
+<p>Example:<br />
+<tt>a=3;b=7;c=4;quadsoln1(a:b:c)<br />
+ans> -1<br />
+b^2<br />
+ans> 49</tt></p>
+
+<H3>Programming</H3>
+
+<p>EasyCalc can't execute 'programs', except by separating functions and
+expressions with the semicolon.</p>
+
+<p>EasyCalc can save its workspace of user-defined variables and functions
+to MemoPad. In the Special menu, select 'Export to memopad' or 'Import from
+memopad'. If there is a category named 'EasyCalc' in MemoPad, only
+memos from that category are displayed.</p>
+
+<p>The first line of an imported memo (the title) is not executed. The
+imported memo is executed just as if you inserted the text line-by-line
+into the calculator.</p>
+
+<p>Simple function routines can be built using the semicolon, lists for
+input/output series, user defined variables and functions, and the
+ask(), and if() functions, although only one line can be
+executed at a time.</p>
+
+<p>
+<tt>ask("title"{:default value})</tt> - opens a dialog with the (optional)
+default entered. Returns the user input.
+</p>
+<p>
+<tt>if(test:true-expr:false-expr)</tt> - evaluates test and returns
+the appropriate expression. Test must return a positive integer ('true') or
+zero ('false'). The not used expression is <strong>not</strong> evaluated.
+</p>
+<p>
+Example: Recursive factorial definition.<br />
+<tt>myfact()="if(x>1:x*myfact(x-1):1)"<br />
+ans> myfact()<br />
+myfact(3)<br />
+ans> 6
+myfact(100)<br />
+ans> Too deep recursion</tt> - Limited stack space for recursion !!!<br />
+<tt>res=myfact(ask("Enter argument for myfact":5))</tt><br />
+<IMG height="214" width="242" alt="Ask myfact()"
+ src="images/AskMyfact.png" border="1"><br />
+Tap/Select 'OK'<br />
+<tt>ans> 120</tt>
+</p>
+
+<H3>'GuessIt' Simplification</H3>
+
+<p>EasyCalc can rationalize a number to fractions, common square roots, and
+powers of e or pi. If the number is integer it tries to write the number
+as prime factors</p>
+
+<p>Examples:<br />
+<tt>acos(0)<br />
+ans> 1.570 796 327</tt><br />
+in the 'M' menu, choose 'GuessIt':<br />
+<tt>ans> pi/2<br />
+<br />
+6/21+1/5<br />
+ans> 0.485 714 286</tt><br />
+'M' ->GuessIt<br />
+<tt>ans> 17/35<br />
+<br />
+533<br />
+ans> 533</tt><br />
+'M' ->GuessIt<br />
+<tt>ans> 13*41</tt>
+</p>
+<br />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC05"></A>
+<H2>05. Preferences</H2>
+
+<p>
+<IMG width="240" height="292" alt="Preferences" src="images/Title-4.png" border=1>
+</p>
+
+<p>
+Radian/Degree/Grad mode - applies to all calculations. Can also be set
+on the main screen taping on annunciators.
+</p>
+<p>
+Decimal/Binary/Octal/Hexadecimal - sets output formatting mode. Can also
+be set on the main screen taping on annunciators.
+</p>
+<p>
+Normal/Scientific/Engineer - display mode for results.
+<p>
+Force integer nums - Note: Graphing will NOT work properly with this
+checked. Generally, you will not check this UNLESS you are working with
+base conversions. This setting applies to input recognition and
+displaying results, but doesn't change computing behavior. The
+expression '3.14159' isn't recognized in integer modes (Bin/Oct/Hex),
+because '3.14159' is a floating point number. 'pi' outputs the correct
+result regardless of mode, because 'pi' is a floating point constant.
+Floating point output formatting prints at most 10 digits, but integer
+number formatting will print always the whole number - this makes sense
+only for 32-bit numbers converted to Binary. See the Integer/Base
+Operations section for more details.
+</p>
+<p>
+Precision - the number of digits to display after the decimal point.
+</p>
+<p>
+Reduce precision - When checked, floating point numbers are rounded off
+to 13 places after each calculation, and will round certain results
+smaller than 1E-14 to zero. This avoids results like: sin(pi)=1E-15.
+Selecting this option slows all operations a little, so I recommend
+switching it off if you are going to use Numerical Analysis (fzero(),
+etc.). If you use Numerical Analysis in Graphing mode, 'Reduce
+precision' turns off automatically.
+</p>
+<p>
+Strip zeros - output '3.100' or '3.1'
+</p>
+<p>
+Insert Help - insert argument names for some multiparameter functions
+on the input line.
+</p>
+<p>
+Match ()'s - Can be very handy. If checked, then tapping a function
+button automatically inserts the closing bracket and moves the cursor
+position between the brackets.
+</p>
+<p>
+OS Num Prefs - If checked, EasyCalc allows entering numbers exactly
+according to OS Preferences. Not recommended unless you use
+clipboard for moving data from other applications.
+</p>
+<p>
+Show Units - If checked and the engineer mode is selected, numbers get a
+unit to them at the output (e.g. 1E6 -> 1M ).
+</p>
+<br />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC06"></A>
+<H2>06. Graphing (made available with 1.25g PPC)</H2>
+
+<H3>Entering/Plotting Graphs</H3>
+<p>
+Switch to Graph mode by tapping the 'G' at the top of the screen.
+</p>
+<p>
+Set up the functions to graph by tapping 'conf'.
+<br />
+<IMG width="240" height="215" alt="Setup Graphs"
+ src="images/SetupGraphs.png" border="1">
+<br />
+Tap the area to the RIGHT of 'Y1' and enter any valid expression in terms
+of 'x', such as 'x^2-4' - but WITHOUT any quotes.<br />
+<i>[Not in PPC version -> <s>For each graph you can select the color and the line style
+(line/points/vertical).</s>]</i>
+Each graph can be turned on and off individually.
+<i>[Not in PPC version -> <s>The color of the axes, the grid and the graph background are also user
+selectable.  You can also turn the axes, axes labels and the grid on and off.</s>]</i>
+</p>
+<p>
+Change Graph Preferences by tapping 'prefs'.<br />
+<IMG width="240" height="264" alt="Graph Preferences 1"
+ src="images/GraphPreferences-1.png">
+<IMG width="240" height="262" alt="Graph Preferences 2"
+ src="images/GraphPreferences-2.png">
+<IMG width="240" height="263" alt="Graph Preferences 3"
+ src="images/GraphPreferences-3.png"><br />
+Here you can setup the display area (min and max bounds, grid interval) and
+type of graph (normal, polar, parametric).  Either axis can be logarithmically
+scaled. Note that for Polar graphs the angle units (th-min, th-max, th-step)
+obey the Rad/Deg/Grd setting.
+</p>
+<p>
+You may also enter an existing user-defined function, and if necessary,
+pass it additional parameters (to make it a graphable function of one
+variable).
+</p>
+<p>
+Example:<br />
+In Scientific mode, define this familiar function of 1 variable 'x', and
+3 other parameters:<br />
+<tt>quad()="x(2)*x^2 + x(3)*x + x(4)"</tt><br />
+In Graphing mode,<br />
+Tap 'conf' to Setup Graphs.<br />
+Tap the area to the right of 'Y1'.<br />
+Tap 'F' (user functions) and select quad().<br />
+Enter 4 parameters for quad(), which will be passed to x, x(2), x(3),
+and x(4). Here, we tell EasyCalc to take the first parameter as the
+independent variable for the graph (must always be 'x'), and take the
+other three as constant parameters:<br />
+<tt>quad(x:1:-2:-3)</tt>
+</p>
+<p>
+You may enter up to six functions in each mode (Function, Polar,
+Parametric). The functions are stored as 'z_grafun1()', 'z_grapol1()',
+'z_grapara1()',  etc., and can be
+used and modified in the non graphical modes.<br />
+When entering an expression, the 'V', 'F', and 'f' buttons are
+available and work the same as on the main screen.<br />
+To remove a function, tap the 'Y1' button itself and select 'Delete' from
+the popup menu.
+</p>
+
+<H3>Graph</H3>
+<p>There is a graph zone and a smaller track view zone which highlights
+where is the graph view zone if it's in there.
+<IMG width="241" height="293" alt="Graph speed" src="images/GraphSpeed.png">
+<br />
+
+<H3>Select or scroll graph</H3>
+<p>
+On both zones, you can tap and drag the graph to scroll around, or select
+a point on, or a part of, the graph, depending on the mode.
+</p>
+<p><b>Select mode:</b> This is the button with the select square.
+</p>
+<p><b>Move mode:</b> This is the button with a curve and vertical + horizontal arrows.
+</p>
+<p><b>Curve track mode:</b> This is the button with a curve and dashed lines.
+The 'calc' key only works in this mode, when a point is selected, or a zone is selected.
+When pressing the key, a popup asks for which curve to track on.
+</p>
+<p><b>Center mode:</b> This is the button with a rectngle and vertical + horizontal arrows.
+</p>
+<p>In each mode, tap or drag has the following effect:
+</p>
+<table border=1>
+<tr>
+<td width=162></td>
+<td width=162><b>Graph zone</b></td>
+<td width=162><b>Track zone</b></td>
+<td width=162><b>Track sync'ed to graph ?</b></td>
+</tr>
+<tr>
+<td><b>Select mode</b></td>
+<td><u><i>drag</i></u> = update x,y + define zoom in (press '+' to zoom to it). Can be non square.
+<br /><u><i>tap</i></u> = update x,y
+</td>
+<td><u><i>drag</i></u> = update x,y + define graph zone (press '+' to set graph to it). Can be non square.
+<br /><u><i>tap</i></u> = update x,y
+</td>
+<td align=center>N
+</td>
+</tr>
+<tr>
+<td><b>Move mode</b></td>
+<td><u><i>drag or tap</i></u> = update x,y + move graph zone.
+</td>
+<td><u><i>drag or tap</i></u> = update x,y + move track zone.
+</td>
+<td align=center>N
+</td>
+</tr>
+<tr>
+<td><b>Curve track mode</b></td>
+<td><u><i>drag</i></u> = update x,y + define selected zone on curve.
+<br /><u><i>tap</i></u> = update x,y + define selected point on curve.
+</td>
+<td><u><i>drag</i></u> = same.
+<br /><u><i>tap</i></u> = same.
+</td>
+<td align=center>N
+</td>
+</tr>
+<tr>
+<td><b>Center mode</b></td>
+<td><u><i>drag or tap</i></u> = Same as Move mode.
+</td>
+<td><u><i>drag or tap</i></u> = update x,y + move graph zone.
+</td>
+<td align=center>Y, centered on graph each time the graph is moved
+</td>
+</tr>
+</table>
+
+<H3>Zoom, normed display, moving through graph</H3>
+<p>There is one set of zoom buttons for each of the graph zone or the track view zone.
+They function in the same way. However, the track view zone will always be normed,
+i.e. in "square" mode, or in other words, 1 vertical = 1 horizontal. So it will
+fit to the biggest border of the selected rectangle.
+A contrario, the graph zone will show all the defined selected zone in Select mode.
+Meaning that selecting a rectangle will result in a non normed display, where
+1 vertical != 1 horizontal : the biggest rectangle border will be "shrinked" to
+fit with the display square to include everything.</br>
+Come back to a normed mode (square mode) by tapping on the square button.
+</p>
+<ul>
+<li>'-' button - zoom out by a 2x factor</li>
+<li>'+' button - zoom in. In Select mode, select zone and tap '+' to zoom on it.
+In other modes, or in select mode but with no selection, tap '+' and zoom by
+a 2x factor on the graph center.</li>
+<li>'square' button (only for graph zone) - restore a normed display. This will expand the [min, max]
+range on the smallest axis to the same extent than the biggest one, keeping
+the same center.</li>
+<li>'0' button - Bring zone center back to origin (0, 0).</li>
+<li>'->' button - Goto specified (x, y) = a dialog will appear to type X then Y.
+Note that in Curve track mode, there will be no dialog asking for 'Y'. Instead,
+Y will be calculated from the specified X using the selected curve.</li>
+<li>Use up/down and left/right arrows to move the graph zone accordingly.</li>
+</ul>
+
+<H3>Table Mode [Not in PPC version]</H3>
+<p>
+<s>(Menu-> Graph-> Table Mode) displays exact values of the parameter 'x'
+and values of all the functions simultaneously.<br />
+<IMG width="160 "height="160" alt="Table Mode"
+ src="images/TableMode.png"><br />
+GoTo will start the table at a specific value (Tip: you may just write a
+number, without tapping GoTo first)<br />
+The initial table step value is set by the 'xscale' parameter in Graph
+Preferences. It can be changed on the Table Mode form by tapping the Step
+button.
+</s></p>
+
+<H3>How to use the Curve track mode</H3>
+Tap on
+<IMG width="29" height="19" alt="Curve track button"
+ src="images/CurvetrackButton.png">
+then select a function to track or select on ('Y1' etc.).<br />
+Tap on screen to show a cross, with vertical line = selected X, and
+horizontal line = calculated Y on the selected curve.<br/>
+Tap then drag to show a selected zone on the curve, from x0 to x.<br/>
+<br/>
+X and Y on the bottom left will show the last selected point.<br/>
+The two numbers on each side of '<->' on the bottom left will show
+the selected range: x0 to x in function mode, t0 to t in parameteric mode,
+and th0 to th in polar mode.<br/>
+<br/>
+In function mode, dragging the pen horizontally traverses the x range
+defined in Graph Preferences. In polar mode, dragging the pen horizontally
+traverses the th angle range defined in Graph Preferences.
+And in parametric mode, dragging the pen horizontally varies the parameter t
+over the range defined in Graph Preferences.<br />
+<IMG width="241" height="268" alt="Tracing Polar Graph"
+ src="images/TracePolar.png" border="1"><br />
+
+<H3>Numerical Analysis</H3>
+<p>
+EasyCalc can find a zero (root), value, local minimum and maximum of a
+function, first and second derivatives, integral, and intersection with
+another function:<br />
+Tap the 'calc' button in Curve track mode, after having selected a point or
+an area.<br />
+Select an operation from the presented list:<br />
+- zero, find value, min, max, intersection, integral require a zone selection,<br/>
+- derivatives require a point selection at least (or they will calculate on
+the maximum x of selected zone).<br/>
+Note: intersection will ask you to select a second function.<br />
+<IMG height="268" width="242" alt="Graph Computing Result"
+ src="images/GraphComputingResult.png" border="1">
+</p>
+<p>
+The result of the operation will be stored in a variable called 'graphres'.
+</p>
+
+<H3>Notes</H3>
+<ul>
+<li>
+EasyCalc will only find one solution in an interval. Zoom in if
+multiple results are possible.
+
+<li>Deg/Rad/Grad mode must be properly set for Trig graphs.
+
+<li>'Force Integer Nums' (in 'Preferences') will cause graphs to be
+plotted very strangely - as dots at integer points, or not at all.
+
+<li>EasyCalc simply connects calculated points, and so does not handle
+discontinuities perfectly (such as the vertical asymptotes in 'tan(x)').
+This effect is worse at faster graph speeds, and when zoomed out.
+You can make EasyCalc graph even slower than 1x by graphing as a
+parametric graph (set 'X1=t' and 'Y1=tan(t)'. Then set the T-step as
+small as necessary for the desired results.
+</ul>
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC07"></A>
+<H2>07. Trigonometry</H2>
+<p>
+Normal, inverse, and hyperbolic trig functions work as expected. See the
+Function Reference for a complete list.
+</p>
+<p>
+Trigonometric functions can take complex, list, or matrix arguments. For lists
+and matrices, the function is applied to each element individually.
+</p>
+<p>
+Set Deg/Rad/Grad mode by tapping the annunciator at the top of the screen,
+or in File->Options->Preferences.<br />
+Note: Be sure to check the mode when using Trigonometric functions!
+</p>
+<p>
+Trigonometric display conversions are found in the 'M' menu (on the right side of
+the Results Line):<br />
+<br />
+M ->GuessIt - may come up with a helpful simplification<br />
+<br />
+in any mode:<br />
+<IMG height="123" width="242" alt="Trig DMS 1"
+ src="images/Trig-DMS-1.png" border="1">
+<IMG height="147" width="242" alt="Trig DMS 2"
+ src="images/Trig-DMS-2.png" border="1">
+<IMG height="120" width="242" alt="Trig DMS 3"
+ src="images/Trig-DMS-3.png" border="1"><br />
+M ->Degree - display as D°M'S<br />
+M ->Degree2 - display as D°M.sss'<br />
+M ->Radian - display in Radian, as a multiple of pi<br />
+M ->Grad - display in Grad<br />
+</p>
+
+<H3>Coordinate Conversion</H3>
+<p>
+The following results depend on the Deg/Rad/Grad setting. The mode is
+set to Degree for the examples.
+</p>
+<p>
+Rectangular to Polar:<br />
+<tt>rtopr(x:y)</tt> - Radius of the point (x,y)<br />
+<tt>rtopd(x:y)</tt> - Angle of the point (x,y)<br />
+<tt>rtop(x:y)</tt> - Returns a list [radius:angle].<br />
+<br />
+Polar to Rectangular:<br />
+<tt>ptorx(rad:ang)</tt> - x-coord of point at radius, angle<br />
+<tt>ptory(rad:ang)</tt> - y-coord of point at radius, angle<br />
+<tt>ptor(rad:ang)</tt> - returns a list [x:y].<br />
+<br />
+<tt>hypot(x:y)</tt> - returns the length of the hypotenuse of a right triangle
+with sides x and y.<br />
+</p>
+<p>
+Examples (in Deg):<br />
+<tt>rtopr(1:sqrt(3))<br />
+ans> 2<br />
+ptor(2:30)<br />
+ans> [1.732050808:1]<br />
+hypot(1:1)<br />
+ans> 1.414 213 562</tt>
+</p>
+<p>
+Example(in Rad Mode):<br />
+<IMG width="242" height="121" alt="Rtop Example"
+ src="images/RtopExample.png" border="1"><br />
+<tt>rtop(1:sqrt(3))<br />
+ans> [2:1.047197551]</tt>
+</p>
+<br >
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC08"></A>
+<H2>08. List and Matrix Basics</H2>
+
+Most properties of lists and matrices are similar.
+<p>
+Lists are defined in the form:<br />
+<tt>[1:2:3]</tt>
+</p>
+<p>
+Matrices with m(rows) x n(cols) are defined in the form:<br />
+<tt>[[1:2:3]:[3:4:5]]</tt><br />
+...this operation creates 2 by 3 matrix that is stored in the variable
+'ans'.
+</p>
+<p>
+Lists/Matrices can be stored to a variable directly from the Input Line:<br />
+<tt>d=[[1.1:-2.2:3]:[1:1.4:4]:[6:1.5:-2.6]]<br />
+list1=[1:-2:2:3:0:4:-4:0:7:5]</tt>
+</p>
+<p>
+Lists/matrices too large to be displayed entirely on the results line
+will show only their dimensions:<br />
+<tt>ans> list(..20..)<br />
+ans> matrix(8,3)</tt>
+</p>
+<p>
+Tapping the Result Line when it contains a list or matrix takes you into
+the List or Matrix Editor. The List and Matrix Editors can also be
+accessed from the 'Special' menu.<br />
+In the List/Matrix Editors, you specify the name for the list/matrix,
+its dimensions, and the values of the elements. If necessary, scroll
+using the arrows at the bottom and/or right of the screen.
+</p>
+<p>
+Tip: in the List Editor, once a list has been selected for editing, you
+can just start writing to append elements to the end.
+</p>
+<p>
+If a scalar variable or a function is entered into a list or matrix, it
+is pre-evaluated. Only the value, not the variable reference, is stored
+in the matrix. Also, a matrix can be built from lists of the appropriate
+size.
+</p>
+<p>
+Example:<br />
+<IMG height="124" width="243" alt="Matrix 1"
+ src="images/Matrix-1.png" border="1">
+<IMG height="267" width="242" alt="Matrix 2"
+ src="images/Matrix-2.png" border="1"><br />
+<tt>func1()="x-3"<br />
+var1=5<br />
+list3=[1:2:var1]<br />
+mat_b=[list3:[4:var1:6]:[1:0:func1(var1)]]<br />
+ans> [[1:2:5]:[4:5:6]:[1:0:2]]</tt>
+</p>
+<p>
+Complex numbers are allowed in lists and matrices:<br />
+<tt>mat_c=[[1:i+6]:[4i:3]]</tt>
+</p>
+<p>
+<tt>dim(x)</tt> - dimension (size) of list/matrix 'x'. Returns a scalar if the
+input is a list, and a list if the input is a matrix:<br />
+<tt>dim([1:2:3:-1])<br />
+ans> 4<br />
+dim([[1:2:3]:[3:4:5]])<br />
+ans> [2:3]</tt>
+</p>
+
+<H3>Alternate Method for Creating Lists/Matrices</H3>
+<p>
+<tt>list(elem{:elements})</tt> - returns a list composed of the elements. If the
+elements are lists themselves, list() returns a matrix:<br />
+<tt>list(1:2:3)<br />
+ans> [1:2:3]<br />
+list([1]:[2:3:4:5])<br />
+ans> [[1:0:0:0]:[2:3:4:5]]</tt>
+</p>
+<p>
+<tt>matrix(m:n:{elements})</tt> - returns an m x n matrix of elements:<br />
+<tt>matrix(2:3:1:2:3:4:5:6)<br />
+ans> [[1:2:3]:[4:5:6]]</tt>
+</p>
+
+<H3>Mixed Scalar/List/Matrix Assignments</H3>
+<p>
+<tt>s=list[i]</tt> (or <tt>list[i:i]</tt>) returns the i-th element of a
+ list<br />
+<tt>l=list[i:k]</tt> (k != i) returns a list with the elements from i to k
+ of a list<br />
+<tt>s=matrix[m:n]</tt> returns the element of the m-th row and n-th column
+ of matrix<br />
+<tt>l=matrix[m:.]</tt> (or <tt>matrix[m:0]</tt>) returns a list with the m-th
+ row of matrix<br />
+<tt>l=matrix[.:n]</tt> (or <tt>matrix[0:n]</tt>) returns a list with the n-th
+ column of matrix
+</p>
+<p>
+<tt>list[i]=val</tt> (or <tt>list[i:i]=val</tt>) assigns val to the i-th
+ element of list and returns list<br />
+<tt>list[i:k]=list2</tt> (k != i) assigns the elements of list2 to the
+ elements from i to k of list and returns list<br />
+<tt>matrix[m:n]=val</tt> assigns val to the (m,n) element of matrix and
+ returns matrix<br />
+<tt>matrix[m:.]=list</tt> (or <tt>matrix[m:0]=list</tt>) assigns the elements
+ of list to the m-th row of matrix and returns matrix<br />
+<tt>matrix[.:n]=list</tt> (or <tt>matrix[0:n]=list</tt>) assigns the elements
+ of list to the n-th column of matrix and returns matrix
+</p>
+
+<H3>Scalar Operations</H3>
+<p>
+List addition, subtraction, and multiplication act on elements taken as
+pairs, so the lists must be of the same size (dimension).
+</p>
+<p>
+Most scalar functions can take a matrix or list as a parameter, and
+return a matrix/list with the function applied to each element:<br />
+<tt>sin([[pi:0]:[pi/2:3pi/2]])<br />
+ans> [[0:0]:[1:-1]]<br />
+[1:-2:2:3]^2<br />
+ans> [1:4:4:9]<br />
+[[1:1]:[2:2]]+1<br />
+ans> [[2:2]:[3:3]]</tt><br />
+</p>
+
+<H3>List Manipulations</H3>
+<p>
+<tt>sift(f:x)</tt> - drops all elements for which f returns zero<br />
+<tt>sift("x&lt;9":list(2:9:3:10:1))<br />
+ans> [2:3:1]<br />
+sift("isprime(x)":range(100))<br />
+ans> ..list(xx)..</tt> returns list of primes.
+</p>
+<p>
+<tt>sift(x:y)</tt> - drops all elements from y where x is zero, both
+lists must have same length.<br />
+<tt>sift(list(1:2:0:1):list(9:2:3:9))<br />
+ans> [9:2:9]</tt>
+</p>
+<p>
+<tt>find(f:x)</tt> - returns indices where f(x) is nonzero.<br />
+<tt>find("isprime(x)":[10:11:12:13:14])<br />
+ans> [2:4]</tt> since 11 and 13 are prime.
+</p>
+<p>
+<tt>sample(x:y)</tt> - returns the elements of x indexed by y.<br />
+<tt>sample([0:1:2:3:4]:[1:3:5])<br />
+ans> [0:2:4]</tt>
+</p>
+<p>
+<tt>map(f:x)</tt> - applies f to each element of x.<br />
+In most cases this is done transparently:<br />
+<tt>map("x+1":[3:4])<br />
+ans> [4:5]</tt><br />
+but in some cases not:<br />
+<tt>a=list(1:2:3);map("a[x]":list(3:1))<br />
+ans> [3:1]</tt> (=list(a[3]:a[1])).
+</p>
+<p>
+<tt>map(f:x:y)</tt> - applies f to each pair of x and y (not only
+matching pairs).<br />
+<tt>map("x(1)+x(2)":[2:5]:[10:30])<br />
+ans> [12:15:32:35]</tt>
+</p>
+<p>
+<tt>zip(f:x:y)</tt> - applies f to each maching pair of x and y.<br/>
+<tt>zip("x(1)+x(2)":[2:5]:[10:30])<br />
+ans> [12:35]</tt>
+</p>
+<p>
+<tt>concat(x:y[:z:...])</tt> - concatenates two or more lists.<br />
+<tt>concat([1:2]:[3:4:5]:[6:7])<br />
+ans> [1:2:3:4:5:6:7]</tt>
+</p>
+<p>
+<tt>repeat(x:a:b)</tt> - will repeat a list's elements. a means how
+often to repeat, b means how large parts (0 for full list) to repeat.<br />
+<tt>repeat([1:2:3:4]:3:0)<br />
+ans> [1:2:3:4:1:2:3:4:1:2:3:4]<br />
+repeat([1:2:3:4]:3:1)<br />
+ans> [1:1:1:2:2:2:3:3:3:4:4:4]<br />
+repeat([1:2:3:4]:3:2)<br />
+ans> [1:2:1:2:1:2:3:4:3:4:3:4]<br />
+repeat([1:2:3:4]:3:3)<br />
+ans> [1:2:3:1:2:3:1:2:3:4:4:4]</tt>
+</p>
+<p>
+<tt>kron(x:y)</tt> - computes all possible products between the elements
+of x and those of y.<br/>
+<tt>kron([1:2:3:4]:[1:0:-1])<br />
+ans> [1:0:-1:2:0:-2:3:0:-3:4:0:-4]</tt>
+</p>
+<br />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC09"></A>
+<H2>09. Statistics with Lists</H2>
+<p>
+Lists are used to store sets of data for statistical analysis.
+</p>
+
+<H3>Automatic Sample Generation</H3>
+<p>
+<tt>rand</tt> - returns a pseudo-random number between 0 and 1.<br />
+<tt>rand(n)</tt> - returns an n-dimension list containing 'n' pseudo-random
+ numbers, each uniformly distributed between 0 and 1.<br />
+<tt>rNorm(n)</tt>- returns an n-dimension list containing 'n' pseudo-random
+ numbers, normally distributed with a mean of 0 and std dev of 1.<br />
+<tt>range(n{:start{:step}})</tt> - returns an n-dimension list containing
+ sequential values. Start and step (optional) default to 1.
+</p>
+<p>
+Examples:<br />
+<tt>range(4)<br />
+ans> [1:2:3:4]<br />
+range(4:100)<br />
+ans> [100:101:102:103]<br />
+range(6:2:3)<br />
+ans> [2:5:8:11:14:17]</tt>
+</p>
+
+<h3>Functions</h3>
+<p>
+In the following examples <tt>list1=[1:-2:2:3:0:4:-4:0:7:5]</tt>
+</p>
+<p>
+<tt>sum(listx)</tt> - sum of all elements:<br />
+<tt>sum([i:1:2])<br />
+ans>3+i</tt>
+</p>
+<p>
+<tt>cumsum(listx)</tt> - list containing the cumulative sum of the
+elements:<br />
+<tt>cumsum(list1)<br />
+ans>[1:-1:1:4:4:8:4:4:11:16]</tt>
+</p>
+<p>
+<tt>prod(listx)</tt> - product of all elements:<br />
+<tt>prod[1:2:3]<br />
+ans>6</tt>
+</p>
+<p>
+<tt>mean(listx)</tt> - mean of the list computed as sum(listx)/dim(listx):<br />
+<tt>mean(list1)<br />
+ans>1.6</tt>
+</p>
+<p>
+<tt>gmean(listx)</tt> - geometric mean of the list computed as
+prod(listx)^(1/dim(listx)):<br />
+<tt>gmean(list1)<br />
+ans>0<br />
+gmean([3:2:5:1])<br />
+ans>2.340 347 319</tt>
+</p>
+<p>
+<tt>median(listx)</tt> - median of the list:<br />
+<tt>median(list1)<br />
+ans>1.5</tt>
+</p>
+<p>
+<tt>sorta(listx)</tt> - ascending sort<br />
+<tt>sortd(listx)</tt> - descending sort:<br />
+<tt>sorta(list1)<br />
+ans>[-4:-2:0:0:1:2:3:4:5:7]<br />
+sortd(list1)<br />
+ans>[7:5:4:3:2:1:0:0:-2:-4]</tt>
+</p>
+<p>
+<tt>lmin(listx)</tt> - minimum value in list<br />
+<tt>lmax(listx)</tt> - maximum value in list:<br />
+<tt>lmin(list1)<br />
+ans>-4<br />
+lmax([1:10i:6])<br />
+ans>6<br />
+lmax(abs([1:10i:6]))<br />
+ans>10</tt>
+</p>
+<p>
+<tt>lmode(listx)</tt> - most frequently occurring item in a list:<br />
+<tt>lmode([1:2:3:3])<br />
+ans>3</tt>
+</p>
+<p>
+The 'unbiased' (Sample) variance is defined as
+variance = sum(x-mean(listx)) / (dim(listx)-1).<br />
+However, the 'biased' (Population) variance of a list is defined as
+variance = sum(x-sum(listx)/dim(listx)) / dim(listx).
+</p>
+<p>
+<tt>variance(listx)</tt> or <tt>variance(listx:0)</tt> - sample variance of
+ list<br />
+<tt>variance(listx:1)</tt> - population variance
+</p>
+<p>
+<tt>stddev(listx{:flag})</tt> - computes standard deviation where
+stddev = sqrt(variance()). Uses the variance formula based on the optional
+flag setting (see variance).
+</p>
+<p>
+<tt>moment(listx:n)</tt> - the n'th moment of a list
+</p>
+<p>
+<tt>skewness(listx)</tt> - skewness of listx
+</p>
+<p>
+<tt>kurtosis(listx)</tt> - kurtosis of listx
+</p>
+<p>
+<tt>varcoef(listx)</tt> - coefficient of variance of listx
+</p>
+<p>
+<tt>cov(listx:listy)</tt> - covariance of listx and listy
+</p>
+<p>
+<tt>corr(listx:listy)</tt> - correlation coefficient of listx and listy
+</p>
+<p>
+<tt>linreg(listx,listy)</tt> - returns an equation for the linear regression of
+listx and listy (using least squares method)
+</p>
+<br />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC10"></A>
+<H2>10. Digital Signal Processing</H2>
+<p>
+All vectors and signals in the following descriptions are EasyCalc lists.
+</p>
+<p>
+<tt>filter(x:a:b)</tt> - filters the data in vector x with the filter
+described by vectors a and b to create the filtered data y. The
+filter is an implementation of the standard difference equation:
+a<sub>1</sub>*y(n)=b<sub>1</sub>*x(n)+b<sub>2</sub>*x(n-1)+...+b<sub>nb+1</sub>*x(n-nb)-a<sub>2</sub>*y(n-1)-...-a<sub>na+1</sub>*y(n-na).
+</p>
+<p>
+<tt>conv(x:y)</tt> - convolution of two signals. (If x and y are vectors
+of polynomial coefficients, convolving them is equivalent to
+multiplying the two polynomials).
+</p>
+<p>
+<tt>dft(x[:N])</tt> - N-point Discrete Fourier Transform of a signal.
+</p>
+<p>
+<tt>idft(x[:N])</tt> - N-point Inverse Discrete Fourier Transform.
+</p>
+<p>
+<tt>fft(x[:N])</tt> - N-point Fast Fourier Transform of a signal (N is
+a power of 2).
+</p>
+<p>
+<tt>ifft(x[:N])</tt> - N-point Inverse Fast Fourier Transform (N is a
+power of 2).
+</p>
+<p>
+<tt>fftshift(x)</tt> - shift DC component to center of spectrum.
+</p>
+<p>
+<strong>Caution:</strong> dft and idft are very slow procedures, they can hold
+your device for a long time with large values of N. Use fft and ifft instead.
+</p>
+<p>
+Example:<br/>
+Look at a signal consisting of two sinusoids of 5 and 12 Hz with some noise
+added sampled for 2 seconds with a sample period of 0.01 sec.<br />
+<tt>tt=range(200:0:0.01)</tt> list with sample times<br />
+<tt>ans> list(..200..)<br />
+yy=0.7sin(2pi*5*tt)+sin(2pi*12*tt)+0.5rNorm(200)<br />
+ans> list(..200..)<br />
+yf=fft(yy)/200<br />
+ans> list(..256..)</tt> fft() rounds up to next power of 2<br />
+<tt>ff=range(128:0:50/128)</tt> for a real signal the fft is symmetric around
+ the center element. ff is the frequency range.<br />
+<tt>ans> list(..128..)<br />
+spec=2*abs(yf[1:128])</tt> compute the single sided spectrum<br />
+<tt>ans> list(..128..)</tt></p>
+
+<p>To plot the signal and the spectrum we use the parametric mode on the graph
+layout (only available as of 1.25g PPC). The parameter T is the list index.<br />
+<IMG height="293" width="242" alt="Signal"
+ src="images/FftSignal.png" border="1">
+<IMG height="292" width="239" alt="Signal Preferences"
+ src="images/FftPrefSignal.png" border="1">
+<IMG height="292" width="242" alt="Signal Setup"
+ src="images/FftSetupSignal.png" border="1"><br />
+<IMG height="294" width="242" alt="Spectrum"
+ src="images/FftSpectrum.png" border="1">
+<IMG height="292" width="241" alt="Spectrum Preferences"
+ src="images/FftPrefSpectrum.png" border="1">
+<IMG height="293" width="241" alt="Spectrum Setup"
+ src="images/FftSetupSpectrum.png" border="1"><br />
+Note the peaks in the spectrum at 5 and 12 Hz.
+</p>
+<br />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC11"></A>
+<H2>11. Linear Algebra with Matrices</H2>
+<p>
+Normal matrix addition, subtraction, and multiplication are supported.
+</p>
+<p>
+Examples:<br />
+<tt>matrix_q+matrix_p<br />
+a-[[0:0]:[1:-1]]<br />
+a*b</tt>
+</p>
+<p>
+<tt>identity(n)</tt> - returns the n x n identity matrix<br />
+<tt>matrix_q^-1</tt> - returns the matrix inverse of (user-defined) 'matrix_q'<br />
+<tt>a'</tt> - returns the transpose of matrix 'a'<br />
+<tt>det(a)</tt> - returns the determinant of matrix 'a'
+</p>
+<H3>Matrix Reduction Operations</H3>
+<p>
+<tt>rref(a)</tt> - returns the reduced row-echelon form of a matrix. Often used
+to find a solution to system of equations.
+</p>
+<p>
+Example with two linear equations:<br />
+<tt>1x + 2y = 3<br />
+4x + 5y = 6</tt><br />
+Store the system as an augmented matrix to 'matrix_a':<br />
+<IMG height="125" width="243" alt="rref 1"
+ src="images/Rref-1.png" border="1">
+<IMG height="124" width="242" alt="rref 2"
+ src="images/Rref-2.png" border="1">
+<IMG height="151" width="240" alt="rref 3"
+ src="images/Rref-3.png" border="1"><br />
+<tt>matrix_a=[[1:2:3]:[4:5:6]]<br />
+rref(matrix_a)<br />
+ans> [[1:0:-1]:[0:1:2]]</tt><br />
+The solution is found in the right column of the answer (x=-1, y=2).
+</p>
+
+<H3>Householder QR Factorization</H3>
+<p>
+EasyCalc can factor a matrix 'a' into matrices qrq(a) and qrr(a).
+qrr(a) generally decomposes a full rank matrix to a simpler form.
+</p>
+<p>
+For an m x n matrix:<br />
+<tt>q=qrq(a)</tt> returns an orthogonal m x m matrix<br />
+<tt>r=qrr(a)</tt> returns an upper triangular m x n matrix<br />
+The result of qrq(a) * qrr(a) is the original matrix 'a'.
+</p>
+<p>
+Example:<br />
+<tt>mat3_4=[[1:2:3:4]:[2:3:4:5]:[3:4:5:6]]<br />
+<IMG height="150" width="242" alt="qrq 1"
+ src="images/Qrq-1.png" border="1">
+<IMG height="152" width="240" alt="qrq 2"
+ src="images/Qrq-2.png" border="1"><br />
+q=qrq(mat3_4)<br />
+<IMG height="151" width="242" alt="qrr 1"
+ src="images/Qrr-1.png" border="1">
+<IMG height="152" width="240" alt="qrr 2"
+ src="images/Qrr-2.png" border="1">
+<IMG height="152" width="241" alt="qrr 3"
+ src="images/Qrr-3.png" border="1"><br />
+r=qrr(mat3_4)<br />
+<IMG height="148" width="242" alt="qrq*qrr 1"
+ src="images/Qrqqrr-1.png" border="1">
+<IMG height="152" width="240" alt="qrq*qrr 2"
+ src="images/Qrqqrr-2.png" border="1"><br />
+qrq(mat3_4) * qrr(mat3_4)<br />
+ans> [[1:2:3:4]:[2:3:4:5]:[3:4:5:6]]</tt> (the original matrix)
+</p>
+<p>
+Linear systems in the form 'Ax = b' can be solved by replacing 'A' with
+'QR'.
+qrs(Ab) uses Householder QR decomposition and back-substitution. This
+approach may solve matrices that are not solvable with rref().
+</p>
+<p>
+Example:<br />
+<tt>matrix_a=[[1:2:3]:[4:5:6]]<br />
+qrs(matrix_a)<br />
+ans>[[1:2:-1]:[4:5:2]]</tt><br />
+The original 'A' matrix is returned, augmented with the solution 'x',
+which is (-1, 2).
+</p>
+<p>
+Note: for qrs(), matrices can be complex, but the 'A' matrix part must
+currently be square.
+</p>
+
+<H3>Eigenvalues</H3>
+<p>
+To find the eigenvalues of a matrix, find the zeros of:<br />
+<tt>evalue()="det(x(2)-(x(1))*identity(sum(dim(x(2))*[1:0])))"</tt>
+</p>
+<p>
+Example:<br />
+<tt>a=[[1:3]:[2:2]]</tt><br />
+graph -> "evalue(x:a)" - gives zeroes (Eigenvalues) at -1 and 4.
+</p>
+<br />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC12"></A>
+<H2>12. Probability</H2>
+<p>
+<tt>npr(n:r)</tt> - permutations of n obj taken r at a time<br />
+<tt>ncr(n:r)</tt> - n Choose r for combinations (the Binomial Coefficient)<br />
+Examples:<br />
+<tt>npr(8:3)<br />
+ans> 336<br />
+ncr(8:3)<br />
+ans>56</tt>
+</p>
+<p>
+gamma(x)
+</p>
+
+<H3>Upper-Tail Probabilities</H3>
+<p>
+The 'Q' notation is taken from the Handbook of Mathematical Functions,
+edited by Abramowitz and Stegun. This reference is also credited with
+many of the formulas that permit the leveraging of other functions
+already included in EasyCalc.<br />
+EasyCalc uses the lngamma function. This permits
+the use of large numbers for the degrees of freedom of several of the
+probability functions.<br />
+The Upper-Tail Probability functions return 1 minus the Cumulative
+Distribution Function (CDF). You must compute '1-qFunction' to get the
+Lower-Tail Probability.
+</p>
+<p>
+<tt>qBinomial(c:n:p)</tt> - returns the probability of more than 'c' successes,
+given the number of trials 'n', and probability of success 'p'.<br />
+Where: {0 <= c, n>0, 0 <= p <= 1}
+</p>
+<p>
+<tt>qBeta(x:a:b)</tt> - returns the probability of getting a value greater than
+'x', given the Beta coefficients 'a' and 'b'.<br />
+Where: {0 <= x <= 1, a>0, b>0}
+</p>
+<p>
+<tt>qChiSq(ChiSq:df)</tt> - returns the probability of getting a value greater
+than 'ChiSq', given 'df' degrees of freedom.<br />
+Where:{0 <= ChiSq, df>0}
+</p>
+<p>
+<tt>qF(F:df1:df2)</tt> - returns the probability of getting an F-ratio value
+greater than 'F', given numerator and denominator degrees of freedom
+'df1' and 'df2'.<br />
+Where: {F=>1, df1>0, df2>0}
+</p>
+<p>
+<tt>qPoisson(c:lam)</tt> - returns the probability of getting more than 'c'
+occurrences, given the occurrence rate of 'lam'.<br />
+Where: {0 <= c, 0 <= lam}
+</p>
+<p>
+<tt>qStudentt(t:df)</tt> - returns the probability of getting a t-ratio greater
+than 't', given 'df' degrees of freedom.<br />
+Where: {0 <= df}
+</p>
+<p>
+<tt>qWeibull(t:a:b)</tt> - returns the probability of getting a value greater
+than 't', given scale parameter 'a' and shape parameter 'b'.<br />
+Where: {0 <= t, 0 <= b}
+</p>
+<p>
+<tt>qNormal(z)</tt> - returns the probability of getting a value greater than 'z' for the standard normal distribution with mean 0 and standard deviation 1.
+</p>
+<p>
+Example: Compute 90% Confidence Interval:<br />
+For the standard normal distribution the 90% confidence interval for the
+mean 0 lies between -1.645 and +1.645. Here we compute it for a normal
+distribution with mean 100 and standard deviation 10:<br />
+<tt>xbar=100<br />
+s=10<br />
+z90=1.645<br />
+xbar+z90*[-1:1]*s<br />
+ans> [83.6:116.4]</tt>
+</p>
+<br />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC13"></A>
+<H2>13. Complex Calculations</H2>
+<p>
+All functions and operations can take complex arguments (<strong>if</strong>
+allowed mathematically).
+</p>
+<p>
+Complex numbers are represented as '4+5i' ('i' or 'j' indicates the
+complex part). When a complex number is stored in 'ans', the 'M' menu
+offers to convert to '->e^(ix)' or '->c()+isin()' format:<br />
+<IMG height="187" width="244" alt="Complex 1"
+ src="images/Complex-1.png" border="1">
+<IMG height="187" width="242" alt="Complex 2"
+ src="images/Complex-2.png" border="1">
+<IMG height="187" width="241" alt="Complex 3"
+ src="images/Complex-3.png" border="1"><br />
+<tt>1+j<br />
+ans> 1+i</tt><br />
+M ->e^(ix)<br />
+<tt>ans> 1.414213562e^(0.785398163i)</tt><br />
+M ->GuessIt<br />
+<tt>ans> sqrt(2)e^pi*i/4</tt><br />
+M ->c()+isin()<br />
+<tt>ans> 1.414213562(cos(0.785398163)+i*sin(0.785398163))</tt>
+</p>
+<p>
+The functions specific to complex numbers are:
+</p>
+<p>
+<tt>real(x)</tt> - real part of number:<br />
+<tt>real(2+3i)<br />
+ans> 2</tt>
+</p>
+<p>
+<tt>imag(x)</tt> - imaginary part of number:<br />
+<tt>imag(2+3i)<br />
+ans> 3</tt>
+</p>
+<p>
+<tt>conj(x)</tt> - complex conjugate:<br />
+<tt>conj(2+3i)<br />
+ans> (2-3i)</tt><br />
+or<br />
+<tt>(2+3i)'<br />
+ans> 2-3i</tt>
+</p>
+<p>
+<tt>abs(x)</tt> - absolute value:<br />
+<tt>abs(3+4i)<br />
+ans> 5</tt>
+</p>
+<p>
+<tt>angle</tt> - angle of complex vector to the real axis:<br />
+{in radian mode}<br />
+<tt>angle(1+i)<br />
+ans> 0.785 398 163</tt><br />
+M ->Radian<br />
+<tt>ans> 0.25pi</tt><br />
+M ->GuessIt<br />
+<tt>ans> pi/4</tt>
+</p>
+<br />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC14"></A>
+<H2>14. Integer/Base Operations and Functions</H2>
+<p>
+Switch to the Integer form by tapping 'I' at the top of the main screen.
+Then, check 'Force integer nums' in the Preferences. (If you leave this
+        unchecked, numbers will be treated as 'float'. Binary operations are not
+        defined for floating point numbers.)
+</p>
+<p>
+<H3>Base Conversion</H3>
+<p>
+- Select the original base.<br />
+- Enter a value or expression. Note that you must press "EXE" to get the
+value stored in ANS before converting.<br />
+- Select the base to convert to.<br />
+</p>
+<p>
+Example (on Integer form):<br />
+{tap 'Dec' button}<br />
+<tt>1234{EXE}<br />
+ans> 1,234</tt><br />
+{tap 'Bin' button}<br />
+<tt>ans> 100,1101,0010</tt><br />
+{tap 'Oct' buttin}<br />
+<tt>ans> 2322</tt><br />
+{tap 'Hex' button}<br />
+<tt>ans> 4D2<br />
+-EA</tt> ...{<tt>ans-EA</tt> displayed}<br />
+<tt>ans> 3E8</tt><br />
+{tap 'Dec' button}<br />
+<tt>ans> 1,000</tt>
+</p>
+
+<H3>Bitwise Operations</H3>
+<p>
+EasyCalc works with 32-bit integers and supports simple
+bit-wise binary operations:<br />
+<tt>x & y</tt> - x AND y<br />
+<tt>x | y</tt> - x OR y<br />
+<tt>x ¥ y</tt> - x XOR y (the 'yen' symbol)<br />
+<tt>x << n</tt> - logical shift left n bits<br />
+<tt>x >> n</tt> - logical shift right n bits
+</p>
+<p>
+Note: When leaving Integer mode, don't forget to uncheck 'Force integer
+nums' in the Preferences. It will cause unexpected errors and truncated
+results outside of Integer mode. Also, you will usually want to set Dec
+mode again.
+</p>
+
+<H3>Integer Functions</H3>
+<p>
+<tt>factor(a)</tt> - return a list of prime factors of a<br />
+<tt>factor(12)<br />
+ans> [2:2:3]</tt>
+</p>
+<p>
+<tt>gcd(a[:b:c:...])</tt> - greatest common divisor<br />
+<tt>gcd(10:14:12)<br />
+ans> 2</tt>
+</p>
+<p>
+<tt>lcm(a[:b:c:...])</tt> - lowest common multiple<br />
+<tt>lcm(10:12)<br />
+ans> 60</tt>
+</p>
+<p>
+<tt>gcdex(a:b)</tt> - returns a list of cofactors (x and y so that
+a*x+b*y=gcd(a,b)) and gcd and lcm<br />
+<tt>gcdex(14:10)<br />
+ans> [14:-2:10:3:2:70]</tt><br />
+means gcd=2, lcm=70 and 14*-2+10*3=2
+</p>
+<p>
+<tt>modinv(a:b)</tt> - computes inverse of a modulo b, i.e. the number x with
+0 &lt;= x &lt; b and (a * x) % b == 1<br />
+<tt>modinv(2:17)<br />
+ans> 9</tt><br />
+since (2 * 9) % 17 = 18 % 17 = 1
+</p>
+<p>
+<tt>modpow(a:b:c)</tt> - computes (a ^ b) % c, but will not cause any rounding
+errors if a &lt; c &lt; 65536<br />
+<tt>modpow(5:50:10000)<br />
+ans> 5625</tt><br />
+since 5 ^ 50 = 88817841970012523233890533447265625. However, when computing
+(5^50)%10000 directly you get 3440.
+</p>
+<p>
+<tt>phi(a)</tt> - computes the totient (Euler's phi function) of a,
+i.e. the number of positive integers less than or equal to a and
+coprime to a<br />
+<tt>phi(666)<br />
+ans> 216</tt>
+</p>
+<p>
+<tt>chinese(a<sub>1</sub>:n<sub>1</sub>:a<sub>2</sub>:n<sub>2</sub>:[a<sub>3</sub>:n<sub>3</sub>:...])</tt>
+- computes the solution of the Chinese remainder theorem. Every pair of
+parameters (a<sub>i</sub>, n<sub>i</sub>) means
+x % n<sub>i</sub> == a<sub>i</sub>, the resulting x will solve all equations.
+The n<sub>i</sub> must be coprime (may not have common factors)<br />
+<tt>chinese(42:100:2:3)<br />
+ans> 242</tt>
+</p>
+<p>
+<tt>isprime(a)</tt> - returns 1 if a is prime, 0 otherwise<br />
+<tt>isprime(17)<br />
+ans> 1</tt>
+</p>
+<p>
+<tt>nextprime(a)</tt> - returns the smallest prime larger or equal to a<br />
+<tt>nextprime(200)<br />
+ans> 211<br />
+nextprime(97)<br />
+ans> 97</tt>
+</p>
+<p>
+<tt>prevprime(a)</tt> - returns the largest prime smaller or equal to a<br />
+<tt>prevprime(200)<br />
+ans> 199<br/>
+prevprime(97)<br />
+ans> 97</tt>
+</p>
+<br />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC15"></A>
+<H2>15. Numerical Analysis</H2>
+<p>
+EasyCalc can find approximate numeric (not symbolic) solutions to
+equations on an interval.
+These functions are also available from the Graph layout. You may find
+that to be an easier interface, and it allows you to better specify the
+interval.
+Try to specify a small interval (min and max close together). If you
+receive the error 'Impossible Calculation', you may need to adjust the
+interval and/or the error tolerance, or there may be no solution.
+</p>
+<p>
+The following parameters are used in this section:<br />
+<tt>min</tt> - left bound of interval<br />
+<tt>max</tt> - right bound of interval<br />
+<tt>func</tt> - a literal expression enclosed in double quotes such as
+<tt>"x^3-x^2-5"</tt>, or a user defined function such as <tt>f()="x^2-4"</tt>.
+The first parameter must be "x", additional parameters are x(2), x(3), etc.
+Example: <tt>"x^2-3x+2*x(2)-x(3)+1"</tt><br />
+<tt>error</tt> - The maximum error tolerance allowed in the answer. Defaults
+to 1E-10. The smaller the error, the longer the computation time.<br />
+<tt>{:params}</tt> - additional parameters passed to x(2), x(3), etc. if the
+function has multiple variables.
+</p>
+
+<H3>Roots of an Equation</H3>
+<p>
+<tt>fzero(min:max:func{:error{:params}})</tt> - This function finds a root
+(may not be unique!) of a function using the 'division of interval'
+method.<br />
+<br />
+In the following examples, we change the interval and error tolerance (the
+exact roots are -2, -1 and 1):<br />
+<tt>fzero(-10:10:"x^3+2x^2-x-2")<br />
+ans> 1.000 000 001<br />
+fzero(-10:10:"x^3+2x^2-x-2":1E-2)<br />
+ans> 1.000 976 563<br />
+fzero(-10:0:"x^3+2x^2-x-2")<br />
+ans> -1.999 999 997</tt><br />
+<br />
+The following example sets up the general quadratic function a*x^2 + b*x
++ c, sets values for the coefficients, and passes those as parameters
+into fzero().<br />
+<tt>quad()="x(2)*x^2+x(3)*x+x(4)"<br />
+a=2;b=3;c=-2<br />
+<IMG height="146" width="242" alt="fzero"
+ src="images/F-zero.png" border="1"><br/>
+fzero(-100:100:quad():1E-8:a:b:c)<br />
+ans> -1.999 999 999</tt>
+</p>
+<p>
+<tt>fvalue(min:max:value:func{:error{:params}})</tt> - finds a point where
+f(x)=value
+</p>
+<p>
+<tt>fmin(min:max:func{:error})</tt> - finds the minimum of the function in the
+interval [min,max]
+</p>
+<p>
+<tt>fmax(min:max:func{:error})</tt> - finds the maximum of the function in the
+interval [min,max]
+</p>
+<p>
+<tt>fintersect(min:max:f1:f2{:error{:params}})</tt> - finds a point where
+f1(x)=f2(x) .
+</p>
+<H3>Numeric Differentiation</H3>
+<p>
+<tt>fd_dx(x:func{:error{:params}})</tt> - finds the first derivative of the
+function at the point 'x'.<br />
+<tt>fd2_dx(x:func{:error{:params}})</tt> - finds the second derivative at the
+point 'x'.
+</p>
+<p>
+Examples:<br />
+<tt>fd_dx(3:"x^3+2x^2-x-2")<br />
+ans> 38<br />
+<IMG height="142" width="242" alt="fd2-dx"
+ src="images/F-d2dx.png" border="1"><br/>
+fd2_dx(3:"x^3+2x^2-x-2":1E-6)<br />
+ans> 21.999 966 293</tt>
+</p>
+
+<H3>Numeric Integration</H3>
+<p>
+EasyCalc can approximate integrals using Simpson's Rule:<br />
+<br />
+<tt>fsimps(min:max:func{:error{:params}})</tt><br />
+Example:<br />
+<tt>fsimps(0:pi:"sin(x)")<br />
+ans> 2<br />
+fsimps(0:1:"x+x(2)":1E-6:1)<br />
+ans> 1.5</tt><br />
+<br />
+or by Romberg Integration (usually better):<br />
+<br />
+<tt>fromberg(min:max:func{:degree{:params}})</tt><br />
+degree - an optional integer parameter that specifies the degree of the
+polynomial used to approximate the function.
+Computation time can become very long for large values of "n" (more than
+n=10 or so -
+fromberg(0:pi:"sin(x)":15) takes about 120 seconds on a Palm M500.).<br />
+<br />
+Example:<br />
+<tt>fromberg(0:pi:"sin(x)")<br />
+ans> 2<br />
+<IMG height="150" width="242" alt="fromberg"
+ src="images/F-romberg.png" border="1"><br/>
+fromberg(0:pi:"sin(x)":3)<br />
+ans> 1.998 570 732</tt>
+</p>
+<br />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC16"></A>
+<H2>16. Solver</H2>
+<p>
+The EasyCalc Solver (found in the Special Menu) uses the fzero()
+function to find numeric solutions of multi-variable equations.
+</p>
+<p>
+To use the Solver:
+</p>
+<p>
+Tap the 'combo' and select 'New Worksheet'. Name the worksheet.<br />
+<IMG height="268" width="242" alt="Solver 1"
+ src="images/Solver-1.png" border="1">
+</p>
+<p>
+In the top area, enter an equation (WITHOUT double-quotes), such
+as: <tt>s=1/2*a*t^2</tt>.
+Finish with the 'Update' button (or the Graffiti 'Return' stroke).
+The box will list the variables used in the expression, and their
+current values.<br />
+<IMG height="268" width="241" alt="Solver 2"
+ src="images/Solver-2.png" border="1">
+</p>
+<p>
+Tap a variable and tap 'Modify' (or double-tap) to change its value.<br />
+<IMG height="268" width="242" alt="Solver 3"
+ src="images/Solver-3.png" border="1">
+</p>
+<p>
+Select a variable and tap 'Solve' to solve the equation for that
+variable. If you enter an expression without an equals sign, you can tap
+'Calculate' to evaluate the expression with the current variable values.
+</p>
+<p>
+'Note' button<br />
+Tap 'Note' to add a short description of each variable. Enter the
+description after the colon on the note form. This description is then
+displayed in the main Solver form when you select that variable.<br />
+<IMG height="268" width="242" alt="Solver 4"
+ src="images/Solver-4.png" border="1">
+</p>
+<p>
+'Config' button<br />
+Tapping 'Config' allows you change the following:<br />
+Name: The worksheet name<br />
+Minimum/Maximum: The interval to search for a solution on.<br />
+Precision: The maximum error tolerance allowed in the solution.<br />
+These values are passed into the fzero() function.<br />
+<IMG height="267" width="242" alt="Solver 5"
+ src="images/Solver-5.png" border="1">
+</p>
+<br />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC17"></A>
+<H2>17. Financial Manager</H2>
+<p>
+Time Value of Money (TVM) Calculation (Ordinary Annuities)
+</p>
+<p>
+You can calculate the mortgages, loans, savings, and investments using
+EasyCalc's TVM Calculator.
+</p>
+<p>
+<tt>I</tt> - Annual Interest Rate (in percent)<br />
+<tt>N</tt> - Total Number of Payments<br />
+<tt>PV</tt> - Present Value<br />
+<tt>PMT</tt> - Payment (Annuity)<br />
+<tt>FV</tt> - Future Value<br />
+<tt>P/YR</tt> - Number of Payment Periods per Year<br />
+<tt>Begin/End</tt> - Payment made at the beginning or end of the period
+(normally END).
+</p>
+<p>
+Tapping the Value (the right side) lets you change the value of the
+variable.<br />
+Tapping the Variable Name (the left column) solves for that variable.
+</p>
+<p>
+This implementation uses the "cash flow" meaning of sign. "+" can be
+taken as money <strong>to</strong> the bank, and "-" as money
+<strong>from</strong> the bank.
+</p>
+<p>
+Example:<br />
+What are my monthly payments on a $20,000, five-year auto loan at 8% APR?<br />
+<IMG height="268" width="241" alt="Car loan"
+ src="images/Carloan.png" border="1"><br />
+Tap the right column to enter these values:<br />
+<tt>I - 8<br />
+N - 60<br />
+PV - -20000</tt> (Remember '-' means from the bank)<br />
+<tt>PMT - undefined<br />
+FV - 0<br />
+P/YR - 12<br />
+Begin/End - END</tt><br />
+Tap PMT in the left column to calculate the monthly payment: $405.53.<br />
+Change the interest rate to "6", and tap PMT again to see the payment
+drop to: $386.66
+</p>
+<br />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC18"></A>
+<H2>18. Function Reference, Part 1</H2>
+<p>
+Most functions/operators can take scalar, list, matrix, or complex
+operators (if the operation makes sense).
+</p>
+
+<H3>Reserved Variable Names</H3>
+<p>
+<tt>pi</tt> 3.141592653589793<br />
+<tt>e</tt> 2.718281828459045<br />
+<tt>euler</tt> 0.577215664901533<br />
+<tt>i,j</tt> sqrt(-1)<br />
+<tt>x</tt> default parameter in functions<br />
+<tt>ans</tt> result of previous operation<br />
+<tt>m</tt> milli- prefix (1E3 EngDisplay)<br />
+<tt>u</tt> micro- prefix (1E-6 EngDisplay)<br />
+<tt>n</tt> nano- prefix (1E-9 EngDisplay)<br />
+<tt>p</tt> pico- prefix (1E-12 EngDisplay)<br />
+<tt>f</tt> femto- prefix (1E-15 EngDisplay)<br />
+<tt>k</tt> kilo- prefix (1E3 EngDisplay)<br />
+<tt>M</tt> mega- prefix (1E6 EngDisplay)<br />
+<tt>G</tt> giga- prefix (1E9 EngDisplay)<br />
+<tt>T</tt> tera- prefix (1E12 EngDisplay)
+</p>
+
+<H3>Operators</H3>
+<p>
+<tt>+</tt> addition<br />
+<tt>-</tt> subtraction, unary minus<br />
+<tt>*</tt> multiplication<br />
+<tt>/</tt> division<br />
+<tt>^</tt> exponentiation<br />
+<tt>x%y</tt> x modulo y (remainder)<br />
+<tt>=</tt> variable/function assignment<br />
+<tt>x&lt;&lt;n</tt> shift x left 'n' bits<br />
+<tt>x&gt;&gt;n</tt> shift x right 'n' bits<br />
+<tt>&</tt> bit-wise logical AND<br />
+<tt>|</tt> bit-wise logical OR<br />
+<tt>¥</tt> (YEN) bit-wise logical XOR<br />
+<tt>,</tt> alternate decimal point<br />
+<tt>;</tt> separates expressions on a single line
+</p>
+<p>
+Arithmetic Comparisons (return 1 if true, 0 if false)<br />
+<tt>==</tt> equality<br />
+<tt>>=</tt> greater than or equal to<br />
+<tt><=</tt> less than or equal to
+</p>
+<p>
+<tt>d°m's</tt> deg°min'sec angle notation<br />
+<tt>a'</tt> matrix transpose of matrix 'a'<br />
+<tt>c'</tt> complex conjugate of scalar 'c'<br />
+<tt>[:]</tt> matrix/list delimiters<br />
+<tt>()</tt> parens for expression collection<br />
+<tt>f()="expr"</tt> define function 'f'
+</p>
+
+<H3>General Mathematics</H3>
+<p>
+<tt>exp(x)</tt> power of e to the x<br />
+<tt>ln(x)</tt> natural logarithm<br />
+<tt>log(x)</tt> logarithm base 10<br />
+<tt>log2(x)</tt> logarithm base 2<br />
+<tt>sqrt(x)</tt> square root<br />
+<tt>cbrt(x)</tt> cube root<br />
+<tt>abs(x)</tt> absolute value<br />
+<tt>neg(x)</tt> arithmetic negation<br />
+<tt>floor(x)</tt> next integer <= x<br />
+<tt>ceil(x)</tt> next integer >= x<br />
+<tt>round(x{:dec})</tt> rounds x up or down to 'dec' decimal places<br />
+<tt>trunc(x{:dec})</tt> discards fractional part of x past 'dec' decimal places<br />
+<tt>ipart(x{:dec})</tt> same as trunc(x{:dec})<br />
+<tt>fpart(x)</tt> fractional part of x<br />
+<tt>fact(x)</tt> x factorial<br />
+<tt>real(x)</tt> real part of a number<br />
+<tt>imag(x)</tt> imag. part of a number<br />
+<tt>angle(x)</tt> angle of complex number to real axis<br />
+<tt>conj(x)</tt> complex conjugate of x<br />
+<tt>sign(x)</tt> -1 if neg, 1 if pos, 0 if 0<br />
+<tt>int(x)</tt> convert float to integer
+</p>
+
+<H3>Integer Functions</H3>
+<p>
+<tt>factor(a)</tt> - return a list of prime factors of a.<br />
+<tt>gcd(a[:b:c:...])</tt> - greatest common divisor.<br />
+<tt>lcm(a[:b:c:...])</tt> - lowest common multiple.<br />
+<tt>gcdex(a:b)</tt> - returns a list of cofactors (x and y so that
+a*x+b*y=gcd(a,b)) and gcd and lcm.<br />
+<tt>modinv(a:b)</tt> - computes inverse of a modulo b, i.e. the number x with
+0 &lt;= x &lt; b and (a * x) % b == 1.<br />
+<tt>modpow(a:b:c)</tt> - computes (a ^ b) % c, but will not cause any rounding
+errors if a &lt; c &lt; 65536.<br />
+<tt>phi(a)</tt> - computes the totient (Euler's phi function) of a.<br />
+<tt>chinese(a<sub>1</sub>:n<sub>1</sub>:a<sub>2</sub>:n<sub>2</sub>:[a<sub>3</sub>:n<sub>3</sub>:...])</tt>
+- computes the solution of the Chinese remainder theorem.<br />
+<tt>isprime(a)</tt> - returns 1 if a is prime, 0 otherwise.<br />
+<tt>nextprime(a)</tt> - returns the smallest prime larger or equal to a.<br />
+<tt>prevprime(a)</tt> - returns the largest prime smaller or equal to a.<br />
+</p>
+
+<H3>Trigonometry</H3>
+<p>
+<tt>sin(x)<br />
+cos(x)<br />
+tan(x)<br />
+asin(x)<br />
+acos(x)<br />
+atan(x)<br />
+atan2(y:x)</tt> = atan(y/x)
+</p>
+
+<H3>Hyperbolic Trigonometry</H3>
+<p>
+<tt>sinh(x)<br />
+cosh(x)<br />
+tanh(x)<br />
+asinh(x)<br />
+acosh(x)<br />
+atanh(x)</tt>
+<br />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC19"></A>
+<H2>19. Function Reference, Part 2</H2>
+
+<H3>Lists and Matrices</H3>
+<p>
+<tt>list(elem{:elems})</tt> - list of elements<br />
+<tt>matrix(m:n:elem{:elems})</tt> - m x n matrix of elements<br />
+<tt>dim(mat_x)</tt> - size of list/ matrix "mat_x" [m:n]<br />
+<tt>sift(f:x)</tt> - drops all elements for which f returns zero<.br />
+<tt>sift(x:y)</tt> - drops all elements from y where x is zero.<br />
+<tt>find(f:x)</tt> - returns indices where f(x) is nonzero.<br />
+<tt>sample(x:y)</tt> - returns the elements of x indexed by y.<br />
+<tt>map(f:x)</tt> - applies f to each element of x.<br />
+<tt>map(f:x:y)</tt> - applies f to each pair of x and y (not only
+matching pairs).<br />
+<tt>zip(f:x:y)</tt> - applies f to each maching pair of x and y.<br/>
+<tt>concat(x:y[:z:...])</tt> - concatenates two or more lists.<br />
+<tt>repeat(x:a:b)</tt> - will repeat a list's elements. a means how
+often to repeat, b means how large parts (0 for full list) to repeat.<br />
+<tt>kron(x:y)</tt> - computes all possible products between the elements
+of x and those of y.<br/>
+<tt>det(mat_x)</tt> - determinant of matrix 'mat_x'<br />
+<tt>rref(mat_x)</tt> - reduced row echelon form of matrix 'mat_x'<br />
+<tt>identity(n)</tt> - n x n identity matrix<br />
+<tt>cmatrix(m:n:{elements})</tt> - m x n matrix of complex elements<br />
+<tt>qrq(mat_x)</tt> - QR factorization, quotient<br />
+<tt>qrr(mat_x)</tt> - QR factorization, remainder<br />
+<tt>qrs(mat_x)</tt> - solution using QR factorization.
+</p>
+
+<H3>Coordinate Conversion</H3>
+<p>
+<tt>rtopr(x:y)</tt> - rectangular to polar Radius<br />
+<tt>rtopd(x:y)</tt> - rectangular to polar Angle<br />
+<tt>rtop(x:y)</tt> - rectangular to polar (returns a list [radius:angle])<br />
+<tt>ptorx(rad:ang)</tt> -polar to rectangular x-coord<br />
+<tt>ptory(rad:ang)</tt> -polar to rectangular y-coord<br />
+<tt>ptor(rad:ang)</tt> - polar to rectangular (returns a list [x:y])<br />
+<tt>hypot(x:y)</tt> - length of the hypotenuse of a right triangle with sides
+x and y.
+</p>
+
+<H3>Financial</H3>
+<p>
+<tt>I</tt> = annual interest<br />
+<tt>N</tt> = total number of payments<br />
+<tt>PV</tt> = present value<br />
+<tt>PMT</tt> = payment<br />
+<tt>FV</tt> = future value<br />
+<tt>P/YR</tt> = payments/year<br />
+<tt>flag=0</tt> end of month payment<br />
+<tt>flag=1</tt> beginning of month payment<br />
+<br />
+<tt>fin_pv(I:N:PMT:FV:PYR:flag)<br />
+fin_n(I:PV:PMT:FV:PYR:flag)<br />
+fin_fv(I:N:PV:PMT:PYR:flag)<br />
+fin_pmt(I:N:PV:FV:PYR:flag)</tt>
+</p>
+
+<H3>Numerical Analysis</H3>
+<p>
+<tt>fzero(min:max:func{:error{:params}})<br />
+fmin(min:max:func{:error})<br />
+fmax(min:max:func{:error})<br />
+fvalue(min:max:value:func{:error{:params}})<br />
+fintersect(min:max:f1:f2{:error{:params}})<br />
+fd_dx(x:func{:error{:params}})<br />
+fd2_dx(x:func{:error{:params}})<br />
+fsimps(min:max:func{:error{:params}})<br />
+fromberg(min:max:func{:degree{:params}})</tt>
+</p>
+
+<H3>Probability and Statistics</H3>
+<p>
+<tt>npr(n:r)</tt> - r permutations of n<br />
+<tt>ncr(n:r)</tt> - n Choose r (combinations)
+</p>
+<p>
+<tt>qBinomial(c:n:p)</tt> - probability of > 'c' successes with 'n' trials,
+'p' probability of success<br />
+<tt>qBeta(x:a:b)</tt> - probability of > 'x', with Beta coefficients
+'a' & 'b'<br />
+<tt>qChiSq(ChiSq:df)</tt> - probability of > 'ChiSq' with 'df' degrees
+of freedom<br />
+<tt>qF(F:df1:df2)</tt> - probability of F-ratio > 'F' with numerator and
+denominator degrees of freedom 'df1' and 'df2'<br />
+<tt>qPoisson(c:lam)</tt> - probability of > 'c' occurrences with occurrence
+rate of 'lam'<br />
+<tt>qStudentt(t:df)</tt> - probability of t-ratio > 't' with 'df' degrees
+of freedom.<br />
+<tt>qWeibull(t:a:b)</tt> - probability of value > 't' with scale parameter 'a'
+and shape parameter 'b'<br />
+<tt>qNormal(z)</tt> - probability of value > than 'z'
+</p>
+<p>
+<tt>mean(listx)</tt> - arithmetic mean of listx<br />
+<tt>lmin(listx)</tt> - min value of listx<br />
+<tt>lmax(listx)</tt> - max value of listx<br />
+<tt>sum(listx)</tt> - sum of elements of listx<br />
+<tt>median(listx)</tt> - median of listx<br />
+<tt>sorta(listx)</tt> - ascending sort of listx<br />
+<tt>sortd(listx)</tt> - descending sort of listx<br />
+<tt>gmean(listx)</tt> - geometric mean of listx<br />
+<tt>prod(listx)</tt> - product of elements of listx<br />
+<tt>variance(listx{:flag})</tt> - variance of listx; if flag==0, uses unbiased
+'sample' formula; if flag==1, uses 'population' formula<br />
+<tt>stddev(listx{:flag})</tt> - standard deviation of listx; if flag==0, uses
+unbiased 'sample' formula; if flag==1, uses 'population' formula<br />
+<tt>skewness(listx)</tt> - skewness of list<br />
+<tt>kurtosis(listx)</tt> - kurtosis of list<br />
+<tt>varcoef(listx)</tt> - coefficient of variance of listx<br />
+<tt>cumsum(listx)</tt> - returns a list containing the cumulative sums of the
+elements of listx<br />
+<tt>lmode(listx)</tt> - most frequently occurring element in listx<br />
+<tt>moment(listx:n)</tt> - n'th moment of listx<br />
+<tt>cov(listx,listy)</tt> - covariance of listx and listy<br />
+<tt>corr(listx,listy)</tt> - correlation coefficient of listx and listy<br />
+<tt>linreg(listx,listy)</tt> - linear regression of listx and listy
+</p>
+<p>
+<tt>randseed(x)</tt> - (reproducibly) starts the pseudo-random series<br />
+<tt>rand</tt> - uniform random num from 0..1<br />
+<tt>rand(n)</tt> - list of 'n' uniformly rand elements<br />
+<tt>rNorm(n)</tt>- list of 'n' normally distributed random elements, mean=0,
+stddev=1
+</p>
+<p>
+<tt>range(n{:start{:step}})</tt> - returns an n-dimension list containing
+sequential values.
+</p>
+<br />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC20"></A>
+<H2>20. Function Reference, Part 3</H2>
+
+<H3>Digital Signal Processing</H3>
+<p>
+<tt>filter(x:a:b)</tt> - filters the data in vector x with the filter
+described by vectors a and b.<br />
+<tt>conv(x:y)</tt> - convolution of two signals.<br />
+<tt>dft(x[:N])</tt> - N-point Discrete Fourier Transform of a signal.<br />
+<tt>idft(x[:N])</tt> - N-point Inverse Discrete Fourier Transform.<br />
+<tt>fft(x[:N])</tt> - N-point Fast Fourier Transform of a signal.<br />
+<tt>ifft(x[:N])</tt> - N-point Inverse Fast Fourier Transform.<br />
+<tt>fftshift(x)</tt> - shift DC component to center of spectrum.
+</p>
+
+<H3>Special Functions</H3>
+<p>
+<tt>euler</tt> - 0.577215664901533<br />
+<tt>gamma(z)</tt> - Euler Gamma Function<br />
+<tt>beta(z:w)</tt> - Beta Function<br />
+<tt>igamma(a:x)</tt> - Incomplete Gamma Function<br />
+<tt>ibeta(a:b:x)</tt> - Incomplete Beta Function<br />
+<tt>erf(x)</tt> - Error Function<br />
+<tt>erfc(x)</tt> - Complementary Error Function
+</p>
+<p>
+<tt>besselj(n:x)</tt> - Bessel Function 1st Kind<br />
+<tt>bessely(n:x)</tt> - Bessel Function 2nd Kind<br />
+<tt>besseli(n:x)</tt> - Modified Bessel Function 1st Kind<br />
+<tt>besselk(n:x)</tt> - Modified Bessel Function 2nd Kind
+</p>
+<p>
+<tt>ellc1(m)</tt> - Complete Elliptic Integral 1st Kind<br />
+<tt>ellc2(m)</tt> - Complete Elliptic Integral 2nd Kind<br />
+<tt>elli1(m:phi)</tt> - Incomplete Elliptic Integral 1st Kind<br />
+<tt>elli2(m:phi)</tt> - Incomplete Elliptic Integral 2nd Kind<br />
+<tt>sn(m:u)</tt> - Jacobi Elliptic Function sn<br />
+<tt>cn(m:u)</tt> - Jacobi Elliptic Function cn<br />
+<tt>dn(m:u)</tt> - Jacobi Elliptic Function dn
+</p>
+
+<H3>Display Functions</H3>
+<p>
+<tt>todeg(x)</tt> - display as D°M'S<br />
+<tt>todeg2(x)</tt> - display as D°m.sss<br />
+<tt>torad(x)</tt> - display as n*pi<br />
+<tt>togonio(x)</tt> - display as c()+isin()<br />
+<tt>tocis(x)</tt> - display as e^(ix)
+</p>
+
+<H3>EasyCalc Functions</H3>
+<p>
+<tt>ask("title"{:default value})</tt> - opens a dialog with the (optional)
+default entered. Returns the user input.<br />
+<tt>if(test:"expr if true":"expr if false")</tt> - evaluates test and returns
+the appropriate expression. Test must return a positive integer ('true') or
+zero ('false' ).<br />
+<tt>unset(name{:names})</tt> - clears functions and variables from memory. Returns the number of functions and variables cleared<br />
+<tt>axis([xmin:xmax:ymin:ymax]{:[xscale:yscale]})</tt> - sets scaling for the x and y axes on the graph mode.<br />
+<tt>defparamn(x)</tt> - <strong>DO NOT USE</strong>. Sets the parameter name to
+something other than 'x'. Some functions (e.q. most of the q&lt;something&gt;
+statistical functions) are defined internally as strings using 'x' as the
+parameter name. They will not work if you change the parameter name !!!
+</p>
+<br />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC21"></A>
+<H2>21. Useful Constants, integrated in EasyCalc</H2>
+<p>
+These are using more recent values than in the PalmOS manual, mostly coming from http://physics.nist.gov/cuu/Constants/index.html.
+</p>
+<p>euler gamma=0.57721 56649 01532 86060 65120 90082 40243 10421 59335 93992 ...</p>
+<p>Speed of light in vacuum (m s-1) c=299792458</p>
+<p>Newtonian constant of gravitation (m3 kg-1 s-2) G=6.67428E-11</p>
+<p>Standard gravitational acc. (N kg-1) g=9.80665</p>
+<p>Electron mass (kg) me=9.10938215E-31</p>
+<p>Proton mass (kg) mp=1.672621637E-27</p>
+<p>Neutron mass (kg) mn=1.67492729E-27</p>
+<p>Unified Atomic mass unit (kg) u=1.660538782E-27</p>
+<p>Planck constant (J s) h=6.62606896-34</p>
+<p>Boltzmann constant (J K-1) k=1.380 6504-23</p>
+<p>Magnetic permeability - vacuum (magnetic constant) (H m-1) µ0=1.2566370614E-6</p>
+<p>Dielectric permittivity (electric constant) (F m-1) e0=8.854187817E-12</p>
+<p>Fine structure constant alpha=7.2973525376E-3</p>
+<p>Rydberg constant (m-1) r=10973731.568527</p>
+<p>Classical electron radius (m) re=2.8179402894E-15</p>
+<p>Bohr radius (m) a0=5.2917720859E-11</p>
+<p>Fluxoid quantum (magnetic flux quantum) (W b) phi0=2.067833667E-15</p>
+<p>Bohr magneton (J T-1) µb=9.27400915E-24</p>
+<p>Electron magnetic moment (J T-1) µe=-9.28476377E-24</p>
+<p>Nuclear magneton (J T-1) µN=5.05078324E-27</p>
+<p>Proton magnetic moment (J T-1) µp=1.410606662E-26</p>
+<p>Neutron magnetic moment (J T-1) µn=-9.6623641E-27</p>
+<p>Compton wavelength (electron) (m) lc=2.4263102175E-12</p>
+<p>Compton wavelength (proton) (m) lcp=1.3214098446E-15</p>
+<p>Stefan-Boltzmann constant (W m-2 K-4) sigma=5.670400E-8</p>
+<p>Avogadro's constant (mol-1) Na=6.02214179E+23</p>
+<p>Ideal gas volume at STP (m3 mol-1) Vm=2.2413996E-2</p>
+<p>Universal molar gas constant (J mol-1 K-1) R=8.314472</p>
+<p>Electron charge (elementary charge) (C) e=1.602176487E-19</p>
+<p>Faraday constant (C mol-1) F=96485.3399</p>
+<p>Quantum Hall resistance = von Klitzing constant (Ohm) Rk=25812.807</p>
+<br />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC0A"></A>
+<H2>A. License</H2>
+<p>
+Scientific Calculator for PalmOS and Pocket PC.<br />
+Copyright (C) 1999 - 2003, 2006, 2007 Ondrej Palkovsky
+</p>
+<p>
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; either version 2 of the License, or (at your
+        option) any later version.
+</p>
+<p>
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+Public License for more details.
+</p>
+<p>
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+</p>
+<p>
+You can contact the developers via the Open Discussion Forum
+<a href="http://sourceforge.net/forum/forum.php?forum_id=41375">
+http://sourceforge.net/forum/forum.php?forum_id=41375</a> on  the project
+website <a href="http://sourceforge.net/projects/easycalc">
+http://sourceforge.net/projects/easycalc</a>
+</p>
+<br/>
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>
+
+<A NAME="SEC0B"></A>
+<H2>B. Credits</H2>
+<p>
+Main author: Ondrej Palkovsky (ondrap at penguin.cz)<br />
+I send many thanks to these people and others for contributing to this
+project, many of the features that you are using wouldn't exist without
+their help.
+</p>
+<p>
+Rafael R. Sevilla (dido at pacific.net.ph)<br />
+Added many mathematical functions and improved the old code.
+</p>
+<p>
+Richard Scott (rts4377 at yahoo.com)<br />
+Contributed the Upper Tail probabilities, romberg integration code,
+improvements of special functions
+</p>
+<p>
+Jorge Gil (cluny at users.sourceforge.net)<br />
+Michael Schierl (schierlm at users.sourceforge.net)<br />
+Recent inprovements of code since 1.23
+</p>
+<p>
+John Hodapp (bigshot at email.msn.com)<br />
+Code improvements regarding matrices, UI etc.
+</p>
+<p>
+Ton van Overbeek (ton at v-overbeek.nl)<br />
+PalmOS5 compatibility, hires and DIA patches. Recent releases.
+</p>
+<p>
+Mapi Bid (mapibid at sourceforge.net)<br />
+Pocket PC port and releases, recent patches.
+</p>
+<p>
+Edgar Piskernik (pisker at gmx.at)<br />
+Harald Lueling (Harald_Lueling at burg-waechter.de)<br />
+German translation
+</p>
+<p>
+Francesco (fcroci at prodigy.net.mx)<br />
+Spanish translation
+</p>
+<p>
+Carlos Irapuan Lube de Menezes (cirapuan at hotmail.com)<br />
+Portuguese translation
+</p>
+<p>
+Daniel Lemire, Ph.D. (lemire at ondelette.com)<br />
+French translation
+</p>
+<p>
+Ignazio Di Napoli (neclepsio at hotmail.com)<br />
+Michele Mazzucchi (m.mazzucchi at linuxpratico.com)<br />
+Italian translation
+</p>
+<p>
+Yoshimov (yoshimov at pobox.com)<br />
+Japanese translation
+</p>
+<p>
+Pavel Kharitonov (dti17 at narod.ru)<br />
+Russian translation
+</p>
+<p>
+Olga Yiparaki (yiparaki at mindspring.com)<br />
+Sent me utilities for matrix functions
+</p>
+<p>
+Antonio Fiol Bonn_n (Antonio.FIOL at enst-bretagne.fr><br />
+Added PYR support for the financial equations
+</p>
+<p>
+Koichi Takagi (halliday at users.sourceforge.net)<br />
+Updated documentation
+</p>
+<p>
+For more information about the GNU General Public License:
+<a href="http://www.gnu.org/copyleft/gpl.html"> http://www.gnu.org/copyleft/gpl.html</a>
+</p>
+<p>
+For more information about the MathLib library:
+<a href="http://www.radiks.net/~rhuebner/mathlib.html"> http://www.radiks.net/~rhuebner/mathlib.html</a>
+</p><br />
+<p>
+Back to <A href="#TOC">Contents</a>
+</p>

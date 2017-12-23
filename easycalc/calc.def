@@ -1,0 +1,2 @@
+application { "EasyCalc" OpCl backup stack=0x2000 }
+multiple code { "mlib" "basefunc" "iface" "specfun" "graph" "newfunc" "parser" "matfunc" }

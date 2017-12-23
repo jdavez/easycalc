@@ -1,0 +1,449 @@
+/* $Id: sp.rcp,v 1.44 2007/07/28 02:52:13 tvoverbe Exp $ */
+
+/*********************************************************
+ * Spanish resources - Francesco Croci <fcroci@prodigy.net.mx> *
+ *********************************************************/
+
+TRANSLATION "sp"
+BEGIN
+
+"$$OK"			=	"OK"
+"$$CANCEL"		=	"Cancelar"
+
+/**************************************************
+ *           PREFERENCES (19)                     *
+ **************************************************/
+"$$PREFERENCES TITLE"	=	"Preferencias"
+
+"$$RADIAN"		=	"Radianes"
+"$$DEGREE"		=	"Grados"
+"$$GRAD"		=	"Gradianes"
+
+"$$DECIMAL"		=	"Decimal"
+"$$BINARY"		=	"Binario"
+"$$OCTAL"		=	"Octal"
+"$$HEXADEC"		=	"HexaDec"
+
+"$$NORMAL"		=	"Normal"
+"$$SCIENTIFIC"		=	"Cient"
+"$$MNSCIENTIFIC"	=	"Científico"
+"$$ENGINEER"		=	"Ingeniería"
+
+"$$PRECISION"		=	"Precisión"
+"$$FORCE INTEGER"	=	"Forzar enteros"
+"$$REDUCE PRECISION"	=	"Reducir precisión"
+"$$STRIP ZEROS"		=	"Quitar ceros"
+"$$MATCH BRACKETS" 	=	"Cerrar ()'s"
+"$$SHOW UNITS"		=	"Ver Unidades"
+"$$INSERT HELP"		=	"Insertar Ayuda"
+/**************************************************/
+"$$PALM NUM PREFS"	=	"Palm Num Prefs"
+"$$DISP SCIEN"		=	"Calc. Científica en modo básico"
+/**************************************************/
+
+/**************************************************
+ *         MAIN FORMS (10)                         *
+ **************************************************/
+"$$TRIGONOMETRICS"      =       "Trigonométricas"
+"$$EXPONENTIAL"		=	"Exponenciales"
+"$$COMBINATORICS"	=	"Combinatoria"
+"$$COMPLEX"		=	"Complejas"
+"$$SPECIAL FUNCTIONS"	=	"Especiales 1"
+"$$SPECIAL FUNCTIONS2"	=	"Especiales 2"
+"$$FUNCTION SOLVING"	=	"Resuelve funciones"
+"$$LIST FUNCTIONS"	=	"Listar Funciones"
+"$$MATRIX FUNCTIONS"	=	"Funciones de Matriz"
+"$$UPPER TAIL PROBAB"	=	"Probabilidades"
+"$$SIGNAL PROCESSING"	=	"Procesado de Señal"
+"$$DISCRETE MATH"		=	"Matemática Discreta"
+
+/**************************************************
+ *         MISC FORMS (18)                        *
+ **************************************************/
+
+"$$SAVE AS TITLE"	=	"Salvar variable como"
+"$$NAME:"		=	"Nombre:"
+"$$PARAM:"		=	"Prm:"
+"$$DONE"		=	"Hecho"
+
+"$$FINANCIAL TITLE"	=	"Calculadora Financiera"
+"$$BEGIN"		=	"Iniciar"
+"$$END"			=	"Fin"
+
+"$$DEFINITION TITLE"	=	"Administrador de Datos"
+"$$NEW"			=	"Nuevo"
+"$$MODIFY"		=	"Modifica"
+"$$DELETE"		=	"Borrar"
+"$$FUNCTION"		=	"Función"
+"$$VARIABLE"		=	"Variable"
+"$$INSERT"		=	"Insertar"
+
+"$$LIST EDITOR"		=	"Editor de Listas"
+"$$VALUE:"		=	"Valor:"
+"$$REFERENCE1"		=	"Referencia 1"
+
+"$$MATRIX EDITOR"	=	"Editor de Matrices"
+
+/**************************************************
+ *         Solver                                 *
+ **************************************************/
+"$$SOLVER"		=	"Solver"
+"$$UPDATE"		=	"Update"
+"$$OPTIONS"		=	"Options"
+"$$NOTE"		=	"Note"
+"$$NEW WORKSHEET"	=	"New Worksheet"
+"$$MINIMUM:"		=	"Minimum:"
+"$$MAXIMUM:"		=	"Maximum:"
+"$$PRECISION:"		=	"Precision:"
+"$$SOLVE"		=	"Solve"
+"$$CALCULATE"		=	"Calculate"
+"$$WORKSHEET"		=	"worksheet"
+"$$NEW WORKSHEET"	=	"New Worksheet"
+"$$SOLVER OPTIONS"	=	"Solver Options"
+"$$VARIABLE DESCR"	=	"Variable Description:\n"
+"$$UNDEFINED"		=	"Undefined"
+
+/**************************************************
+ *         MENU (17)                              *
+ **************************************************/
+
+"$$LAYOUT"		=	"Modo"
+"$$BASIC"		=	"Básic"
+"$$SCIENTIFIC"		=	"Científica"
+"$$INTEGER"		=	"Enteros"
+"$$GRAPH"		=	"Gráficos"
+"$$PREFERENCES..."	=	"Preferencias..."
+"$$DEFINITION..."	=	"Administr. de Datos..."
+"$$FINANCIAL..."	=	"Administr. Financiero..."
+/**************************************************/
+"$$SOLVER..."           =       "Solver..."
+/**************************************************/
+
+"$$SPECIAL"		=	"Especial"
+"$$CLEAR HISTORY"	=	"Borrar historial"
+"$$EXPORT TO MEMOPAD"	=	"Copiar a block de notas"
+"$$IMPORT FROM MEMOPAD" =	"Importar del block de notas"
+
+"$$INFO"		=	"Info"
+"$$ABOUT..."		=	"Sobre..."
+"$$HELP"		=	"Ayuda"
+
+"$$MATRIX EDITOR..."	=	"Editor de Matrices..."
+"$$LIST EDITOR..."	=	"Editor de Listas..."
+
+/**************************************************
+ *         ALERTS (20)                            *
+ **************************************************/
+"$$OVERWRITE TITLE"	=	"Confirmar Sobreescribir"
+"$$OVERWRITE MSG"	=	"Objeto '^1' ya existe, sobreescribir?"
+"$$OVERWRITE"		=	"Sobreescribir"
+
+"$$DELETE TITLE"	=	"Confirmar Borrar"
+"$$DELETE MSG"		=	"Borrar Permanentemente ^1 '^2'?"
+"$$DELETE"		=	"Borrar"
+
+"$$ERROR"		=	"Error"
+"$$BADNAME MSG"		=	"Nombre de variable erróneo."
+"$$BADPARAM MSG"	=	"Nombre de parámetro erróneo."
+"$$COMPUTE MSG"		=	"Error al calcular."
+"$$ANS PROBLEM"		=	"El valor de la variable ANS no esta disponible."
+"$$BAD VALUES"		=	"Valores Equivocados."
+"$$NUMBER GUESSER"	=	"Busca Números"
+"$$NUMBER NOT RECOG"	=	"Numero no reconocido."
+/**************************************************/
+"$$OCTAL MODE SELECTED" =       "Bad Mode Selected"
+"$$OCTAL MODE ERROR"    =       "You cannot use this key in ^1 mode."
+/**************************************************/
+
+"$$ERROR DURING IMPORT" = "Error encontrado al importar"
+"$$EXPORT TITLE" = "Exportar datos"
+"$$EXPORT MSG" = "Que desea exportar?"
+"$$ALL" = "Todo"
+"$$FUNCTIONS ONLY" = "Funciones"
+"$$VARIABLES ONLY" = "Variables"
+
+/**************************************************
+ *         MISC STRINGS (17)                      *
+ **************************************************/
+"$$FUNCTION MODIFICATION" = 	"Modificar Función "
+"$$VARIABLE MODIFICATION" = 	"Modificar Variable"
+"$$NEW FUNCTION"	=	"Nueva Función"
+"$$NEW VARIABLE"	=	"Nueva Variable"
+"$$STRVARIABLE"		=	"Variable"
+"$$STRFUNCTION"		=	"Función"
+"$$GRAPH FUNCTION"	=	"Graficar Función"
+"$$NONE"		=	"Ninguno"
+"$$USER"		=	"Usuario"
+
+"$$MNCOPY"		=	"Copiar"
+"$$MNSAVE AS"		=	"Salvar como..."
+"$$MNDATAMGR"		=	"Administ.Datos"
+"$$MNGUESSIT"		=	"Adivinar"
+"$$ENGDISPL"		=	"Ingeniería"
+"$$MNDEGREE"		=	"->Grados"
+"$$MNDEGREE2"		=	"->Grados2"
+"$$MNRADIAN"		=	"->Radianes"
+"$$MNGON"		=	"->e^(x)"
+"$$MNCIS"		=	"->cos()+i·sin()"
+
+/**************************************************
+ *         Graph strings (15)                     *
+ **************************************************/
+"$$SELECT A FUNCTION"   =	"Seleccione Función"
+"$$GRAPH COMPUTING"	=	"Calcula Gráfico"
+"$$GRAPH COMPUTING RESULT" = 	"Resultado Calculo Gráfico"
+"$$COMPUTING"		=	"Calculando"
+"$$COMPCONFIRM"		=	"El calculo puede tardar, oprima OK para iniciar"
+"$$COMPRESULT"		=	"Función de ^1 es: ^2"
+"$$LEFTBOUND"		=	"Seleccione el borde IZQUIERDO del intervalo y oprima el botón 'C' "
+"$$RIGHTBOUND"		=	"Seleccione el borde DERECHO del intervalo y oprima el botón 'C' "
+"$$POINTONGRAPH"	=	"Seleccione un punto en la gráfica y oprima el botón 'C'"
+"$$GRZERO"		=	"cero"
+"$$GRVALUE"		=	"valor"
+"$$GRMIN"		=	"mínimo"
+"$$GRMAX"		=	"máximo"
+"$$GRDDX"		=	"d/dx"
+"$$GRINTEG"		=	"integral"
+"$$GRCBOUNDERR"		=	"El borde izquierdo debe ser menor que el derecho"
+/**************************************************/
+"$$GRINTERSECT"		=	"intersect"
+"$$GRCFUNCERR"		=	"You have to select 2 different functions"
+/**************************************************/
+
+/**************************************************
+ *         ERROR MESSAGES (17)                    *
+ **************************************************/
+"$$ERRNO ERROR"		=	"Error No."
+"$$ERRSYNTAX ERROR"	=	"Error de sintaxis"
+"$$ERRBAD FUNCTION"	=	"Función equivocada"
+"$$ERRMISSING ARGUMENT"	=	"Falta argumento"
+"$$ERRBAD ARGUMENT TYPE" = 	"Tipo de argumento equivocado"
+"$$ERRINTERNAL ERROR"	=	"Error Interno"
+"$$ERRBAD MODE SELECTED"=	"El modo seleccionado es erróneo"
+"$$ERRNO RESULT"	=	"Sin resultado"
+"$$ERRDIVISION BY 0"	=	"División entre 0"
+"$$ERRNO SUCH VARIABLE"	=	"No existe variable"
+"$$ERRBAD RESULT"	=	"Resultado erróneo"
+"$$ERRTOO DEEP RECURSION"=	"Demasiadas anidaciones"
+"$$ERRIMPOSSIBLE CALCULATION" = "Calculo imposible"
+"$$ERROUT OF RANGE" 	=	"Fuera de rango"
+"$$ERRBAD ARG COUNT"	=	"Error en conteo de argumento"
+"$$ERRBAD DIMENSION"	=	"Dimension erronea"
+"$$ERRSINGULAR"		=	"Matriz Singular"
+/**************************************************/
+"$$ERRINTERRUPTED"	=	"Operation interrupted"
+/**************************************************/
+
+/**************************************************
+ *         GRAPH SCREENS (13)                     *
+ **************************************************/
+"$$TABLE MODE..."	=	"Modo Tabla..."
+"$$TABLE MODE"		=	"Modo Tabla"
+"$$GOTO"		=	"Ir a"
+"$$STEP"		=	"Paso"
+"$$GO"			=	"Ir a"
+"$$SETUP GRAPHS..."	=	"Configurar Gráfico..."
+"$$SETUP GRAPHS"	=	"Configurar Gráfico"
+"$$GRAPH PREFERENCES..."	=	"Preferencias de Gráfico..."
+"$$GRAPH PREFERENCES"	=	"Preferencias de Gráfico"
+"$$DEFAULT"		=	"Default"
+"$$TRIGONO"		=	"Trigono"
+
+"$$FUNCMODE"		=	"Función"
+"$$POLARMODE"		=	"Polar"
+"$$PARAMMODE"		=	"Paramétrico"
+
+"$$GRAPH COLORS"	=	"Configurar colores"
+"$$BACKGRND"	=	"fondo"
+"$$AXIS"	=	"ejes"
+"$$GRID"	=	"grid"
+
+/**************************************************
+ *         MENU EDIT (8)                          *
+ **************************************************/
+"$$EDIT"		=	"Editar"
+"$$UNDO"		=	"Deshacer"
+"$$CUT"			=	"Cortar"
+"$$COPY"		=	"Copiar"
+"$$PASTE"		=	"Pegar"
+"$$SELECT ALL"		=	"Selecciona todo"
+"$$KEYBOARD"		=	"Teclado"
+"$$GRAFFITI HELP"	=	"Ayuda de Graffiti"
+
+/**************************************************
+ *         HELP STRINGS (7)                       *
+ **************************************************/
+"$$PREFHELP" = "Preferencias para EasyCalc\n\n"\
+/**************************************************/
+	"Reduce precision - if checked, EasyCalc rounds the number after "\
+	"every operation a little to avoid effects of floating point. It makes "\
+	"all operations slower though, that's why I recommend turing it off "\
+	"if you work with matrices, lists or function solving."\
+/**************************************************/
+	"\n\n"\
+	"Cerrar ()'s - si esta marcado, el ')' es agregado automáticamente a la función "\
+	"y el cursor se mueve entre los paréntesis. "\
+	"\n\n"\
+	"Forzar enteros - convierte los datos ingresados a "\
+	"números enteros. Esto es generalmente mejor para trabajar con conversiones "\
+	"de números, ya que los resultados con punto flotante siguen el esquema "\
+	"tradicional desplegando máximo 10 dígitos, mientras que los números enteros "\
+	"mostraran un entero de 32 bits en binario sin problema."\
+	"\n\n"\
+	"Ver unidades - al seleccionar el modo Eng se desplegara 10E3 como 10K "\
+	"etc. Estos números pueden emplearse como datos de entrada."\
+	"\n\n"\
+	"Insertar ayuda - inserta  nombres de argumentos para algunas funciones"\
+	"multiparametro directamente en la linea de entrada."\
+	"\n\n"\
+/************************************************************/
+	"Palm Num Prefs - follow the palm number preferences on the input exactly "\
+	"including the dot/comma/space between thousands. Normally the dot and "\
+	"comma are both recognized as a decimal point but if you select this "\
+	"option, only the one selected in number preferences will be recognized. "\
+	"This may be useful if you want paste into EasyCalc numbers from other "\
+	"applications."
+/************************************************************/
+
+"$$BASIC HELP" = "La información más reciente se encuentra en "\
+	"http://easycalc.sourceforge.net ."\
+	"\n\n"\
+/************************************************************/
+	"EasyCalc now uses different algorithm for Reduce precision that "\
+	"should be better in most situations. The only exception is "\
+	"when you want to work with numbers like pi, where reducing "\
+	"precision could cause worse results (especially with goniometric "\
+	"functions). I recommend setting this feature on except cases when "\
+	"you work with goniometric functions in Radian mode."\
+/************************************************************/
+	"\n\n"\
+	"Para usuarios de Visor Platinum: al parecer estos equipos tienen la utilería "\
+	"MathLib integrada en memoria ROM, por lo que no es necesario "\
+	"instalarla en RAM. Si ya la instalo, "\
+	"puede borrarla, usando Borrar del menú Aplicaciones."\
+	"\n\n"\
+	"Por favor, lea el archivo INSTALL si no puede encontrar algunas "\
+	"propiedades (como gráficas) que espera ver. EasyCalc se distribuye "\
+	"en varios paquetes, y cada uno tiene sets diferentes de propiedades."\
+	"\n\n"\
+	"Información sobre funciones recientemente añadidas se encuentra en el archivo "\
+	"llamado specfuncs.pdf."\
+	"\n\n"\
+	"Las funciones multiparámetros tienen los parámetros separados por ':', "\
+	"Ej. ncr(6:3) "\
+	"\n\n"\
+	"Ayuda para la calculadora\n"\
+	"Cosas que le parecerán útiles:\n"\
+	"La letra Graffiti 'enter' es equivalente a la tecla EXE \n\n"\
+	"introducir operadores usando el área de graffiti no agrega 'ANS' al "\
+	"principio de la línea (solo sirve para '-3+4').\n\n"\
+	"Quizá quiera habilitar el auto-cierre de paréntesis en Preferencias.\n"\
+	"Así no necesitara cerrar los paréntesis al "\
+	"final de la línea, Ej. 'sin(3.5'.\n\n"\
+	"Al definir la función: f()=\"x^2\"\nx es un parámetro\n\n"\
+	"Puede ingresar grados de la siguiente manera: 90°30'\n"\
+	"Ahora es posible usar lenguaje matemático como 3pi+4e "\
+	"o 3sin(x)\n"\
+	"Los cálculos con números complejos son LENTOS. Deshabilitelos en preferencias."\
+	"\n\n"\
+	"Puede usar unidades como M-mega, G-giga, T-terra, n-nano, f-femto etc. "\
+	"de la misma manera en que lo hace en papel normal, e.g. 10G, 1/80T"\
+	"\n\n"\
+	"Puede definir sus funciones multiparametro. Defina el "\
+	"segundo parametero como 'x(2)', el tercero como 'x(3)' etc.(siendo 'x' "\
+	"el nombre del parametro)."
+
+"$$GNU NOTICE" =  "La Calculadora Científica para PalmOS\n"\
+	"Copyright (C) 1999-2003, 2006, 2007 Ondrej Palkovsky.\n"\
+	"http://easycalc.sourceforge.net\n\n"\
+	"Este programa es software libre; puede redistribuirlo y/o modificarlo "\
+	"bajo los términos de GNU General Public License según publicado por la "\
+	"Free Software Foundation; sea por la versión 2 de la Licencia, o "\
+	"(a su elección) cualquier otra versión posterior.\n\n"\
+	"Este programa es distribuido con la intención de que sea útil, "\
+	"pero SIN GARANTIA; ni siquiera la garantía implícita de "\
+	"COMERCIALIZACION O DE APTITUD PARA PROPOSITOS PARTICULARES.  Vea la "\
+	"GNU General Public License para mas detalles.\n\n"\
+	"Junto con este programa debe de haber recibido una copia del "\
+	"GNU General Public License; de no ser así, escriba a la Free Software "\
+	"Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA"
+
+"$$GRPREF HELP" = "Preferencias para diseño básico de gráficas. "\
+	"\n\n"\
+	"xmin, xmax, ymin, ymax - limites del área de gráficos"\
+	"\n\n"\
+	"Función,Polar,Param - Puede seleccionar el tipo de gráfica. Las gráficas Función "\
+	"son del tipo y=f(x), las gráficas Polares tendrán un ángulo theta como parámetro "\
+	"y devolverán la longitud de una línea, como r=f(t) y las gráficas Paramétricas "\
+	"le permitirán especificar diferentes funciones para X y Y, Ej. X=t, Y=6t."
+
+"$$GRSETUP HELP" = "Prepare las gráficas que desee diseñar."\
+	"\n\n"\
+	"Un Click sobre el ID de función (X1,Y1,r1..) seleccionará una gráfica "\
+	"existente."\
+	"\n\n"\
+	" Haga Click sobre el nombre de la función para editarla."
+
+"$$FINHELP"	= "Los cálculos básicos financieros pueden describirse como: "\
+	"Ud. tiene dinero en el banco (PV, valor presente). X-veces al año(P/YR, "\
+	"pagos por año) Ud. deposita dinero (PMT, pago) a su cuenta "\
+	"bancaria. El Banco agrega cada vez una cantidad de dinero, un porcentaje del "\
+	"importe actual de su cuenta, y este porcentaje es llamado "\
+	"interés (IT).\n"\
+	"Después de un cierto numero de depósitos (NP, Numero de periodos) Ud. decide "\
+	"retirar "\
+	"su dinero del banco. Lo que recibirá del banco es el Valor Futuro(FV).\n"\
+	"Este procedimiento supone, que el periodo de depósitos es igual al "\
+	"periodo en que el Banco agrega intereses a su cuenta."\
+	"\n\n" \
+/*****************************************************/
+	"!!! This implementation uses the 'cash flow' meaning of sign. E.g. " \
+	"'+' may mean 'money to bank' and '-' means 'money from bank'. There " \
+	"are many people asking me to change the sign, but IMO this is the " \
+	"correct and least confusing way how to show the meaning."
+
+"$$MEMOHELP" = "Seleccione una nota de la lista y oprima OK para ejecutar la nota. "\
+	"La primera línea de la nota (titulo) no se  ejecuta. La nota es ejecutada "\
+	"como si hubiera introducido el texto línea por línea en la calculadora.\n\n"\
+	"Si hay una categoría 'EasyCalc' en el block de notas, serán desplegadas "\
+	"solo las notas de esta categoría."
+
+"$$FUNCHELP" = "Referencia de funciones\n" \
+	"Estas son funciones para 'resolver ecuaciones' . El argumento 'función' "\
+	"puede definirse como 'f()' o directamente como cadena e.g. '\"x+1\"'. "\
+	"Las funciones siguientes tienen 1 argumento extra OPCIONAL para "\
+ 	"definir el rango de error con el que deben calcularse. Mientras más "\
+	"pequeño el rango, mas lento será el cálculo.\n\n" \
+	"fzero(min:max:func[:error]) - calcula la raíz de una función\n\n"\
+	"fvalue(min:max:value:func[:error]) - calcula x, donde f(x)=valor\n\n"\
+	"fmin(min:max:func[:error]) - calcula el mínimo de una función en "\
+	"el intervalo <min:max>\n\n"\
+	"fmax(min:max:func[:error]) - calcula el máximo de una función en "\
+	"el intervalo <min:max>\n\n"\
+	"fd_dx(point:func[:error]) - calcula la primera derivada de la función\n\n"\
+	"fsimps(min:max:func[:error]) - calcula la integral finita de una función "\
+	"usando el algoritmo de Simpson"\
+	"\n\n" \
+	"fromberg(min:max:func[:n]) - computes finite integral of a function "\
+	"using romberg algorithm (the higher 'n', the slower).\n\n" \
+	"fintersect(min:max:f1:f2[:error]) - finds intersection of functions "\
+	"f1 and f2"
+
+/**************************************************/
+"$$SOLVERHELP" = "The Solver is a tool, that helps you store equations "\
+        "and formulas and compute results in a convinient way. "\
+	"Create a new worksheet or select existing one from the drop-down "\
+	"menu. When the worksheet is selected, you can type in either formula "\
+	"(e.g. pi*r^2) or equation (e.g. x^2=x+2). Then tap the 'Update' "\
+	"button and the list of variables gets updated. If you wrote in formula, "\
+	"set up the variables and tap button 'Calculate'. If you entered equation, "\
+	"select the variable you want to solve and press button 'Solve'.\n\n"\
+	"You may annotate the function and the variables. Press the 'Note' button "\
+	"and add a note. If you start a new line with a name of variable and colon "\
+	"(e.g. 't: Time'), the rest of the line is treated as a description of the "\
+	"variable and shown to you when you select the variable in the list.\n\n"\
+	"The equation solving internally uses fzero() function, you can modify the "\
+	"parameters by tapping the 'Options' button."
+
+END
+

@@ -1,0 +1,112 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- ViewVC - http://viewvc.org/
+by Greg Stein - mailto:gstein@lyra.org -->
+<head>
+<title>SourceForge.net Repository - [easycalc] View of /easycalc/manual/images/Preferences.png</title>
+<meta name="generator" content="ViewVC 1.0.3" />
+<link rel="stylesheet" href="/*docroot*/styles.css" type="text/css" />
+</head>
+<body>
+<table style="padding:0.1em;">
+<tr>
+<td>
+<strong>
+
+<a href="/easycalc/">
+
+[easycalc]</a>
+/
+
+<a href="/easycalc/easycalc/">
+
+easycalc</a>
+/
+
+<a href="/easycalc/easycalc/manual/">
+
+manual</a>
+/
+
+<a href="/easycalc/easycalc/manual/images/">
+
+images</a>
+/
+
+<a href="/easycalc/easycalc/manual/images/Preferences.png?view=log">
+
+Preferences.png</a>
+
+
+</strong>
+
+</td>
+</tr>
+</table>
+
+
+<div style="float: right; padding: 5px;"><a href="http://sourceforge.net"><img src="/*docroot*/images/sflogo-210pxtrans.png" alt="(logo)" border=0 width=210 height=62></a></div>
+<h1>View of /easycalc/manual/images/Preferences.png</h1>
+
+<p style="margin:0;">
+
+<a href="/easycalc/easycalc/manual/images/"><img src="/*docroot*/images/back_small.png" width="16" height="16" alt="Parent Directory" /> Parent Directory</a>
+
+| <a href="/easycalc/easycalc/manual/images/Preferences.png?view=log#rev1.1"><img src="/*docroot*/images/log.png" width="16" height="16" alt="Revision Log" /> Revision Log</a>
+
+
+
+
+</p>
+
+<hr />
+<div class="vc_summary">
+Revision <strong>1.1</strong> -
+(<a href="/*checkout*/easycalc/easycalc/manual/images/Preferences.png?revision=1.1"><strong>download</strong></a>)
+(<a href="/*checkout*/easycalc/easycalc/manual/images/Preferences.png?revision=1.1&amp;content-type=text%2Fplain"><strong>as text</strong></a>)
+(<a href="/easycalc/easycalc/manual/images/Preferences.png?annotate=1.1"><strong>annotate</strong></a>)
+
+<br /><em>Sun Sep  2 00:59:49 2007 UTC</em>
+(4 months ago)
+by <em>tvoverbe</em>
+
+
+<br />Branch: <strong>MAIN</strong>
+
+
+<br />CVS Tags: <strong>stable_1_25, HEAD</strong>
+
+
+
+
+
+
+
+
+<pre class="vc_log">Added new manual derived from &lt;halliday at users.sourceforge.net&gt; contribution
+and Ondrap's original tutuorial. Also a Plucker version.
+</pre>
+
+</div>
+<div id="vc_markup"><pre><img src="/*checkout*/easycalc/easycalc/manual/images/Preferences.png?revision=1.1" alt="" /><br /></pre></div>
+
+<hr />
+<table>
+<tr>
+<td>
+<address><a href="http://sourceforge.net/">Back to SourceForge.net</a></address><br />
+Powered by <a href="http://viewvc.tigris.org/">ViewVC 1.0.3</a>
+</td>
+<td style="text-align:right;">
+<h3><a href="/*docroot*/help_rootview.html">ViewVC and Help</a></h3>
+</td>
+</tr>
+</table>
+</body>
+</html>
+

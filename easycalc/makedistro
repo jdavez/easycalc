@@ -1,0 +1,49 @@
+#!/bin/sh -x
+rm -r /tmp/easycalc
+if [ -z "$1" ]; then
+  echo "Syntax: $0 CVS_tag"
+  exit
+fi
+VERSION=`echo $1 | sed -e "s/^.*_\([0-9]*\)_\([0-9]*\)\$/\\1.\\2/"`
+rm -r /tmp/EasyCalc-$VERSION
+set -e
+mkdir /tmp/EasyCalc-$VERSION
+mkdir /tmp/EasyCalc-$VERSION/binary
+# Create changelog
+rcs2log -h users.sourceforge.net > /tmp/ChangeLog
+# Unpack the CVS
+cd /tmp
+cvs -z3 -d:ext:tvoverbe@easycalc.cvs.sourceforge.net/cvsroot/easycalc export -r $1 easycalc
+# Move the manual directory
+mv /tmp/easycalc/manual /tmp/EasyCalc-$VERSION
+# Create source package 
+cd /tmp
+find easycalc | zip -@ EasyCalc-$VERSION/src.zip
+# Compile calc_small
+cd /tmp/easycalc
+./configure --disable-specfun --disable-graphfun --disable-os5hires --disable-diasupport
+make
+cp calc_en.prc /tmp/EasyCalc-$VERSION/binary/calc_small.prc
+# Compile full versions of calc
+make distclean
+./configure --with-sonysdk --with-handerasdk
+make
+mv calc_cs.prc /tmp/EasyCalc-$VERSION/binary/calc_cs_iso.prc
+mv calc_*.prc /tmp/EasyCalc-$VERSION/binary
+cd langs
+mv cs.rcp cs2.rcp
+cat cs2.rcp | recode latin2..cp1250/ > cs.rcp
+cd ..
+make
+mv calc_cs.prc /tmp/EasyCalc-$VERSION/binary/calc_cs_win.prc
+cd langs; mv cs2.rcp cs.rcp; cd ..
+make INSTALL
+# Create other important thigs in the Output
+mv /tmp/ChangeLog /tmp/EasyCalc-$VERSION/ChangeLog
+mv /tmp/easycalc/docs /tmp/EasyCalc-$VERSION
+mv /tmp/easycalc/INSTALL /tmp/EasyCalc-$VERSION
+cd /tmp/EasyCalc-$VERSION/docs
+mv COPYING CREDITS specfuncs.pdf ..
+cp ~/PalmStuff/PalmDev/Projects/MathLib/MathLib/MathLib.prc /tmp/EasyCalc-$VERSION/binary
+cd /tmp
+find EasyCalc-$VERSION | zip -@ ~/EasyCalc-$VERSION.zip

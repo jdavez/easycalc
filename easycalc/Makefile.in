@@ -1,0 +1,141 @@
+## Makefile for EasyCalc
+## $Id: Makefile.in,v 1.36 2007/09/28 01:23:25 tvoverbe Exp $
+##
+
+# ----------- Configuration options and optional SDK paths --------------
+
+SPECFUN_ENABLED		=	@SPECFUN@
+GRAPHS_ENABLED		=	@GRAPHFUN@
+DIA_ENABLED		=	@DIASUPP@
+OS5HIRES_ENABLED	=	@OS5HIRES@
+SONYSDK			=	@SONYSDK@
+HANDERASDK		=	@HANDERASDK@
+
+SONYINC		=	-I/PalmDev/clie-sdk-5/include -I/PalmDev/clie-sdk-5/include/Libraries -I/PalmDev/clie-sdk-5/include/System
+HANDERAINC	=	-I/PalmDev/handera/include
+
+# ----------- End of configuration options ------------------------------
+
+CC		=	@CC@
+PILXFER		=	@PILXFER@
+BUILDPRC	=	@BUILDPRC@
+PILRC		=	@PILRC@
+MULTIGEN	=	@MULTIGEN@
+CTAGS		=	@CTAGS@
+
+LANGDIR		=	langs
+LANG		=	@LANGS@
+
+CFLAGS=-Wall -Wno-switch -O2 -I./include -I.
+PILRCFLAGS=
+
+TARGET 		= 	calc
+PRC		=	$(foreach lang, $(LANG), $(TARGET)_$(lang).prc)
+LANGRCP		=	$(foreach lang, $(LANG), $(LANGDIR)/$(lang).rcp)
+RCPFILE		=	$(TARGET).rcp
+ROFILE		=	$(TARGET).ro
+
+CALC_OBJS = calc.o about.o clie.o clie-util.o chkstack.o dbutil.o \
+       mlib/calcDB.o mlib/fl_num.o mlib/fp.o mlib/funcs.o \
+       mlib/guess.o mlib/konvert.o mlib/mathem.o mlib/stack.o prefs.o \
+       mlib/MathLib.o mlib/display.o mlib/history.o mlib/complex.o \
+       finance.o result.o ansops.o defmgr.o mlib/meqstack.o \
+       mlib/txtask.o \
+       main.o memo.o varmgr.o $(TARGET)-sections.o
+
+GRAPH_OBJS = graph.o grprefs.o grsetup.o grtaps.o grtable.o grcalc.o
+SPECFUN_OBJS = mlib/specfun.o mlib/bessels.o mlib/elliptic.o \
+	mlib/slist.o mlib/matrix.o mlib/integ.o mtxedit.o lstedit.o \
+	mlib/cmatrix.o solver.o
+DIA_OBJS = calc-dia/DIA.o calc-dia/resize.o
+
+RSRCS = calc.rcp.in 
+OBJS = $(CALC_OBJS)
+
+ifeq "$(GRAPHS_ENABLED)" "yes"
+	OBJS += $(GRAPH_OBJS)
+	CFLAGS += -DGRAPHS_ENABLED
+	RSRCS += graph.rcp.in
+	PILRCFLAGS += -D GRAPHS_ENABLED
+endif
+
+ifeq "$(SPECFUN_ENABLED)" "yes"
+	OBJS += $(SPECFUN_OBJS)
+	CFLAGS += -DSPECFUN_ENABLED
+	PILRCFLAGS += -D SPECFUN_ENABLED
+endif
+
+ifeq "$(DIA_ENABLED)" "yes"
+	OBJS += $(DIA_OBJS)
+	CFLAGS += -I./calc-dia -DSUPPORT_DIA
+	PILRCFLAGS += -I ./calc-dia -D SUPPORT_DIA
+endif
+
+ifeq "$(OS5HIRES_ENABLED)" "yes"
+	CFLAGS += -DOS5HIRES
+	PILRCFLAGS += -D OS5HIRES
+endif
+
+ifeq "$(SONYSDK)" "yes"
+	CFLAGS += -DSONY_SDK $(SONYINC)
+	PILRCFLAGS += -D SONY_SDK
+endif
+
+ifeq "$(HANDERASDK)" "yes"
+	CFLAGS += -DHANDERA_SDK $(HANDERAINC)
+	PILRCFLAGS += -D HANDERA_SDK
+endif
+
+all: $(PRC)
+
+####################
+######   Transfer
+####################
+xfer: $(TARGET)_en.prc
+	$(PILXFER) -i $(TARGET)_en.prc
+cxfer: $(TARGET).prc
+	$(PILXFER) -p /dev/ttyqe -i calc.prc
+
+#####################
+### Calc executable
+###################
+$(TARGET)_%.prc: $(TARGET) %.stamp
+	$(BUILDPRC) -o $@ -n 'Easy Calc' -c 'OpCl' $(TARGET).def $(ROFILE) $(TARGET)
+
+$(RCPFILE): $(RSRCS) $(LANGDIR)/*.rcp docs/CREDITS VERSION
+	cat $(LANGRCP) $(RSRCS) | \
+	sed -e "s/DATE_HERE/`date +'%Y-%m-%d'`/g" | \
+	sed -e "s/VERSION_HERE/`cat VERSION`/g" > $(RCPFILE)
+
+%.stamp: $(RCPFILE) calcrsc.h
+	-rm $(ROFILE)
+	@if [ $* = 'jp' ]; then \
+	   echo "$(PILRC) -ro -o $(ROFILE) -allowEditID -q -Fj -L $* $(RCPFILE)";\
+	   $(PILRC) -ro -o $(ROFILE) $(PILRCFLAGS) -allowEditID -q -Fj -L $* $(RCPFILE);\
+        else \
+	   echo "$(PILRC) -ro -o $(ROFILE) -allowEditID -q -L $* $(RCPFILE)";\
+	   $(PILRC) -ro -o $(ROFILE) $(PILRCFLAGS) -allowEditID -q -L $* $(RCPFILE);\
+        fi
+	touch $@
+
+$(TARGET): $(OBJS) $(TARGET)-sections.ld
+	$(CC) -Wl,-Map -Wl,calc.map -o $@ $(OBJS) $(TARGET)-sections.ld -lPalmOSGlue 
+
+$(TARGET)-sections.o: $(TARGET)-sections.s
+	$(CC) -c $(TARGET)-sections.s
+
+$(TARGET)-sections.s $(TARGET)-sections.ld: $(TARGET).def
+	$(MULTIGEN) $(TARGET).def
+
+clean:
+	-rm -f *.[oaS] calc *.ro *~ *.exp Makefile.bak include/*~ mlib/*.o mlib/*~ calc-sections.* INSTALL calc.rcp 
+
+distclean: clean
+	-rm -f *.prc Makefile config.status config.log config.cache
+dep: 
+	makedepend -Y $(CFLAGS) *.c mlib/*.c
+ctags: 
+	$(CTAGS) --format=1 *.c *.h
+
+INSTALL: docs/INSTALL.man
+	groff -Tascii -man -P -bc docs/INSTALL.man > INSTALL

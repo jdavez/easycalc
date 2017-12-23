@@ -1,0 +1,259 @@
+
+\documentclass{article}
+
+\begin{document}
+
+\title{Special Functions Supported by EasyCalc}
+\author{Rafael R. Sevilla}
+\maketitle
+
+EasyCalc now supports a large number of ``special functions,'' which
+should be especially useful for those involved in mathematical
+physics, boundary value problems, and statistics.  Most of these
+functions will only be available if you apply the flag
+\texttt{--enable-specfun} to the \texttt{configure} script for
+EasyCalc.  These functions are for the most part based on
+approximations given in Chapter 6 of \emph{Numerical Recipes}
+\cite{press}, and the public domain Cephes code available from Netlib.
+More information on all of these special functions is available from
+Abramowitz and Stegun \cite{abramowitz}. Discussions of the theory,
+special properties, and applications of these functions can be found
+in \cite{andrews} and in \cite{whittaker}.
+
+\section*{Summary of Special Functions}
+
+\begin{center}
+\begin{tabular}{|l|l|}\hline
+Function Name & Name in EasyCalc \\\hline
+Euler Gamma & \texttt{gamma(z)} \\\hline
+Beta & \texttt{beta(z:w)} \\\hline
+Incomplete Gamma & \texttt{igamma(a:x)} \\\hline
+Error & \texttt{erf(x)} \\\hline
+Complementary Error & \texttt{erfc(x)} \\\hline
+Incomplete Beta & \texttt{ibeta(a:b:x)} \\\hline
+Bessel 1st Kind & \texttt{besselj(n:x)} \\\hline
+Bessel 2nd Kind & \texttt{bessely(n:x)} \\\hline
+Mod. Bessel 1st Kind & \texttt{besseli(n:x)} \\\hline
+Mod. Bessel 2nd Kind & \texttt{besselk(n:x)} \\\hline
+Inc. Elliptic Integral 1st kind & \texttt{elli1(m:phi)} \\\hline
+Inc. Elliptic Integral 2nd kind & \texttt{elli2(m:phi)} \\\hline
+Comp. Elliptic Integral 1st kind & \texttt{ellc1(m)} \\\hline
+Comp. Elliptic Integral 2nd kind & \texttt{ellc2(m)} \\\hline
+Jacobi sn & \texttt{sn(m:u)} \\\hline
+Jacobi cn & \texttt{cn(m:u)} \\\hline
+Jacobi dn & \texttt{dn(m:u)} \\\hline
+\end{tabular}
+\end{center}
+
+\section*{The Euler Gamma Function}
+
+The Euler gamma function is the only function here described that is
+available whether or not you set \texttt{--enable-specfun}, but if
+that flag is not set then you will be able to use the gamma function
+only for real arguments; to be able to use it for complex arguments
+you will need to set that flag.  It is used by the factorial function
+to compute non-integral values for the factorial as well.  The Euler
+gamma function is defined by the integral:
+\begin{equation}
+\Gamma(z) = \int^\infty_0 e^{-t}t^{x-1} dt
+\end{equation}
+You can call the gamma function as \texttt{gamma(\textsl{arg})}.  Note
+that this function is automatically called implicitly whenever you do
+\texttt{fact(\textsl{arg})} where \texttt{\textsl{arg}} is not an
+integer.  The Euler gamma function should not be evaluated for
+negative integer arguments.
+
+\section*{The Beta Function}
+
+The Beta function is defined by
+\begin{equation}
+\label{betafunc}
+B(z,w) = B(w,z) = \int^1_0 t^{z-1}(1-t)^{w-1} dt = \frac{\Gamma(z)\Gamma(w)}{\Gamma(z + w)}
+\end{equation}
+Call it as \texttt{beta(\textsl{z}:\textsl{w})}.  It just uses the
+gamma function to calculate it directly.  Do not call it with negative
+values for $z$ and/or $w$.
+
+\section*{The Incomplete Gamma Function}
+
+The incomplete gamma function is defined by
+\begin{equation}
+P(a,x) = \frac{1}{\Gamma(a)}\int^x_0 e^{-t}t^{a-1} dt
+\end{equation}
+You can access it with \texttt{igamma(\textsl{a}:\textsl{x})}.  Values
+of $a \le 0$ or for $x < 0$ are invalid and produce an error.
+
+\section*{The Error Function and the Complementary Error Function}
+
+These functions are defined by
+\begin{equation}
+\mathrm{erf}(x) = \frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2} dt
+\end{equation}
+and
+\begin{equation}
+\mathrm{erfc}(x) = 1 - \mathrm{erf}(x) =
+\frac{2}{\sqrt{\pi}}\int_x^\infty e^{-t^2} dt
+\end{equation}
+Call them as \texttt{erf(\textsl{x})} and \texttt{erfc(\textsl{x})}.
+
+\section*{The Incomplete Beta Function}
+
+This function is defined by
+\begin{equation}
+I_x(a, b) = \frac{1}{B(a, b)} \int_0^x t^{a-1}(1-t)^{b-1} dt
+\end{equation}
+where $B(a, b)$ is the Beta Function (Eq.~\ref{betafunc}) and can
+be called as \texttt{ibeta(\textsl{a}:\textsl{b}:\textsl{x})}.  Both
+$a$ and $b$ must be greater than 0, and $0 \le x \le 1$.  Do not use
+it for values other than these allowed.
+
+\section*{Bessel Functions of the First and Second Kinds}
+
+The Bessel functions of the first kind, $J_\nu(x)$ arise as
+solutions to the differential equation:
+\begin{equation}
+\label{besselde}
+x^2\frac{d^2y}{dx^2} - x\frac{dy}{dx} + (x^2 - \nu^2)y = 0
+\end{equation}
+and is defined by the series representation
+\begin{equation}
+J_\nu(x) = \sum^\infty_{k=0}\frac{(-1)^k(x/2)^{2k+\nu}}{k!\Gamma(k + \nu
+ +1)}
+\end{equation}
+You can evaluate it with EasyCalc by doing
+\texttt{besselj(\textsl{nu}:\textsl{x})}.  The order $\nu$ of the
+Bessel function is restricted to nonnegative integers in this
+version.
+
+The Bessel functions of the second kind $Y_\nu(x)$ are the second
+linearly independent solutions to Eq.~\ref{besselde}.  For $\nu$
+\emph{not} an integer, $Y_\nu(x)$ can be expressed in terms of the
+Bessel functions of the first kind as:
+\begin{equation}
+Y_\nu(x) = \frac{J_\nu(x) cos(\nu\pi) - J_{-\nu}(x)}{sin(\nu\pi)}
+\end{equation}
+but it produces correct results in the limit as $\nu$ approaches an
+integer.  You can evaluate this by doing
+\texttt{bessely(\textsl{nu}:\textsl{x})}.  Again, the order $\nu$ is
+restricted to integers, and note that all the Bessel functions of the
+second kind possess singularities at zero, so don't try to evaluate it
+there.
+
+\section*{Modified Bessel functions of the First and Second Kinds}
+
+These functions, $I_\nu(x)$ and $K_\nu(x)$, arise as the linearly
+independent solutions to the differential equation:
+\begin{equation}
+x^2\frac{d^2y}{dx^2} + x\frac{dy}{dx} - (x^2 + \nu^2)y = 0
+\end{equation}
+and are the regular Bessel functions $J_\nu(x)$ and $Y_\nu(x)$
+evaluated for purely imaginary arguments:
+\begin{equation}
+I_\nu(x) = (-i)^\nu J_\nu(ix)
+\end{equation}
+and
+\begin{equation}
+K_\nu(x) = \frac{\pi}{2}i^{\nu+1}[J_\nu(ix) + iY_\nu(ix)]
+\end{equation}
+They are evaluated by \texttt{besseli(\textsl{nu}:\textsl{x})} and
+\texttt{besselk(\textsl{nu}:\textsl{x})}.  Again the order $\nu$ is
+restricted to integers, and the $K_\nu$ functions have a singularity
+at zero.
+
+%\section*{Airy Functions of the First and Second Kinds}
+
+%These functions, $\mathrm{Ai}(x)$ and $\mathrm{Bi}(x)$ arise as the
+%linearly independent solutions to the differential equation:
+%\begin{equation}
+%\frac{d^2y}{dx^2} - xy = 0
+%\end{equation}
+%They may be expressed in terms of the modified Bessel functions:
+%\begin{equation}
+%\mathrm{Ai}(x) = \frac{1}{\pi} \sqrt{\frac{x}{3}}K_{1/3}\left(\frac{2}{3}x^{3/2}\right)
+%\end{equation}
+%and
+%\begin{equation}
+%\mathrm{Bi}(x) =
+%\sqrt{\frac{x}{3}}\left[I_{-1/3}\left(\frac{2}{3}x^{3/2}\right) + 
+%  I_{1/3}\left(\frac{2}{3}x^{3/2}\right)\right]
+%\end{equation}
+%They can be computed as \texttt{airy(\textsl{x})} and
+%\texttt{biry(\textsl{x})} respectively.
+
+\section*{Elliptic Integrals}
+
+The incomplete elliptic integral of the first kind is defined as
+follows:
+\begin{equation}
+F(\phi | m) = \int^\phi_0 \frac{d\theta}{\sqrt{1 - m^2 \sin^2 \theta}}
+\end{equation}
+with eccentricity/modulus $m$ and amplitude $\phi$.  You can compute
+this function by entering \texttt{elli1(\textsl{m}:\textsl{phi})}.
+The complete elliptic integral of the first kind:
+\begin{equation}
+K(m) = \int^{\pi/2}_0 \frac{d\theta}{\sqrt{1 - m^2 \sin^2 \theta}}
+\end{equation}
+and may be computed as \texttt{ellc1(\textsl{m})}.  The incomplete
+elliptic integral of the second kind:
+\begin{equation}
+E(\phi | m) = \int^\phi_0 \sqrt{1 - m^2 \sin^2 \theta} d\theta
+\end{equation}
+may be calculated with \texttt{elli2(\textsl{m}:\textsl{phi})}, while
+the complete elliptic integral of the second kind
+\begin{equation}
+E(m) = \int^{\pi/2}_0 \sqrt{1 - m^2 \sin^2 \theta} d\theta
+\end{equation}
+may be computed as \texttt{ellc2(\textsl{m})}.  All of these elliptic
+functions can be computed only with an eccentricity $m$ between 0 and
+1.  Values outside this are considered out of range.
+
+\section*{Jacobian Elliptic Functions}
+
+These functions are inverses of the elliptic integral of the first
+kind $F(\phi | m)$.  The Jacobian elliptic function $\mathrm{sn}(u|m)$
+is defined as
+\begin{equation}
+\mathrm{sn}(F(\phi | m) | m) = \sin \phi
+\end{equation}
+The other two functions, sn and dn, can be defined by the relations
+\begin{equation}
+\mathrm{cn}(F(\phi | m) | m) = \cos \phi
+\end{equation}
+and
+\begin{equation}
+\mathrm{dn}(F(\phi | m) | m) = \sqrt{1-m^2\sin^2 \phi}
+\end{equation}
+or equivalently,
+\begin{equation}
+\mathrm{sn}^2(u | m) + \mathrm{cn}^2(u | m) = 1
+\end{equation}
+and
+\begin{equation}
+m^2\mathrm{sn}^2(u | m) + \mathrm{dn}^2(u | m) = 1
+\end{equation}
+These three functions may be calculated as
+\texttt{sn(\textsl{m}:\textsl{u})}, \texttt{cn(\textsl{m}:\textsl{u})} and 
+\texttt{dn(\textsl{m}:\textsl{u})}.  As with the elliptic
+integrals, the eccentricity $m$ may only be between 0 and 1.
+
+\begin{thebibliography}{99}
+
+\bibitem{abramowitz} Abramowitz, Milton, and Irene A. Stegun.
+  \emph{Handbook of Mathematical Functions}, Applied Mathematics
+  Series, vol. 55.  Washington: National Institute of Standards and
+  Technology, 1968.
+
+\bibitem{andrews} Andrews, Larry C. \emph{Special Functions of
+    Mathematics for Engineers}.  New York: McGraw-Hill, Inc, 1992.
+
+\bibitem{press} Press, William H., Brian P. Flannery, Saul
+  A. Teukolsky, and William K. Vetterling.  \emph{Numerical Recipes in
+    FORTRAN}.  Cambridge: Cambridge University Press, 1986.
+
+\bibitem{whittaker} Whittaker, E. T., and G. N. Watson.  \emph{A
+    Course of Modern Analysis}.  Cambridge: Cambridge University
+  Press, 1927.
+
+\end{thebibliography}
+
+\end{document}
